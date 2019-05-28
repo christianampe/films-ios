@@ -8,8 +8,6 @@
 
 import UIKit
 
-extension UIStoryboardSegue: StoryboardIdentifiable {}
-
 extension UIStoryboardSegue {
     
     /// Method used to implicitly extract the view controller's type from the segue's destination.

@@ -16,7 +16,7 @@ extension SegueIdentifiable where Self: UIViewController, Segue.RawValue == Stri
     /// - Returns: Returns the enum case for which the UIStoryboardSegue is associated.  If there is no associated case, this method throws an exception.
     func segueCase(for segue: UIStoryboardSegue) -> Segue {
         guard let identifier = segue.identifier, let identifierCase = Segue(rawValue: identifier) else {
-            fatalError("Could not map segue identifier - \(String(describing: segue.identifier)) - to segue case")
+            fatalError("could not map segue identifier - \(String(describing: segue.identifier)) - to segue case")
         }
         
         return identifierCase

@@ -1,23 +1,12 @@
 //
-//  KeyNamespaceable.swift
-//  WeedmapsChallenge
+//  UserDefaultable.swift
+//  Films
 //
-//  Created by Christian Ampe on 5/27/19.
+//  Created by Christian Ampe on 5/28/19.
+//  Copyright © 2019 christianampe. All rights reserved.
 //
 
 import Foundation
-
-protocol KeyNamespaceable {}
-
-extension KeyNamespaceable {
-    private static func namespace(_ key: String) -> String {
-        return "\(Self.self).\(key)"
-    }
-    
-    static func namespace<T: RawRepresentable>(_ key: T) -> String where T.RawValue == String {
-        return namespace(key.rawValue)
-    }
-}
 
 protocol BoolUserDefaultable: KeyNamespaceable {
     associatedtype BoolDefaultKey: RawRepresentable
@@ -81,7 +70,7 @@ extension ObjectUserDefaultable where ObjectDefaultKey.RawValue == String {
     static func set(_ object: AnyObject, forKey key: ObjectDefaultKey) {
         UserDefaults.standard.set(object, forKey: namespace(key))
     }
-
+    
     static func object(forKey key: ObjectDefaultKey) -> Any? {
         return UserDefaults.standard.object(forKey: namespace(key))
     }

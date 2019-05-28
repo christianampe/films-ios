@@ -9,7 +9,7 @@
 import UIKit.UIImageView
 
 extension UIImageView {
-    private static let memoryCache = MemoryCache<UIImage>()
+    private static let memoryCache = CRAMemoryCache<UIImage>()
     private static let networkingService = NetworkingService()
 }
 
