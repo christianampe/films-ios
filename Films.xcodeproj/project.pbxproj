@@ -13,6 +13,8 @@
 		BF256DC0229CD77A00794D56 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF256DBE229CD77A00794D56 /* Launch.storyboard */; };
 		BF256DCB229CD77A00794D56 /* FilmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF256DCA229CD77A00794D56 /* FilmsTests.swift */; };
 		BF256DD6229CD77A00794D56 /* FilmsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF256DD5229CD77A00794D56 /* FilmsUITests.swift */; };
+		BFB7B728229DC85D001CCD49 /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B727229DC85D001CCD49 /* MemoryCache.swift */; };
+		BFB7B72B229DCC34001CCD49 /* UIImageView+MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */; };
 		BFD2DFE7229CFD68008EC33D /* UINestedCollectionViewRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFE3229CFD67008EC33D /* UINestedCollectionViewRowCell.swift */; };
 		BFD2DFE8229CFD68008EC33D /* UINestedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFE4229CFD67008EC33D /* UINestedCollectionViewController.swift */; };
 		BFD2DFE9229CFD68008EC33D /* UINestedCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD2DFE5229CFD68008EC33D /* UINestedCollection.storyboard */; };
@@ -71,6 +73,8 @@
 		BF256DD1229CD77A00794D56 /* FilmsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FilmsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF256DD5229CD77A00794D56 /* FilmsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsUITests.swift; sourceTree = "<group>"; };
 		BF256DD7229CD77A00794D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFB7B727229DC85D001CCD49 /* MemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
+		BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+MemoryCache.swift"; sourceTree = "<group>"; };
 		BFD2DFE3229CFD67008EC33D /* UINestedCollectionViewRowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINestedCollectionViewRowCell.swift; sourceTree = "<group>"; };
 		BFD2DFE4229CFD67008EC33D /* UINestedCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINestedCollectionViewController.swift; sourceTree = "<group>"; };
 		BFD2DFE5229CFD68008EC33D /* UINestedCollection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UINestedCollection.storyboard; sourceTree = "<group>"; };
@@ -233,6 +237,14 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		BFB7B726229DC84E001CCD49 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				BFB7B727229DC85D001CCD49 /* MemoryCache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		BFD2DFE1229CFD42008EC33D /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				BFD2DFF1229D0022008EC33D /* Array++.swift */,
+				BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -288,6 +301,7 @@
 		BFD2DFF3229D009A008EC33D /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				BFB7B726229DC84E001CCD49 /* Cache */,
 				BFD2E00F229D0177008EC33D /* Networking */,
 				BFD2E00C229D0120008EC33D /* User Defaults */,
 				BFD2DFF5229D00BE008EC33D /* Storyboard */,
@@ -521,9 +535,11 @@
 				BFD2E009229D00E6008EC33D /* UITableViewCell+StoryboardIdentifiable.swift in Sources */,
 				BFD2E007229D00E6008EC33D /* UICollectionView+StoryboardIdentifiable.swift in Sources */,
 				BFD2E015229D01BE008EC33D /* NetworkingProviderError.swift in Sources */,
+				BFB7B72B229DCC34001CCD49 /* UIImageView+MemoryCache.swift in Sources */,
 				BFD2E00B229D00E6008EC33D /* UIViewController+StoryboardIdentifiable.swift in Sources */,
 				BFD2E004229D00E6008EC33D /* UIStoryboard+StoryboardIdentifiable.swift in Sources */,
 				BFD2E014229D01BE008EC33D /* NetworkingProvider.swift in Sources */,
+				BFB7B728229DC85D001CCD49 /* MemoryCache.swift in Sources */,
 				BFD2E020229D0221008EC33D /* NetworkingRequestHTTPMethod.swift in Sources */,
 				BFD2DFF2229D0022008EC33D /* Array++.swift in Sources */,
 			);
