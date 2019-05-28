@@ -13,6 +13,32 @@
 		BF256DC0229CD77A00794D56 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF256DBE229CD77A00794D56 /* Launch.storyboard */; };
 		BF256DCB229CD77A00794D56 /* FilmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF256DCA229CD77A00794D56 /* FilmsTests.swift */; };
 		BF256DD6229CD77A00794D56 /* FilmsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF256DD5229CD77A00794D56 /* FilmsUITests.swift */; };
+		BFD2DFE7229CFD68008EC33D /* UINestedCollectionViewRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFE3229CFD67008EC33D /* UINestedCollectionViewRowCell.swift */; };
+		BFD2DFE8229CFD68008EC33D /* UINestedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFE4229CFD67008EC33D /* UINestedCollectionViewController.swift */; };
+		BFD2DFE9229CFD68008EC33D /* UINestedCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD2DFE5229CFD68008EC33D /* UINestedCollection.storyboard */; };
+		BFD2DFEA229CFD68008EC33D /* UINestedCollectionViewItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFE6229CFD68008EC33D /* UINestedCollectionViewItemCell.swift */; };
+		BFD2DFEF229CFDD6008EC33D /* UINestedCollectionViewRowCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFEE229CFDD6008EC33D /* UINestedCollectionViewRowCellViewModelProtocol.swift */; };
+		BFD2DFF2229D0022008EC33D /* Array++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFF1229D0022008EC33D /* Array++.swift */; };
+		BFD2DFF8229D00DB008EC33D /* SegueIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFF6229D00DB008EC33D /* SegueIdentifiable.swift */; };
+		BFD2DFF9229D00DB008EC33D /* SegueIdentifiable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFF7229D00DB008EC33D /* SegueIdentifiable+UIViewController.swift */; };
+		BFD2E003229D00E6008EC33D /* StoryboardIdentifiable+Self.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFFA229D00E6008EC33D /* StoryboardIdentifiable+Self.swift */; };
+		BFD2E004229D00E6008EC33D /* UIStoryboard+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFFB229D00E6008EC33D /* UIStoryboard+StoryboardIdentifiable.swift */; };
+		BFD2E005229D00E6008EC33D /* UICollectionReusableView+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFFC229D00E6008EC33D /* UICollectionReusableView+StoryboardIdentifiable.swift */; };
+		BFD2E006229D00E6008EC33D /* UIStoryboardSegue+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFFD229D00E6008EC33D /* UIStoryboardSegue+StoryboardIdentifiable.swift */; };
+		BFD2E007229D00E6008EC33D /* UICollectionView+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFFE229D00E6008EC33D /* UICollectionView+StoryboardIdentifiable.swift */; };
+		BFD2E008229D00E6008EC33D /* UITableView+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFFF229D00E6008EC33D /* UITableView+StoryboardIdentifiable.swift */; };
+		BFD2E009229D00E6008EC33D /* UITableViewCell+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E000229D00E6008EC33D /* UITableViewCell+StoryboardIdentifiable.swift */; };
+		BFD2E00A229D00E6008EC33D /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E001229D00E6008EC33D /* StoryboardIdentifiable.swift */; };
+		BFD2E00B229D00E6008EC33D /* UIViewController+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E002229D00E6008EC33D /* UIViewController+StoryboardIdentifiable.swift */; };
+		BFD2E00E229D0131008EC33D /* KeyNamespaceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E00D229D0131008EC33D /* KeyNamespaceable.swift */; };
+		BFD2E014229D01BE008EC33D /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E012229D01BE008EC33D /* NetworkingProvider.swift */; };
+		BFD2E015229D01BE008EC33D /* NetworkingProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E013229D01BE008EC33D /* NetworkingProviderError.swift */; };
+		BFD2E019229D01D8008EC33D /* NetworkingServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E016229D01D8008EC33D /* NetworkingServiceResponse.swift */; };
+		BFD2E01A229D01D8008EC33D /* NetworkingServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E017229D01D8008EC33D /* NetworkingServiceError.swift */; };
+		BFD2E01B229D01D8008EC33D /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E018229D01D8008EC33D /* NetworkingService.swift */; };
+		BFD2E020229D0221008EC33D /* NetworkingRequestHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E01D229D0221008EC33D /* NetworkingRequestHTTPMethod.swift */; };
+		BFD2E021229D0221008EC33D /* NetworkingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E01E229D0221008EC33D /* NetworkingRequest.swift */; };
+		BFD2E022229D0221008EC33D /* NetworkingRequestValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E01F229D0221008EC33D /* NetworkingRequestValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +71,32 @@
 		BF256DD1229CD77A00794D56 /* FilmsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FilmsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF256DD5229CD77A00794D56 /* FilmsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsUITests.swift; sourceTree = "<group>"; };
 		BF256DD7229CD77A00794D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFD2DFE3229CFD67008EC33D /* UINestedCollectionViewRowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINestedCollectionViewRowCell.swift; sourceTree = "<group>"; };
+		BFD2DFE4229CFD67008EC33D /* UINestedCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINestedCollectionViewController.swift; sourceTree = "<group>"; };
+		BFD2DFE5229CFD68008EC33D /* UINestedCollection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UINestedCollection.storyboard; sourceTree = "<group>"; };
+		BFD2DFE6229CFD68008EC33D /* UINestedCollectionViewItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINestedCollectionViewItemCell.swift; sourceTree = "<group>"; };
+		BFD2DFEE229CFDD6008EC33D /* UINestedCollectionViewRowCellViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINestedCollectionViewRowCellViewModelProtocol.swift; sourceTree = "<group>"; };
+		BFD2DFF1229D0022008EC33D /* Array++.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array++.swift"; sourceTree = "<group>"; };
+		BFD2DFF6229D00DB008EC33D /* SegueIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifiable.swift; sourceTree = "<group>"; };
+		BFD2DFF7229D00DB008EC33D /* SegueIdentifiable+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SegueIdentifiable+UIViewController.swift"; sourceTree = "<group>"; };
+		BFD2DFFA229D00E6008EC33D /* StoryboardIdentifiable+Self.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StoryboardIdentifiable+Self.swift"; sourceTree = "<group>"; };
+		BFD2DFFB229D00E6008EC33D /* UIStoryboard+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		BFD2DFFC229D00E6008EC33D /* UICollectionReusableView+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		BFD2DFFD229D00E6008EC33D /* UIStoryboardSegue+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboardSegue+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		BFD2DFFE229D00E6008EC33D /* UICollectionView+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		BFD2DFFF229D00E6008EC33D /* UITableView+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		BFD2E000229D00E6008EC33D /* UITableViewCell+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		BFD2E001229D00E6008EC33D /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
+		BFD2E002229D00E6008EC33D /* UIViewController+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		BFD2E00D229D0131008EC33D /* KeyNamespaceable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyNamespaceable.swift; sourceTree = "<group>"; };
+		BFD2E012229D01BE008EC33D /* NetworkingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
+		BFD2E013229D01BE008EC33D /* NetworkingProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingProviderError.swift; sourceTree = "<group>"; };
+		BFD2E016229D01D8008EC33D /* NetworkingServiceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingServiceResponse.swift; sourceTree = "<group>"; };
+		BFD2E017229D01D8008EC33D /* NetworkingServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingServiceError.swift; sourceTree = "<group>"; };
+		BFD2E018229D01D8008EC33D /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		BFD2E01D229D0221008EC33D /* NetworkingRequestHTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequestHTTPMethod.swift; sourceTree = "<group>"; };
+		BFD2E01E229D0221008EC33D /* NetworkingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequest.swift; sourceTree = "<group>"; };
+		BFD2E01F229D0221008EC33D /* NetworkingRequestValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequestValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +175,9 @@
 			isa = PBXGroup;
 			children = (
 				BF256DE6229CD7CC00794D56 /* Screens */,
+				BFD2DFE1229CFD42008EC33D /* UI Components */,
+				BFD2DFF3229D009A008EC33D /* Implementations */,
+				BFD2DFF0229CFEB5008EC33D /* Extensions */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -176,6 +231,141 @@
 			children = (
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		BFD2DFE1229CFD42008EC33D /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				BFD2DFE2229CFD4F008EC33D /* Nested Collection */,
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		BFD2DFE2229CFD4F008EC33D /* Nested Collection */ = {
+			isa = PBXGroup;
+			children = (
+				BFD2DFEB229CFDA8008EC33D /* Interface */,
+				BFD2DFEC229CFDB1008EC33D /* Views */,
+				BFD2DFED229CFDC9008EC33D /* Models */,
+			);
+			path = "Nested Collection";
+			sourceTree = "<group>";
+		};
+		BFD2DFEB229CFDA8008EC33D /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				BFD2DFE5229CFD68008EC33D /* UINestedCollection.storyboard */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		BFD2DFEC229CFDB1008EC33D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFD2DFE4229CFD67008EC33D /* UINestedCollectionViewController.swift */,
+				BFD2DFE3229CFD67008EC33D /* UINestedCollectionViewRowCell.swift */,
+				BFD2DFE6229CFD68008EC33D /* UINestedCollectionViewItemCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BFD2DFED229CFDC9008EC33D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BFD2DFEE229CFDD6008EC33D /* UINestedCollectionViewRowCellViewModelProtocol.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BFD2DFF0229CFEB5008EC33D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFD2DFF1229D0022008EC33D /* Array++.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BFD2DFF3229D009A008EC33D /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				BFD2E00F229D0177008EC33D /* Networking */,
+				BFD2E00C229D0120008EC33D /* User Defaults */,
+				BFD2DFF5229D00BE008EC33D /* Storyboard */,
+				BFD2DFF4229D00B6008EC33D /* Segue */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		BFD2DFF4229D00B6008EC33D /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+				BFD2E001229D00E6008EC33D /* StoryboardIdentifiable.swift */,
+				BFD2DFFA229D00E6008EC33D /* StoryboardIdentifiable+Self.swift */,
+				BFD2DFFC229D00E6008EC33D /* UICollectionReusableView+StoryboardIdentifiable.swift */,
+				BFD2DFFE229D00E6008EC33D /* UICollectionView+StoryboardIdentifiable.swift */,
+				BFD2DFFB229D00E6008EC33D /* UIStoryboard+StoryboardIdentifiable.swift */,
+				BFD2DFFD229D00E6008EC33D /* UIStoryboardSegue+StoryboardIdentifiable.swift */,
+				BFD2DFFF229D00E6008EC33D /* UITableView+StoryboardIdentifiable.swift */,
+				BFD2E000229D00E6008EC33D /* UITableViewCell+StoryboardIdentifiable.swift */,
+				BFD2E002229D00E6008EC33D /* UIViewController+StoryboardIdentifiable.swift */,
+			);
+			path = Segue;
+			sourceTree = "<group>";
+		};
+		BFD2DFF5229D00BE008EC33D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BFD2DFF6229D00DB008EC33D /* SegueIdentifiable.swift */,
+				BFD2DFF7229D00DB008EC33D /* SegueIdentifiable+UIViewController.swift */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		BFD2E00C229D0120008EC33D /* User Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				BFD2E00D229D0131008EC33D /* KeyNamespaceable.swift */,
+			);
+			path = "User Defaults";
+			sourceTree = "<group>";
+		};
+		BFD2E00F229D0177008EC33D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BFD2E010229D018A008EC33D /* Provider */,
+				BFD2E01C229D020F008EC33D /* Request */,
+				BFD2E011229D018F008EC33D /* Service */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BFD2E010229D018A008EC33D /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				BFD2E012229D01BE008EC33D /* NetworkingProvider.swift */,
+				BFD2E013229D01BE008EC33D /* NetworkingProviderError.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		BFD2E011229D018F008EC33D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BFD2E018229D01D8008EC33D /* NetworkingService.swift */,
+				BFD2E016229D01D8008EC33D /* NetworkingServiceResponse.swift */,
+				BFD2E017229D01D8008EC33D /* NetworkingServiceError.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BFD2E01C229D020F008EC33D /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				BFD2E01E229D0221008EC33D /* NetworkingRequest.swift */,
+				BFD2E01D229D0221008EC33D /* NetworkingRequestHTTPMethod.swift */,
+				BFD2E01F229D0221008EC33D /* NetworkingRequestValidation.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +472,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD2DFE9229CFD68008EC33D /* UINestedCollection.storyboard in Resources */,
 				BF256DC0229CD77A00794D56 /* Launch.storyboard in Resources */,
 				BF256DBD229CD77A00794D56 /* Assets.xcassets in Resources */,
 			);
@@ -308,8 +499,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD2E005229D00E6008EC33D /* UICollectionReusableView+StoryboardIdentifiable.swift in Sources */,
 				BF256DBB229CD77900794D56 /* Films.xcdatamodeld in Sources */,
+				BFD2DFEF229CFDD6008EC33D /* UINestedCollectionViewRowCellViewModelProtocol.swift in Sources */,
+				BFD2E01B229D01D8008EC33D /* NetworkingService.swift in Sources */,
+				BFD2E003229D00E6008EC33D /* StoryboardIdentifiable+Self.swift in Sources */,
+				BFD2E019229D01D8008EC33D /* NetworkingServiceResponse.swift in Sources */,
+				BFD2DFEA229CFD68008EC33D /* UINestedCollectionViewItemCell.swift in Sources */,
+				BFD2E008229D00E6008EC33D /* UITableView+StoryboardIdentifiable.swift in Sources */,
+				BFD2DFF8229D00DB008EC33D /* SegueIdentifiable.swift in Sources */,
+				BFD2E01A229D01D8008EC33D /* NetworkingServiceError.swift in Sources */,
+				BFD2E00E229D0131008EC33D /* KeyNamespaceable.swift in Sources */,
+				BFD2DFF9229D00DB008EC33D /* SegueIdentifiable+UIViewController.swift in Sources */,
+				BFD2DFE8229CFD68008EC33D /* UINestedCollectionViewController.swift in Sources */,
 				BF256DB3229CD77900794D56 /* AppDelegate.swift in Sources */,
+				BFD2E00A229D00E6008EC33D /* StoryboardIdentifiable.swift in Sources */,
+				BFD2E021229D0221008EC33D /* NetworkingRequest.swift in Sources */,
+				BFD2E022229D0221008EC33D /* NetworkingRequestValidation.swift in Sources */,
+				BFD2E006229D00E6008EC33D /* UIStoryboardSegue+StoryboardIdentifiable.swift in Sources */,
+				BFD2DFE7229CFD68008EC33D /* UINestedCollectionViewRowCell.swift in Sources */,
+				BFD2E009229D00E6008EC33D /* UITableViewCell+StoryboardIdentifiable.swift in Sources */,
+				BFD2E007229D00E6008EC33D /* UICollectionView+StoryboardIdentifiable.swift in Sources */,
+				BFD2E015229D01BE008EC33D /* NetworkingProviderError.swift in Sources */,
+				BFD2E00B229D00E6008EC33D /* UIViewController+StoryboardIdentifiable.swift in Sources */,
+				BFD2E004229D00E6008EC33D /* UIStoryboard+StoryboardIdentifiable.swift in Sources */,
+				BFD2E014229D01BE008EC33D /* NetworkingProvider.swift in Sources */,
+				BFD2E020229D0221008EC33D /* NetworkingRequestHTTPMethod.swift in Sources */,
+				BFD2DFF2229D0022008EC33D /* Array++.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
