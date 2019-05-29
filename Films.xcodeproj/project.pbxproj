@@ -20,15 +20,20 @@
 		BF8BFCA7229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCA6229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift */; };
 		BF8BFCAA229E2E490035AB90 /* CRAGenericTableViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCA9229E2E480035AB90 /* CRAGenericTableViewSource.swift */; };
 		BF8BFCAD229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCAC229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift */; };
+		BF8BFCB0229E32700035AB90 /* CANestedCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCAF229E32700035AB90 /* CANestedCollectionViewDataSource.swift */; };
+		BF8BFCB2229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCB1229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift */; };
+		BF8BFCB4229E3AEC0035AB90 /* CRANestedCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCB3229E3AEC0035AB90 /* CRANestedCollectionViewDelegate.swift */; };
+		BF8BFCB9229E41010035AB90 /* CRANestedCollectionViewRowCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCB8229E41010035AB90 /* CRANestedCollectionViewRowCellDataSource.swift */; };
+		BF8BFCBB229E41140035AB90 /* CRANestedCollectionViewRowCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCBA229E41130035AB90 /* CRANestedCollectionViewRowCellDelegate.swift */; };
 		BFB7B728229DC85D001CCD49 /* CRAMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B727229DC85D001CCD49 /* CRAMemoryCache.swift */; };
 		BFB7B72B229DCC34001CCD49 /* UIImageView+MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */; };
 		BFB7B72D229DE04B001CCD49 /* CRACache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B72C229DE04B001CCD49 /* CRACache.swift */; };
 		BFB7B72F229DE13B001CCD49 /* CRADiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B72E229DE13B001CCD49 /* CRADiskCache.swift */; };
-		BFD2DFE7229CFD68008EC33D /* UINestedCollectionViewRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFE3229CFD67008EC33D /* UINestedCollectionViewRowCell.swift */; };
-		BFD2DFE8229CFD68008EC33D /* UINestedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFE4229CFD67008EC33D /* UINestedCollectionViewController.swift */; };
-		BFD2DFE9229CFD68008EC33D /* UINestedCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD2DFE5229CFD68008EC33D /* UINestedCollection.storyboard */; };
-		BFD2DFEA229CFD68008EC33D /* UINestedCollectionViewItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFE6229CFD68008EC33D /* UINestedCollectionViewItemCell.swift */; };
-		BFD2DFEF229CFDD6008EC33D /* UINestedCollectionViewRowCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFEE229CFDD6008EC33D /* UINestedCollectionViewRowCellViewModelProtocol.swift */; };
+		BFD2DFE7229CFD68008EC33D /* CRANestedCollectionViewItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFE3229CFD67008EC33D /* CRANestedCollectionViewItemCell.swift */; };
+		BFD2DFE8229CFD68008EC33D /* CRANestedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFE4229CFD67008EC33D /* CRANestedCollectionViewController.swift */; };
+		BFD2DFE9229CFD68008EC33D /* CRANestedCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD2DFE5229CFD68008EC33D /* CRANestedCollection.storyboard */; };
+		BFD2DFEA229CFD68008EC33D /* CRANestedCollectionViewRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFE6229CFD68008EC33D /* CRANestedCollectionViewRowCell.swift */; };
+		BFD2DFEF229CFDD6008EC33D /* CRANestedCollectionViewRowCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFEE229CFDD6008EC33D /* CRANestedCollectionViewRowCellViewModelProtocol.swift */; };
 		BFD2DFF2229D0022008EC33D /* Array++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFF1229D0022008EC33D /* Array++.swift */; };
 		BFD2DFF8229D00DB008EC33D /* SegueIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFF6229D00DB008EC33D /* SegueIdentifiable.swift */; };
 		BFD2DFF9229D00DB008EC33D /* SegueIdentifiable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFF7229D00DB008EC33D /* SegueIdentifiable+UIViewController.swift */; };
@@ -86,15 +91,20 @@
 		BF8BFCA6229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericCollectionCellProtocol.swift; sourceTree = "<group>"; };
 		BF8BFCA9229E2E480035AB90 /* CRAGenericTableViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericTableViewSource.swift; sourceTree = "<group>"; };
 		BF8BFCAC229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericCollectionViewSource.swift; sourceTree = "<group>"; };
+		BF8BFCAF229E32700035AB90 /* CANestedCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CANestedCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		BF8BFCB1229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		BF8BFCB3229E3AEC0035AB90 /* CRANestedCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		BF8BFCB8229E41010035AB90 /* CRANestedCollectionViewRowCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewRowCellDataSource.swift; sourceTree = "<group>"; };
+		BF8BFCBA229E41130035AB90 /* CRANestedCollectionViewRowCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewRowCellDelegate.swift; sourceTree = "<group>"; };
 		BFB7B727229DC85D001CCD49 /* CRAMemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAMemoryCache.swift; sourceTree = "<group>"; };
 		BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+MemoryCache.swift"; sourceTree = "<group>"; };
 		BFB7B72C229DE04B001CCD49 /* CRACache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRACache.swift; sourceTree = "<group>"; };
 		BFB7B72E229DE13B001CCD49 /* CRADiskCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRADiskCache.swift; sourceTree = "<group>"; };
-		BFD2DFE3229CFD67008EC33D /* UINestedCollectionViewRowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINestedCollectionViewRowCell.swift; sourceTree = "<group>"; };
-		BFD2DFE4229CFD67008EC33D /* UINestedCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINestedCollectionViewController.swift; sourceTree = "<group>"; };
-		BFD2DFE5229CFD68008EC33D /* UINestedCollection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UINestedCollection.storyboard; sourceTree = "<group>"; };
-		BFD2DFE6229CFD68008EC33D /* UINestedCollectionViewItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINestedCollectionViewItemCell.swift; sourceTree = "<group>"; };
-		BFD2DFEE229CFDD6008EC33D /* UINestedCollectionViewRowCellViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINestedCollectionViewRowCellViewModelProtocol.swift; sourceTree = "<group>"; };
+		BFD2DFE3229CFD67008EC33D /* CRANestedCollectionViewItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewItemCell.swift; sourceTree = "<group>"; };
+		BFD2DFE4229CFD67008EC33D /* CRANestedCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewController.swift; sourceTree = "<group>"; };
+		BFD2DFE5229CFD68008EC33D /* CRANestedCollection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CRANestedCollection.storyboard; sourceTree = "<group>"; };
+		BFD2DFE6229CFD68008EC33D /* CRANestedCollectionViewRowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewRowCell.swift; sourceTree = "<group>"; };
+		BFD2DFEE229CFDD6008EC33D /* CRANestedCollectionViewRowCellViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewRowCellViewModelProtocol.swift; sourceTree = "<group>"; };
 		BFD2DFF1229D0022008EC33D /* Array++.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array++.swift"; sourceTree = "<group>"; };
 		BFD2DFF6229D00DB008EC33D /* SegueIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifiable.swift; sourceTree = "<group>"; };
 		BFD2DFF7229D00DB008EC33D /* SegueIdentifiable+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SegueIdentifiable+UIViewController.swift"; sourceTree = "<group>"; };
@@ -252,10 +262,10 @@
 		BF8BFCA1229E1E690035AB90 /* Generic Collections */ = {
 			isa = PBXGroup;
 			children = (
-				BF8BFCAB229E2E890035AB90 /* Collection View */,
-				BF8BFCA8229E2E260035AB90 /* Table View */,
 				BF8BFCA4229E2DCC0035AB90 /* CRAGenericCollectionDataSource.swift */,
 				BF8BFCA6229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift */,
+				BF8BFCAB229E2E890035AB90 /* Collection View */,
+				BF8BFCA8229E2E260035AB90 /* Table View */,
 			);
 			path = "Generic Collections";
 			sourceTree = "<group>";
@@ -309,6 +319,7 @@
 				BFD2DFEB229CFDA8008EC33D /* Interface */,
 				BFD2DFEC229CFDB1008EC33D /* Views */,
 				BFD2DFED229CFDC9008EC33D /* Models */,
+				BF8BFCAF229E32700035AB90 /* CANestedCollectionViewDataSource.swift */,
 			);
 			path = "Nested Collection";
 			sourceTree = "<group>";
@@ -316,7 +327,7 @@
 		BFD2DFEB229CFDA8008EC33D /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				BFD2DFE5229CFD68008EC33D /* UINestedCollection.storyboard */,
+				BFD2DFE5229CFD68008EC33D /* CRANestedCollection.storyboard */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -324,9 +335,13 @@
 		BFD2DFEC229CFDB1008EC33D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BFD2DFE4229CFD67008EC33D /* UINestedCollectionViewController.swift */,
-				BFD2DFE3229CFD67008EC33D /* UINestedCollectionViewRowCell.swift */,
-				BFD2DFE6229CFD68008EC33D /* UINestedCollectionViewItemCell.swift */,
+				BF8BFCB1229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift */,
+				BF8BFCB3229E3AEC0035AB90 /* CRANestedCollectionViewDelegate.swift */,
+				BFD2DFE4229CFD67008EC33D /* CRANestedCollectionViewController.swift */,
+				BF8BFCB8229E41010035AB90 /* CRANestedCollectionViewRowCellDataSource.swift */,
+				BF8BFCBA229E41130035AB90 /* CRANestedCollectionViewRowCellDelegate.swift */,
+				BFD2DFE6229CFD68008EC33D /* CRANestedCollectionViewRowCell.swift */,
+				BFD2DFE3229CFD67008EC33D /* CRANestedCollectionViewItemCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -334,7 +349,7 @@
 		BFD2DFED229CFDC9008EC33D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BFD2DFEE229CFDD6008EC33D /* UINestedCollectionViewRowCellViewModelProtocol.swift */,
+				BFD2DFEE229CFDD6008EC33D /* CRANestedCollectionViewRowCellViewModelProtocol.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -536,7 +551,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFD2DFE9229CFD68008EC33D /* UINestedCollection.storyboard in Resources */,
+				BFD2DFE9229CFD68008EC33D /* CRANestedCollection.storyboard in Resources */,
 				BF256DC0229CD77A00794D56 /* Launch.storyboard in Resources */,
 				BF256DBD229CD77A00794D56 /* Assets.xcassets in Resources */,
 			);
@@ -565,13 +580,15 @@
 			files = (
 				BFB7B72D229DE04B001CCD49 /* CRACache.swift in Sources */,
 				BF256DBB229CD77900794D56 /* Films.xcdatamodeld in Sources */,
-				BFD2DFEF229CFDD6008EC33D /* UINestedCollectionViewRowCellViewModelProtocol.swift in Sources */,
+				BFD2DFEF229CFDD6008EC33D /* CRANestedCollectionViewRowCellViewModelProtocol.swift in Sources */,
 				BFD2E01B229D01D8008EC33D /* CRANetworkingService.swift in Sources */,
 				BF8BFCAD229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift in Sources */,
+				BF8BFCB4229E3AEC0035AB90 /* CRANestedCollectionViewDelegate.swift in Sources */,
 				BF8BFCA5229E2DCC0035AB90 /* CRAGenericCollectionDataSource.swift in Sources */,
+				BF8BFCB0229E32700035AB90 /* CANestedCollectionViewDataSource.swift in Sources */,
 				BFD2E003229D00E6008EC33D /* StoryboardIdentifiable+Self.swift in Sources */,
 				BFD2E019229D01D8008EC33D /* CRANetworkingServiceResponse.swift in Sources */,
-				BFD2DFEA229CFD68008EC33D /* UINestedCollectionViewItemCell.swift in Sources */,
+				BFD2DFEA229CFD68008EC33D /* CRANestedCollectionViewRowCell.swift in Sources */,
 				BF8BFC9C229DE7310035AB90 /* CRAUserDefaultable.swift in Sources */,
 				BFD2E008229D00E6008EC33D /* UITableView+StoryboardIdentifiable.swift in Sources */,
 				BFD2DFF8229D00DB008EC33D /* SegueIdentifiable.swift in Sources */,
@@ -579,23 +596,26 @@
 				BF8BFCA7229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift in Sources */,
 				BFD2E00E229D0131008EC33D /* CRAKeyNamespaceable.swift in Sources */,
 				BFD2DFF9229D00DB008EC33D /* SegueIdentifiable+UIViewController.swift in Sources */,
+				BF8BFCBB229E41140035AB90 /* CRANestedCollectionViewRowCellDelegate.swift in Sources */,
 				BF8BFC9E229DEA120035AB90 /* StoryboardIdentifiable++.swift in Sources */,
-				BFD2DFE8229CFD68008EC33D /* UINestedCollectionViewController.swift in Sources */,
+				BFD2DFE8229CFD68008EC33D /* CRANestedCollectionViewController.swift in Sources */,
 				BF256DB3229CD77900794D56 /* AppDelegate.swift in Sources */,
 				BFB7B72F229DE13B001CCD49 /* CRADiskCache.swift in Sources */,
 				BFD2E00A229D00E6008EC33D /* StoryboardIdentifiable.swift in Sources */,
 				BFD2E021229D0221008EC33D /* CRANetworkingRequest.swift in Sources */,
 				BFD2E022229D0221008EC33D /* CRANetworkingRequestValidation.swift in Sources */,
 				BFD2E006229D00E6008EC33D /* UIStoryboardSegue+StoryboardIdentifiable.swift in Sources */,
-				BFD2DFE7229CFD68008EC33D /* UINestedCollectionViewRowCell.swift in Sources */,
+				BFD2DFE7229CFD68008EC33D /* CRANestedCollectionViewItemCell.swift in Sources */,
 				BF8BFCA0229E1B250035AB90 /* CRANetworkingProviderResponse.swift in Sources */,
 				BFD2E007229D00E6008EC33D /* UICollectionView+StoryboardIdentifiable.swift in Sources */,
 				BFD2E015229D01BE008EC33D /* CRANetworkingProviderError.swift in Sources */,
 				BFB7B72B229DCC34001CCD49 /* UIImageView+MemoryCache.swift in Sources */,
+				BF8BFCB2229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift in Sources */,
 				BFD2E004229D00E6008EC33D /* UIStoryboard+StoryboardIdentifiable.swift in Sources */,
 				BFD2E014229D01BE008EC33D /* CRANetworkingProvider.swift in Sources */,
 				BF8BFCAA229E2E490035AB90 /* CRAGenericTableViewSource.swift in Sources */,
 				BFB7B728229DC85D001CCD49 /* CRAMemoryCache.swift in Sources */,
+				BF8BFCB9229E41010035AB90 /* CRANestedCollectionViewRowCellDataSource.swift in Sources */,
 				BFD2E020229D0221008EC33D /* CRANetworkingRequestHTTPMethod.swift in Sources */,
 				BFD2DFF2229D0022008EC33D /* Array++.swift in Sources */,
 			);

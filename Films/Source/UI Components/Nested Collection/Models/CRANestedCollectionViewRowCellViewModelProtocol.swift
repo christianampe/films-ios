@@ -8,8 +8,6 @@
 
 import Foundation
 
-protocol UINestedCollectionViewRowCellViewModelProtocol {
-    var name: String { get }
-    var detail: String { get }
-    var backgroundURLString: String { get }
+protocol CRANestedCollectionViewRowCellViewModelProtocol {
+    var backgroundImageURLString: String { get }
 }
