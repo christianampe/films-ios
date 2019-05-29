@@ -1,5 +1,5 @@
 //
-//  CRAGenericTableViewDataSource.swift
+//  CRAGenericTableViewSource.swift
 //  Films
 //
 //  Created by Christian Ampe on 5/28/19.
@@ -8,7 +8,7 @@
 
 import UIKit.UITableView
 
-class CRAGenericTableViewDataSource<DS: CRAGenericCollectionDataSourceProtocol, C: UITableViewCell>: NSObject, UITableViewDataSource, UITableViewDelegate where C: CRAGenericCollectionCellProtocol, DS.CM == C.CM {
+class CRAGenericTableViewSource<DS: CRAGenericCollectionDataSourceProtocol, C: UITableViewCell>: NSObject, UITableViewDataSource, UITableViewDelegate where C: CRAGenericCollectionCellProtocol, DS.CM == C.CM {
     
     
     // MARK: - Private Properties

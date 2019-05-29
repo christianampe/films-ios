@@ -8,7 +8,7 @@
 
 import UIKit.UICollectionView
 
-class CRAGenericCollectionViewDataSource<DS: CRAGenericCollectionDataSourceProtocol, C: UICollectionViewCell>: NSObject, UICollectionViewDataSource, UICollectionViewDelegate where C: CRAGenericCollectionCellProtocol, DS.CM == C.CM {
+class CRAGenericCollectionViewSource<DS: CRAGenericCollectionDataSourceProtocol, C: UICollectionViewCell>: NSObject, UICollectionViewDataSource, UICollectionViewDelegate where C: CRAGenericCollectionCellProtocol, DS.CM == C.CM {
     
     
     // MARK: - Private Properties

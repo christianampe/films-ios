@@ -18,8 +18,8 @@
 		BF8BFCA0229E1B250035AB90 /* CRANetworkingProviderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFC9F229E1B250035AB90 /* CRANetworkingProviderResponse.swift */; };
 		BF8BFCA5229E2DCC0035AB90 /* CRAGenericCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCA4229E2DCC0035AB90 /* CRAGenericCollectionDataSource.swift */; };
 		BF8BFCA7229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCA6229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift */; };
-		BF8BFCAA229E2E490035AB90 /* CRAGenericTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCA9229E2E480035AB90 /* CRAGenericTableViewDataSource.swift */; };
-		BF8BFCAD229E2EA40035AB90 /* CRAGenericCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCAC229E2EA40035AB90 /* CRAGenericCollectionViewDataSource.swift */; };
+		BF8BFCAA229E2E490035AB90 /* CRAGenericTableViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCA9229E2E480035AB90 /* CRAGenericTableViewSource.swift */; };
+		BF8BFCAD229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCAC229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift */; };
 		BFB7B728229DC85D001CCD49 /* CRAMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B727229DC85D001CCD49 /* CRAMemoryCache.swift */; };
 		BFB7B72B229DCC34001CCD49 /* UIImageView+MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */; };
 		BFB7B72D229DE04B001CCD49 /* CRACache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B72C229DE04B001CCD49 /* CRACache.swift */; };
@@ -84,8 +84,8 @@
 		BF8BFC9F229E1B250035AB90 /* CRANetworkingProviderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANetworkingProviderResponse.swift; sourceTree = "<group>"; };
 		BF8BFCA4229E2DCC0035AB90 /* CRAGenericCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericCollectionDataSource.swift; sourceTree = "<group>"; };
 		BF8BFCA6229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericCollectionCellProtocol.swift; sourceTree = "<group>"; };
-		BF8BFCA9229E2E480035AB90 /* CRAGenericTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericTableViewDataSource.swift; sourceTree = "<group>"; };
-		BF8BFCAC229E2EA40035AB90 /* CRAGenericCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		BF8BFCA9229E2E480035AB90 /* CRAGenericTableViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericTableViewSource.swift; sourceTree = "<group>"; };
+		BF8BFCAC229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericCollectionViewSource.swift; sourceTree = "<group>"; };
 		BFB7B727229DC85D001CCD49 /* CRAMemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAMemoryCache.swift; sourceTree = "<group>"; };
 		BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+MemoryCache.swift"; sourceTree = "<group>"; };
 		BFB7B72C229DE04B001CCD49 /* CRACache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRACache.swift; sourceTree = "<group>"; };
@@ -271,7 +271,7 @@
 		BF8BFCA8229E2E260035AB90 /* Table View */ = {
 			isa = PBXGroup;
 			children = (
-				BF8BFCA9229E2E480035AB90 /* CRAGenericTableViewDataSource.swift */,
+				BF8BFCA9229E2E480035AB90 /* CRAGenericTableViewSource.swift */,
 			);
 			path = "Table View";
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 		BF8BFCAB229E2E890035AB90 /* Collection View */ = {
 			isa = PBXGroup;
 			children = (
-				BF8BFCAC229E2EA40035AB90 /* CRAGenericCollectionViewDataSource.swift */,
+				BF8BFCAC229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift */,
 			);
 			path = "Collection View";
 			sourceTree = "<group>";
@@ -567,7 +567,7 @@
 				BF256DBB229CD77900794D56 /* Films.xcdatamodeld in Sources */,
 				BFD2DFEF229CFDD6008EC33D /* UINestedCollectionViewRowCellViewModelProtocol.swift in Sources */,
 				BFD2E01B229D01D8008EC33D /* CRANetworkingService.swift in Sources */,
-				BF8BFCAD229E2EA40035AB90 /* CRAGenericCollectionViewDataSource.swift in Sources */,
+				BF8BFCAD229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift in Sources */,
 				BF8BFCA5229E2DCC0035AB90 /* CRAGenericCollectionDataSource.swift in Sources */,
 				BFD2E003229D00E6008EC33D /* StoryboardIdentifiable+Self.swift in Sources */,
 				BFD2E019229D01D8008EC33D /* CRANetworkingServiceResponse.swift in Sources */,
@@ -594,7 +594,7 @@
 				BFB7B72B229DCC34001CCD49 /* UIImageView+MemoryCache.swift in Sources */,
 				BFD2E004229D00E6008EC33D /* UIStoryboard+StoryboardIdentifiable.swift in Sources */,
 				BFD2E014229D01BE008EC33D /* CRANetworkingProvider.swift in Sources */,
-				BF8BFCAA229E2E490035AB90 /* CRAGenericTableViewDataSource.swift in Sources */,
+				BF8BFCAA229E2E490035AB90 /* CRAGenericTableViewSource.swift in Sources */,
 				BFB7B728229DC85D001CCD49 /* CRAMemoryCache.swift in Sources */,
 				BFD2E020229D0221008EC33D /* CRANetworkingRequestHTTPMethod.swift in Sources */,
 				BFD2DFF2229D0022008EC33D /* Array++.swift in Sources */,
