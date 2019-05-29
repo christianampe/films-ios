@@ -1,5 +1,5 @@
 //
-//  UserDefaultable.swift
+//  CRAUserDefaultable.swift
 //  Films
 //
 //  Created by Christian Ampe on 5/28/19.
@@ -8,35 +8,35 @@
 
 import Foundation
 
-protocol BoolUserDefaultable: KeyNamespaceable {
+protocol CRABoolUserDefaultable: CRAKeyNamespaceable {
     associatedtype BoolDefaultKey: RawRepresentable
 }
 
-protocol FloatUserDefaultable: KeyNamespaceable {
+protocol FloatUserDefaultable: CRAKeyNamespaceable {
     associatedtype FloatDefaultKey: RawRepresentable
 }
 
-protocol IntegerUserDefaultable: KeyNamespaceable {
+protocol IntegerUserDefaultable: CRAKeyNamespaceable {
     associatedtype IntegerDefaultKey: RawRepresentable
 }
 
-protocol ObjectUserDefaultable: KeyNamespaceable {
+protocol ObjectUserDefaultable: CRAKeyNamespaceable {
     associatedtype ObjectDefaultKey: RawRepresentable
 }
 
-protocol DoubleUserDefaultable: KeyNamespaceable {
+protocol DoubleUserDefaultable: CRAKeyNamespaceable {
     associatedtype DoubleDefaultKey: RawRepresentable
 }
 
-protocol URLUserDefaultable: KeyNamespaceable {
+protocol URLUserDefaultable: CRAKeyNamespaceable {
     associatedtype URLDefaultKey: RawRepresentable
 }
 
-protocol ArrayUserDefaultable: KeyNamespaceable {
+protocol ArrayUserDefaultable: CRAKeyNamespaceable {
     associatedtype ArrayDefaultKey: RawRepresentable
 }
 
-extension BoolUserDefaultable where BoolDefaultKey.RawValue == String {
+extension CRABoolUserDefaultable where BoolDefaultKey.RawValue == String {
     static func set(_ bool: Bool, forKey key: BoolDefaultKey) {
         UserDefaults.standard.set(bool, forKey: namespace(key))
     }

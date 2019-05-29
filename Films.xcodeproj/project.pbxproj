@@ -13,7 +13,7 @@
 		BF256DC0229CD77A00794D56 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF256DBE229CD77A00794D56 /* Launch.storyboard */; };
 		BF256DCB229CD77A00794D56 /* FilmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF256DCA229CD77A00794D56 /* FilmsTests.swift */; };
 		BF256DD6229CD77A00794D56 /* FilmsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF256DD5229CD77A00794D56 /* FilmsUITests.swift */; };
-		BF8BFC9C229DE7310035AB90 /* UserDefaultable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFC9B229DE7310035AB90 /* UserDefaultable.swift */; };
+		BF8BFC9C229DE7310035AB90 /* CRAUserDefaultable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFC9B229DE7310035AB90 /* CRAUserDefaultable.swift */; };
 		BF8BFC9E229DEA120035AB90 /* StoryboardIdentifiable++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFC9D229DEA120035AB90 /* StoryboardIdentifiable++.swift */; };
 		BF8BFCA0229E1B250035AB90 /* CRANetworkingProviderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFC9F229E1B250035AB90 /* CRANetworkingProviderResponse.swift */; };
 		BF8BFCA5229E2DCC0035AB90 /* CRAGenericCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCA4229E2DCC0035AB90 /* CRAGenericCollectionDataSource.swift */; };
@@ -38,7 +38,7 @@
 		BFD2E007229D00E6008EC33D /* UICollectionView+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFFE229D00E6008EC33D /* UICollectionView+StoryboardIdentifiable.swift */; };
 		BFD2E008229D00E6008EC33D /* UITableView+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFFF229D00E6008EC33D /* UITableView+StoryboardIdentifiable.swift */; };
 		BFD2E00A229D00E6008EC33D /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E001229D00E6008EC33D /* StoryboardIdentifiable.swift */; };
-		BFD2E00E229D0131008EC33D /* KeyNamespaceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E00D229D0131008EC33D /* KeyNamespaceable.swift */; };
+		BFD2E00E229D0131008EC33D /* CRAKeyNamespaceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E00D229D0131008EC33D /* CRAKeyNamespaceable.swift */; };
 		BFD2E014229D01BE008EC33D /* CRANetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E012229D01BE008EC33D /* CRANetworkingProvider.swift */; };
 		BFD2E015229D01BE008EC33D /* CRANetworkingProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E013229D01BE008EC33D /* CRANetworkingProviderError.swift */; };
 		BFD2E019229D01D8008EC33D /* CRANetworkingServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E016229D01D8008EC33D /* CRANetworkingServiceResponse.swift */; };
@@ -79,7 +79,7 @@
 		BF256DD1229CD77A00794D56 /* FilmsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FilmsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF256DD5229CD77A00794D56 /* FilmsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsUITests.swift; sourceTree = "<group>"; };
 		BF256DD7229CD77A00794D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF8BFC9B229DE7310035AB90 /* UserDefaultable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultable.swift; sourceTree = "<group>"; };
+		BF8BFC9B229DE7310035AB90 /* CRAUserDefaultable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAUserDefaultable.swift; sourceTree = "<group>"; };
 		BF8BFC9D229DEA120035AB90 /* StoryboardIdentifiable++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryboardIdentifiable++.swift"; sourceTree = "<group>"; };
 		BF8BFC9F229E1B250035AB90 /* CRANetworkingProviderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANetworkingProviderResponse.swift; sourceTree = "<group>"; };
 		BF8BFCA4229E2DCC0035AB90 /* CRAGenericCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericCollectionDataSource.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		BFD2DFFE229D00E6008EC33D /* UICollectionView+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
 		BFD2DFFF229D00E6008EC33D /* UITableView+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
 		BFD2E001229D00E6008EC33D /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
-		BFD2E00D229D0131008EC33D /* KeyNamespaceable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyNamespaceable.swift; sourceTree = "<group>"; };
+		BFD2E00D229D0131008EC33D /* CRAKeyNamespaceable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRAKeyNamespaceable.swift; sourceTree = "<group>"; };
 		BFD2E012229D01BE008EC33D /* CRANetworkingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANetworkingProvider.swift; sourceTree = "<group>"; };
 		BFD2E013229D01BE008EC33D /* CRANetworkingProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANetworkingProviderError.swift; sourceTree = "<group>"; };
 		BFD2E016229D01D8008EC33D /* CRANetworkingServiceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANetworkingServiceResponse.swift; sourceTree = "<group>"; };
@@ -249,14 +249,6 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		BF8BFC99229DE6C00035AB90 /* KeyNamespaceable */ = {
-			isa = PBXGroup;
-			children = (
-				BFD2E00D229D0131008EC33D /* KeyNamespaceable.swift */,
-			);
-			path = KeyNamespaceable;
-			sourceTree = "<group>";
-		};
 		BF8BFCA1229E1E690035AB90 /* Generic Collections */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +274,14 @@
 				BF8BFCAC229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift */,
 			);
 			path = "Collection View";
+			sourceTree = "<group>";
+		};
+		BF8BFCAE229E30F60035AB90 /* Namespace */ = {
+			isa = PBXGroup;
+			children = (
+				BFD2E00D229D0131008EC33D /* CRAKeyNamespaceable.swift */,
+			);
+			path = Namespace;
 			sourceTree = "<group>";
 		};
 		BFB7B726229DC84E001CCD49 /* Cache */ = {
@@ -351,7 +351,7 @@
 		BFD2DFF3229D009A008EC33D /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
-				BF8BFC99229DE6C00035AB90 /* KeyNamespaceable */,
+				BF8BFCAE229E30F60035AB90 /* Namespace */,
 				BFB7B726229DC84E001CCD49 /* Cache */,
 				BFD2E00F229D0177008EC33D /* Networking */,
 				BFD2E00C229D0120008EC33D /* User Defaults */,
@@ -387,7 +387,7 @@
 		BFD2E00C229D0120008EC33D /* User Defaults */ = {
 			isa = PBXGroup;
 			children = (
-				BF8BFC9B229DE7310035AB90 /* UserDefaultable.swift */,
+				BF8BFC9B229DE7310035AB90 /* CRAUserDefaultable.swift */,
 			);
 			path = "User Defaults";
 			sourceTree = "<group>";
@@ -572,12 +572,12 @@
 				BFD2E003229D00E6008EC33D /* StoryboardIdentifiable+Self.swift in Sources */,
 				BFD2E019229D01D8008EC33D /* CRANetworkingServiceResponse.swift in Sources */,
 				BFD2DFEA229CFD68008EC33D /* UINestedCollectionViewItemCell.swift in Sources */,
-				BF8BFC9C229DE7310035AB90 /* UserDefaultable.swift in Sources */,
+				BF8BFC9C229DE7310035AB90 /* CRAUserDefaultable.swift in Sources */,
 				BFD2E008229D00E6008EC33D /* UITableView+StoryboardIdentifiable.swift in Sources */,
 				BFD2DFF8229D00DB008EC33D /* SegueIdentifiable.swift in Sources */,
 				BFD2E01A229D01D8008EC33D /* NetworkingServiceError.swift in Sources */,
 				BF8BFCA7229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift in Sources */,
-				BFD2E00E229D0131008EC33D /* KeyNamespaceable.swift in Sources */,
+				BFD2E00E229D0131008EC33D /* CRAKeyNamespaceable.swift in Sources */,
 				BFD2DFF9229D00DB008EC33D /* SegueIdentifiable+UIViewController.swift in Sources */,
 				BF8BFC9E229DEA120035AB90 /* StoryboardIdentifiable++.swift in Sources */,
 				BFD2DFE8229CFD68008EC33D /* UINestedCollectionViewController.swift in Sources */,

@@ -7,9 +7,9 @@
 
 import Foundation
 
-protocol KeyNamespaceable {}
+protocol CRAKeyNamespaceable {}
 
-extension KeyNamespaceable {
+extension CRAKeyNamespaceable {
     private static func namespace(_ key: String) -> String {
         return "\(Self.self).\(key)"
     }
