@@ -13,7 +13,7 @@
         <!--Movies View Controller-->
         <scene sceneID="wnA-bd-HK2">
             <objects>
-                <viewController id="gFC-5i-aiR" customClass="MoviesViewController" customModule="Films" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoviesViewController" id="gFC-5i-aiR" customClass="MoviesViewController" customModule="Films" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="678-Dv-3cL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

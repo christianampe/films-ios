@@ -8,10 +8,9 @@
 
 import UIKit
 
-final class NavigationViewController: UIViewController, NavigationViewProtocol {
-    var input: NavigationInputProtocol?
-    var viewModel: NavigationViewModelProtocol?
-    var output: NavigationOutputProtocol?
-    var presenter: NavigationPresenterProtocol?
-    weak var delegate: NavigationDelegateProtocol?
+final class NavigationViewController: UINavigationController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NavigationBuilder.create(navigationController: self)
+    }
 }

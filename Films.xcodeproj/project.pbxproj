@@ -36,7 +36,6 @@
 		BF8BFCD1229E425F0035AB90 /* MoviesOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCC7229E425F0035AB90 /* MoviesOutput.swift */; };
 		BF8BFCD2229E425F0035AB90 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCC8229E425F0035AB90 /* MoviesViewModel.swift */; };
 		BF8BFCD4229E45190035AB90 /* UIStoryboard+Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCD3229E45190035AB90 /* UIStoryboard+Identifiers.swift */; };
-		BF8BFCE1229E462F0035AB90 /* NavigationInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCD7229E462F0035AB90 /* NavigationInput.swift */; };
 		BF8BFCE2229E462F0035AB90 /* NavigationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCD8229E462F0035AB90 /* NavigationPresenter.swift */; };
 		BF8BFCE3229E462F0035AB90 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCD9229E462F0035AB90 /* NavigationRouter.swift */; };
 		BF8BFCE4229E462F0035AB90 /* Navigation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF8BFCDA229E462F0035AB90 /* Navigation.storyboard */; };
@@ -44,8 +43,6 @@
 		BF8BFCE6229E462F0035AB90 /* NavigationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCDC229E462F0035AB90 /* NavigationProtocols.swift */; };
 		BF8BFCE7229E462F0035AB90 /* NavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCDD229E462F0035AB90 /* NavigationBuilder.swift */; };
 		BF8BFCE8229E462F0035AB90 /* NavigationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCDE229E462F0035AB90 /* NavigationInteractor.swift */; };
-		BF8BFCE9229E462F0035AB90 /* NavigationOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCDF229E462F0035AB90 /* NavigationOutput.swift */; };
-		BF8BFCEA229E462F0035AB90 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCE0229E462F0035AB90 /* NavigationViewModel.swift */; };
 		BFB7B728229DC85D001CCD49 /* CRAMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B727229DC85D001CCD49 /* CRAMemoryCache.swift */; };
 		BFB7B72B229DCC34001CCD49 /* UIImageView+MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */; };
 		BFB7B72D229DE04B001CCD49 /* CRACache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B72C229DE04B001CCD49 /* CRACache.swift */; };
@@ -128,7 +125,6 @@
 		BF8BFCC7229E425F0035AB90 /* MoviesOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesOutput.swift; sourceTree = "<group>"; };
 		BF8BFCC8229E425F0035AB90 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		BF8BFCD3229E45190035AB90 /* UIStoryboard+Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Identifiers.swift"; sourceTree = "<group>"; };
-		BF8BFCD7229E462F0035AB90 /* NavigationInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationInput.swift; sourceTree = "<group>"; };
 		BF8BFCD8229E462F0035AB90 /* NavigationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPresenter.swift; sourceTree = "<group>"; };
 		BF8BFCD9229E462F0035AB90 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		BF8BFCDA229E462F0035AB90 /* Navigation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Navigation.storyboard; sourceTree = "<group>"; };
@@ -136,8 +132,6 @@
 		BF8BFCDC229E462F0035AB90 /* NavigationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationProtocols.swift; sourceTree = "<group>"; };
 		BF8BFCDD229E462F0035AB90 /* NavigationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBuilder.swift; sourceTree = "<group>"; };
 		BF8BFCDE229E462F0035AB90 /* NavigationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationInteractor.swift; sourceTree = "<group>"; };
-		BF8BFCDF229E462F0035AB90 /* NavigationOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationOutput.swift; sourceTree = "<group>"; };
-		BF8BFCE0229E462F0035AB90 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
 		BFB7B727229DC85D001CCD49 /* CRAMemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAMemoryCache.swift; sourceTree = "<group>"; };
 		BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+MemoryCache.swift"; sourceTree = "<group>"; };
 		BFB7B72C229DE04B001CCD49 /* CRACache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRACache.swift; sourceTree = "<group>"; };
@@ -314,9 +308,6 @@
 				BF8BFCDE229E462F0035AB90 /* NavigationInteractor.swift */,
 				BF8BFCD9229E462F0035AB90 /* NavigationRouter.swift */,
 				BF8BFCDD229E462F0035AB90 /* NavigationBuilder.swift */,
-				BF8BFCD7229E462F0035AB90 /* NavigationInput.swift */,
-				BF8BFCDF229E462F0035AB90 /* NavigationOutput.swift */,
-				BF8BFCE0229E462F0035AB90 /* NavigationViewModel.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -655,7 +646,6 @@
 				BFD2E003229D00E6008EC33D /* StoryboardIdentifiable+Self.swift in Sources */,
 				BFD2E019229D01D8008EC33D /* CRANetworkingServiceResponse.swift in Sources */,
 				BF8BFCCF229E425F0035AB90 /* MoviesBuilder.swift in Sources */,
-				BF8BFCE9229E462F0035AB90 /* NavigationOutput.swift in Sources */,
 				BFD2DFEA229CFD68008EC33D /* CRANestedCollectionViewRowCell.swift in Sources */,
 				BF8BFCE8229E462F0035AB90 /* NavigationInteractor.swift in Sources */,
 				BF8BFCE5229E462F0035AB90 /* NavigationViewController.swift in Sources */,
@@ -688,7 +678,6 @@
 				BF8BFCA0229E1B250035AB90 /* CRANetworkingProviderResponse.swift in Sources */,
 				BFD2E007229D00E6008EC33D /* UICollectionView+StoryboardIdentifiable.swift in Sources */,
 				BFD2E015229D01BE008EC33D /* CRANetworkingProviderError.swift in Sources */,
-				BF8BFCE1229E462F0035AB90 /* NavigationInput.swift in Sources */,
 				BFB7B72B229DCC34001CCD49 /* UIImageView+MemoryCache.swift in Sources */,
 				BF8BFCB2229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift in Sources */,
 				BFD2E004229D00E6008EC33D /* UIStoryboard+StoryboardIdentifiable.swift in Sources */,
@@ -700,7 +689,6 @@
 				BF8BFCB9229E41010035AB90 /* CRANestedCollectionViewRowCellDataSource.swift in Sources */,
 				BF8BFCD4229E45190035AB90 /* UIStoryboard+Identifiers.swift in Sources */,
 				BFD2E020229D0221008EC33D /* CRANetworkingRequestHTTPMethod.swift in Sources */,
-				BF8BFCEA229E462F0035AB90 /* NavigationViewModel.swift in Sources */,
 				BFD2DFF2229D0022008EC33D /* Array++.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

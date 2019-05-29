@@ -6,30 +6,17 @@
 //  Copyright © 2019 christianampe. All rights reserved.
 //
 
-protocol NavigationInputProtocol {}
-
-protocol NavigationViewModelProtocol {}
-
-protocol NavigationOutputProtocol {}
-
-protocol NavigationDelegateProtocol: class {}
-
-protocol NavigationViewProtocol: class {
-    var input: NavigationInputProtocol? { get set }
-    var output: NavigationOutputProtocol? { get set }
-    var viewModel: NavigationViewModelProtocol? { get set }
-    var presenter: NavigationPresenterProtocol?  { get set }
-    var delegate: NavigationDelegateProtocol? { get set }
-}
-
-protocol NavigationPresenterProtocol: class {
-    var view: NavigationViewProtocol? { get set }
+protocol NavigationPresenterProtocol: MoviesDelegateProtocol {
     var interactor: NavigationInteractorProtocol? { get set }
     var router: NavigationRouterProtocol? { get set }
+    
+    func start()
 }
 
 protocol NavigationInteractorProtocol: class {
     var presenter: NavigationPresenterProtocol?  { get set }
 }
 
-protocol NavigationRouterProtocol: class {}
+protocol NavigationRouterProtocol: class {
+    func presentMovies(_ delegate: MoviesDelegateProtocol, input: MoviesInput)
+}

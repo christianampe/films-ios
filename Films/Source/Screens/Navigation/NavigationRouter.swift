@@ -9,5 +9,15 @@
 import UIKit
 
 final class NavigationRouter: NavigationRouterProtocol {
-    weak var viewController: UIViewController?
+    weak var navigationController: UINavigationController?
+}
+
+extension NavigationRouter {
+    func presentMovies(_ delegate: MoviesDelegateProtocol,
+                       input: MoviesInput) {
+        
+        navigationController?.setViewControllers([MoviesBuilder.create(delegate,
+                                                                       input: input)],
+                                                 animated: true)
+    }
 }

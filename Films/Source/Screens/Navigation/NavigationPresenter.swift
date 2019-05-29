@@ -9,7 +9,12 @@
 import UIKit
 
 final class NavigationPresenter: NavigationPresenterProtocol {
-    weak var view: NavigationViewProtocol?
     var interactor: NavigationInteractorProtocol?
     var router: NavigationRouterProtocol?
+}
+
+extension NavigationPresenter {
+    func start() {
+        router?.presentMovies(self, input: MoviesInput())
+    }
 }

@@ -9,25 +9,16 @@
 import UIKit
 
 final class NavigationBuilder {
-    static func create(_ delegate: NavigationDelegateProtocol?, input: NavigationInputProtocol, viewModel: NavigationViewModelProtocol = NavigationViewModel(), output: NavigationOutputProtocol = NavigationOutput()) -> UIViewController {
-        
-        let storyboard = UIStoryboard(storyboard: )
-        let view: NavigationViewController = storyboard.instantiateViewController()
+    static func create(navigationController: UINavigationController?) {
+        let presenter = NavigationPresenter()
         let interactor = NavigationInteractor()
         let router = NavigationRouter()
-        let presenter = NavigationPresenter()
         
-        view.input = input
-        view.viewModel = viewModel
-        view.output = output
-        view.presenter = presenter
-        view.delegate = delegate
-        presenter.view = view
+        interactor.presenter = presenter
+        router.navigationController = navigationController
         presenter.interactor = interactor
         presenter.router = router
-        interactor.presenter = presenter
-        router.viewController = view
         
-        return view
+        presenter.start()
     }
 }

@@ -39,7 +39,10 @@ extension CRANestedCollectionViewRowCell: UICollectionViewDataSource {
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(for: indexPath) as CRANestedCollectionViewItemCell
-        cell.configure(with: dataSource.nestedCollectionViewRowCell(self, viewModelAtIndex: indexPath.row))
+        
+        if let viewModel = dataSource.nestedCollectionViewRowCell(self, viewModelAtIndex: indexPath.row) {
+            cell.configure(with: viewModel)
+        }
         
         return cell
     }
