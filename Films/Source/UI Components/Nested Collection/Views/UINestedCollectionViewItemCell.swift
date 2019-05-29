@@ -103,56 +103,7 @@ extension UINestedCollectionViewItemCell: UICollectionViewDataSource {
     }
 }
 
-// MARK: - UICollectionViewDelegate
-extension UINestedCollectionViewItemCell: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView,
-                        didSelectItemAt indexPath: IndexPath) {
-        
-        guard indexPath.section == 0 else {
-            assertionFailure("collections should only have one section")
-            return
-        }
-        
-        delegate?.collectionView(collectionView,
-                                 didSelectItemAt: indexPath.item)
-    }
-    
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView,
-                                   withVelocity velocity: CGPoint,
-                                   targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        
-        targetContentOffset.pointee.x = nextFocus(for: scrollView, withVelocity: velocity).offset
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        currentItemIndex = nextFocus(for: scrollView).index
-        
-        delegate?.collectionView(collectionView,
-                                 didDisplayCellAt: currentItemIndex)
-    }
-    
-    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-        currentItemIndex = nextFocus(for: scrollView).index
-        
-        delegate?.collectionView(collectionView,
-                                 didDisplayCellAt: currentItemIndex)
-    }
-}
-
 // MARK: - UICollectionViewDelegateFlowLayout
 extension UINestedCollectionViewItemCell: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: UINestedCollectionViewItemCell.itemWidth,
-                      height: collectionView.layer.frame.height)
-    }
     
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        
-        return UINestedCollectionViewItemCell.itemSpacing
-    }
 }

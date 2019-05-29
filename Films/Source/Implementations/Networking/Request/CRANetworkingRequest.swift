@@ -1,21 +1,13 @@
-//
-//  NetworkingRequest.swift
-//  WeedmapsChallenge
-//
-//  Created by Christian Ampe on 5/23/19.
-//  Copyright © 2019 Weedmaps, LLC. All rights reserved.
-//
-
 import Foundation
 
 // MARK: - Network Request Protocol
-protocol NetworkingRequest {
+protocol CRANetworkingRequestProtocol {
     
     /// The target's base url.
     var baseURL: URL { get }
     
     /// The http method used in the request.
-    var method: NetworkingRequestHTTPMethod { get }
+    var method: CRANetworkingRequestHTTPMethod { get }
     
     /// The path to be appended to base url to form the full url.
     var path: String { get }
@@ -30,7 +22,7 @@ protocol NetworkingRequest {
 }
 
 // MARK: - Public Constructor
-extension NetworkingRequest {
+extension CRANetworkingRequestProtocol {
     
     /// URL request constructed from the object.
     var urlRequest: URLRequest {
@@ -56,14 +48,14 @@ extension NetworkingRequest {
 }
 
 // MARK: - Private Request Constructor Helpers
-private extension NetworkingRequest {
+private extension CRANetworkingRequestProtocol {
     
     /// Adds the http method type to the request.
     ///
     /// - Parameters:
     ///   - method: HTTP method to be executed.
     ///   - request: Inout url request being constructed.
-    func addMethod(_ method: NetworkingRequestHTTPMethod,
+    func addMethod(_ method: CRANetworkingRequestHTTPMethod,
                    to request: inout URLRequest) {
         
         request.httpMethod = method.name

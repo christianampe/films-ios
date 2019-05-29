@@ -1,27 +1,19 @@
-//
-//  NetworkingService.swift
-//  Client
-//
-//  Created by Christian Ampe on 9/17/18.
-//  Copyright © 2018 Educrate. All rights reserved.
-//
-
 import Foundation
 
-protocol NetworkingServiceProtocol {
-    associatedtype R: NetworkingServiceResponseProtocol
+protocol CRANetworkingServiceProtocol {
+    associatedtype R: CRANetworkingServiceResponseProtocol
     associatedtype E: Swift.Error
     
     func request(_ request: URLRequest, completion: @escaping (Result<R, E>) -> Void) -> URLSessionDataTask
 }
 
-class NetworkingService {
+class CRANetworkingService {
     
     /// URL session used to make all network requests.
     private let session = URLSession(configuration: .default)
 }
 
-extension NetworkingService: NetworkingServiceProtocol {
+extension CRANetworkingService: CRANetworkingServiceProtocol {
     
     /// Core method for making a network request.
     ///
@@ -30,7 +22,7 @@ extension NetworkingService: NetworkingServiceProtocol {
     ///   - completion: Returns a generic result containing either an error or successful response.
     @discardableResult
     func request(_ request: URLRequest,
-                 completion: @escaping (Result<Response, Error>) -> Void) -> URLSessionDataTask {
+                 completion: @escaping (Result<CRANetworkingServiceResponse, CRANetworkingServiceError>) -> Void) -> URLSessionDataTask {
         
         // make network request utilizing Apple's API
         let task = session.dataTask(with: request) { data, response, error in
@@ -52,9 +44,9 @@ extension NetworkingService: NetworkingServiceProtocol {
             } else if let data = data {
                 
                 // if there is data map it into a NetworkingResponse
-                completion(.success(Response(data: data,
-                                             request: request,
-                                             response: response)))
+                completion(.success(CRANetworkingServiceResponse(data: data,
+                                                                 request: request,
+                                                                 response: response)))
             }
         }
         

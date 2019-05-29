@@ -105,46 +105,6 @@ extension UINestedCollectionViewController: UITableViewDataSource {
     }
 }
 
-// MARK: - UITableViewDelegate
-extension UINestedCollectionViewController: UITableViewDelegate {
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView,
-                                   withVelocity velocity: CGPoint,
-                                   targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        
-        targetContentOffset.pointee.y = nextFocus(for: scrollView, withVelocity: velocity).offset
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let index = nextFocus(for: scrollView).index
-        
-        guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: index)) as? UINestedCollectionViewItemCell else {
-            assertionFailure("incorrect cell type used")
-            return
-        }
-        
-        currentIndexPath.row = cell.currentItemIndex
-        currentIndexPath.section = index
-        
-        delegate?.tableView(tableView,
-                            didDisplayItemAt: currentIndexPath)
-    }
-    
-    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-        let index = nextFocus(for: scrollView).index
-        
-        guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: index)) as? UINestedCollectionViewItemCell else {
-            assertionFailure("incorrect cell type used")
-            return
-        }
-        
-        currentIndexPath.row = cell.currentItemIndex
-        currentIndexPath.section = index
-        
-        delegate?.tableView(tableView,
-                            didDisplayItemAt: currentIndexPath)
-    }
-}
-
 // MARK: - UINestedCollectionViewColumnCellDelegate
 extension UINestedCollectionViewController: UINestedCollectionViewItemCellDelegate {
     func collectionView(_ collectionView: UICollectionView,

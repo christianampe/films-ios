@@ -1,14 +1,6 @@
-//
-//  NetworkingRequestValidationCode.swift
-//  WeedmapsChallenge
-//
-//  Created by Christian Ampe on 5/25/19.
-//  Copyright © 2019 Weedmaps, LLC. All rights reserved.
-//
-
 import Foundation
 
-enum NetworkingRequestValidation {
+enum CRANetworkingRequestValidation {
     
     /// No validation.
     case none
@@ -23,7 +15,7 @@ enum NetworkingRequestValidation {
     case customCodes([Int])
 }
 
-extension NetworkingRequestValidation {
+extension CRANetworkingRequestValidation {
     
     /// The list of HTTP status codes to validate.
     var statusCodes: [Int] {

@@ -1,30 +1,22 @@
-//
-//  Networking.swift
-//  WeedmapsChallenge
-//
-//  Created by Christian Ampe on 5/23/19.
-//
-
 import Foundation
 
-protocol NetworkingProviderProtocol {
-    associatedtype T: NetworkingRequest
-    associatedtype R: NetworkingServiceResponseProtocol
-    associatedtype E: Swift.Error
+protocol CRANetworkingProviderProtocol {
+    associatedtype T: CRANetworkingRequestProtocol
+    associatedtype R: CRANetworkingProviderResponseProtocol
     
-    func request(_ target: T, completion: @escaping (Result<R, E>) -> Void) -> URLSessionDataTask
+    func request(_ target: T, completion: @escaping (Result<R, CRANetworkingProviderError>) -> Void) -> URLSessionDataTask
 }
 
 // MARK: - Networking Class
-class NetworkingProvider<T: NetworkingRequest> {
+class CRANetworkingProvider<T: CRANetworkingRequestProtocol> {
     
     /// Initialized provider holding reference
     /// to the innerworkings of the service layer.
-    private let service = NetworkingService()
+    private let service = CRANetworkingService()
 }
 
 // MARK: - Internal API
-extension NetworkingProvider: NetworkingProviderProtocol {
+extension CRANetworkingProvider: CRANetworkingProviderProtocol {
     
     /// Request method used for requesting any service supported network calls.
     ///
@@ -33,7 +25,7 @@ extension NetworkingProvider: NetworkingProviderProtocol {
     ///     - completion: Result returning either a parsed model or an error.
     @discardableResult
     func request(_ target: T,
-                 completion: @escaping (Result<NetworkingService.Response, Error>) -> Void) -> URLSessionDataTask {
+                 completion: @escaping (Result<CRANetworkingProviderResponse, CRANetworkingProviderError>) -> Void) -> URLSessionDataTask {
         
         // make request to specified target
         return service.request(target.urlRequest) { result in
@@ -44,7 +36,9 @@ extension NetworkingProvider: NetworkingProviderProtocol {
             case .success(let response):
                 
                 // successful result
-                completion(.success(response))
+                completion(.success(CRANetworkingProviderResponse(data: response.data,
+                                                                  request: response.request,
+                                                                  response: response.response)))
                 
             case .failure(let error):
                 

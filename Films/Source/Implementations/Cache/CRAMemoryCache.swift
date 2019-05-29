@@ -9,7 +9,7 @@
 import Foundation
 
 class CRAMemoryCache<T: AnyObject>: CRACacheProtocol {
-    private let storage = NSCache<NSString, Value>()
+    private let storage = NSCache<NSString, T>()
 }
 
 extension CRAMemoryCache {

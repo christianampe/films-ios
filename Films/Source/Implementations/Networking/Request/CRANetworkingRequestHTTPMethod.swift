@@ -1,14 +1,6 @@
-//
-//  NetworkingRequestHTTPMethod.swift
-//  WeedmapsChallenge
-//
-//  Created by Christian Ampe on 5/23/19.
-//  Copyright © 2019 Weedmaps, LLC. All rights reserved.
-//
-
 import Foundation
 
-enum NetworkingRequestHTTPMethod: String {
+enum CRANetworkingRequestHTTPMethod: String {
     
     /// https://tools.ietf.org/html/rfc7231#section-4.3.1
     case get
@@ -35,7 +27,7 @@ enum NetworkingRequestHTTPMethod: String {
     case trace
 }
 
-extension NetworkingRequestHTTPMethod {
+extension CRANetworkingRequestHTTPMethod {
     
     /// Uppercased representation of the method name.
     var name: String {

@@ -15,6 +15,11 @@
 		BF256DD6229CD77A00794D56 /* FilmsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF256DD5229CD77A00794D56 /* FilmsUITests.swift */; };
 		BF8BFC9C229DE7310035AB90 /* UserDefaultable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFC9B229DE7310035AB90 /* UserDefaultable.swift */; };
 		BF8BFC9E229DEA120035AB90 /* StoryboardIdentifiable++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFC9D229DEA120035AB90 /* StoryboardIdentifiable++.swift */; };
+		BF8BFCA0229E1B250035AB90 /* CRANetworkingProviderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFC9F229E1B250035AB90 /* CRANetworkingProviderResponse.swift */; };
+		BF8BFCA5229E2DCC0035AB90 /* CRAGenericCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCA4229E2DCC0035AB90 /* CRAGenericCollectionDataSource.swift */; };
+		BF8BFCA7229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCA6229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift */; };
+		BF8BFCAA229E2E490035AB90 /* CRAGenericTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCA9229E2E480035AB90 /* CRAGenericTableViewDataSource.swift */; };
+		BF8BFCAD229E2EA40035AB90 /* CRAGenericCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCAC229E2EA40035AB90 /* CRAGenericCollectionViewDataSource.swift */; };
 		BFB7B728229DC85D001CCD49 /* CRAMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B727229DC85D001CCD49 /* CRAMemoryCache.swift */; };
 		BFB7B72B229DCC34001CCD49 /* UIImageView+MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */; };
 		BFB7B72D229DE04B001CCD49 /* CRACache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B72C229DE04B001CCD49 /* CRACache.swift */; };
@@ -34,14 +39,14 @@
 		BFD2E008229D00E6008EC33D /* UITableView+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFFF229D00E6008EC33D /* UITableView+StoryboardIdentifiable.swift */; };
 		BFD2E00A229D00E6008EC33D /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E001229D00E6008EC33D /* StoryboardIdentifiable.swift */; };
 		BFD2E00E229D0131008EC33D /* KeyNamespaceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E00D229D0131008EC33D /* KeyNamespaceable.swift */; };
-		BFD2E014229D01BE008EC33D /* NetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E012229D01BE008EC33D /* NetworkingProvider.swift */; };
-		BFD2E015229D01BE008EC33D /* NetworkingProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E013229D01BE008EC33D /* NetworkingProviderError.swift */; };
-		BFD2E019229D01D8008EC33D /* NetworkingServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E016229D01D8008EC33D /* NetworkingServiceResponse.swift */; };
+		BFD2E014229D01BE008EC33D /* CRANetworkingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E012229D01BE008EC33D /* CRANetworkingProvider.swift */; };
+		BFD2E015229D01BE008EC33D /* CRANetworkingProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E013229D01BE008EC33D /* CRANetworkingProviderError.swift */; };
+		BFD2E019229D01D8008EC33D /* CRANetworkingServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E016229D01D8008EC33D /* CRANetworkingServiceResponse.swift */; };
 		BFD2E01A229D01D8008EC33D /* NetworkingServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E017229D01D8008EC33D /* NetworkingServiceError.swift */; };
-		BFD2E01B229D01D8008EC33D /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E018229D01D8008EC33D /* NetworkingService.swift */; };
-		BFD2E020229D0221008EC33D /* NetworkingRequestHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E01D229D0221008EC33D /* NetworkingRequestHTTPMethod.swift */; };
-		BFD2E021229D0221008EC33D /* NetworkingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E01E229D0221008EC33D /* NetworkingRequest.swift */; };
-		BFD2E022229D0221008EC33D /* NetworkingRequestValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E01F229D0221008EC33D /* NetworkingRequestValidation.swift */; };
+		BFD2E01B229D01D8008EC33D /* CRANetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E018229D01D8008EC33D /* CRANetworkingService.swift */; };
+		BFD2E020229D0221008EC33D /* CRANetworkingRequestHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E01D229D0221008EC33D /* CRANetworkingRequestHTTPMethod.swift */; };
+		BFD2E021229D0221008EC33D /* CRANetworkingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E01E229D0221008EC33D /* CRANetworkingRequest.swift */; };
+		BFD2E022229D0221008EC33D /* CRANetworkingRequestValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E01F229D0221008EC33D /* CRANetworkingRequestValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +81,11 @@
 		BF256DD7229CD77A00794D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF8BFC9B229DE7310035AB90 /* UserDefaultable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultable.swift; sourceTree = "<group>"; };
 		BF8BFC9D229DEA120035AB90 /* StoryboardIdentifiable++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryboardIdentifiable++.swift"; sourceTree = "<group>"; };
+		BF8BFC9F229E1B250035AB90 /* CRANetworkingProviderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANetworkingProviderResponse.swift; sourceTree = "<group>"; };
+		BF8BFCA4229E2DCC0035AB90 /* CRAGenericCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericCollectionDataSource.swift; sourceTree = "<group>"; };
+		BF8BFCA6229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericCollectionCellProtocol.swift; sourceTree = "<group>"; };
+		BF8BFCA9229E2E480035AB90 /* CRAGenericTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericTableViewDataSource.swift; sourceTree = "<group>"; };
+		BF8BFCAC229E2EA40035AB90 /* CRAGenericCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		BFB7B727229DC85D001CCD49 /* CRAMemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAMemoryCache.swift; sourceTree = "<group>"; };
 		BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+MemoryCache.swift"; sourceTree = "<group>"; };
 		BFB7B72C229DE04B001CCD49 /* CRACache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRACache.swift; sourceTree = "<group>"; };
@@ -95,14 +105,14 @@
 		BFD2DFFF229D00E6008EC33D /* UITableView+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
 		BFD2E001229D00E6008EC33D /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		BFD2E00D229D0131008EC33D /* KeyNamespaceable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyNamespaceable.swift; sourceTree = "<group>"; };
-		BFD2E012229D01BE008EC33D /* NetworkingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingProvider.swift; sourceTree = "<group>"; };
-		BFD2E013229D01BE008EC33D /* NetworkingProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingProviderError.swift; sourceTree = "<group>"; };
-		BFD2E016229D01D8008EC33D /* NetworkingServiceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingServiceResponse.swift; sourceTree = "<group>"; };
+		BFD2E012229D01BE008EC33D /* CRANetworkingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANetworkingProvider.swift; sourceTree = "<group>"; };
+		BFD2E013229D01BE008EC33D /* CRANetworkingProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANetworkingProviderError.swift; sourceTree = "<group>"; };
+		BFD2E016229D01D8008EC33D /* CRANetworkingServiceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANetworkingServiceResponse.swift; sourceTree = "<group>"; };
 		BFD2E017229D01D8008EC33D /* NetworkingServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingServiceError.swift; sourceTree = "<group>"; };
-		BFD2E018229D01D8008EC33D /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
-		BFD2E01D229D0221008EC33D /* NetworkingRequestHTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequestHTTPMethod.swift; sourceTree = "<group>"; };
-		BFD2E01E229D0221008EC33D /* NetworkingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequest.swift; sourceTree = "<group>"; };
-		BFD2E01F229D0221008EC33D /* NetworkingRequestValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingRequestValidation.swift; sourceTree = "<group>"; };
+		BFD2E018229D01D8008EC33D /* CRANetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANetworkingService.swift; sourceTree = "<group>"; };
+		BFD2E01D229D0221008EC33D /* CRANetworkingRequestHTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANetworkingRequestHTTPMethod.swift; sourceTree = "<group>"; };
+		BFD2E01E229D0221008EC33D /* CRANetworkingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANetworkingRequest.swift; sourceTree = "<group>"; };
+		BFD2E01F229D0221008EC33D /* CRANetworkingRequestValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANetworkingRequestValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +257,33 @@
 			path = KeyNamespaceable;
 			sourceTree = "<group>";
 		};
+		BF8BFCA1229E1E690035AB90 /* Generic Collections */ = {
+			isa = PBXGroup;
+			children = (
+				BF8BFCAB229E2E890035AB90 /* Collection View */,
+				BF8BFCA8229E2E260035AB90 /* Table View */,
+				BF8BFCA4229E2DCC0035AB90 /* CRAGenericCollectionDataSource.swift */,
+				BF8BFCA6229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift */,
+			);
+			path = "Generic Collections";
+			sourceTree = "<group>";
+		};
+		BF8BFCA8229E2E260035AB90 /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				BF8BFCA9229E2E480035AB90 /* CRAGenericTableViewDataSource.swift */,
+			);
+			path = "Table View";
+			sourceTree = "<group>";
+		};
+		BF8BFCAB229E2E890035AB90 /* Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				BF8BFCAC229E2EA40035AB90 /* CRAGenericCollectionViewDataSource.swift */,
+			);
+			path = "Collection View";
+			sourceTree = "<group>";
+		};
 		BFB7B726229DC84E001CCD49 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +297,7 @@
 		BFD2DFE1229CFD42008EC33D /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				BF8BFCA1229E1E690035AB90 /* Generic Collections */,
 				BFD2DFE2229CFD4F008EC33D /* Nested Collection */,
 			);
 			path = "UI Components";
@@ -367,8 +405,9 @@
 		BFD2E010229D018A008EC33D /* Provider */ = {
 			isa = PBXGroup;
 			children = (
-				BFD2E012229D01BE008EC33D /* NetworkingProvider.swift */,
-				BFD2E013229D01BE008EC33D /* NetworkingProviderError.swift */,
+				BFD2E012229D01BE008EC33D /* CRANetworkingProvider.swift */,
+				BF8BFC9F229E1B250035AB90 /* CRANetworkingProviderResponse.swift */,
+				BFD2E013229D01BE008EC33D /* CRANetworkingProviderError.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -376,8 +415,8 @@
 		BFD2E011229D018F008EC33D /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				BFD2E018229D01D8008EC33D /* NetworkingService.swift */,
-				BFD2E016229D01D8008EC33D /* NetworkingServiceResponse.swift */,
+				BFD2E018229D01D8008EC33D /* CRANetworkingService.swift */,
+				BFD2E016229D01D8008EC33D /* CRANetworkingServiceResponse.swift */,
 				BFD2E017229D01D8008EC33D /* NetworkingServiceError.swift */,
 			);
 			path = Service;
@@ -386,9 +425,9 @@
 		BFD2E01C229D020F008EC33D /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				BFD2E01E229D0221008EC33D /* NetworkingRequest.swift */,
-				BFD2E01D229D0221008EC33D /* NetworkingRequestHTTPMethod.swift */,
-				BFD2E01F229D0221008EC33D /* NetworkingRequestValidation.swift */,
+				BFD2E01E229D0221008EC33D /* CRANetworkingRequest.swift */,
+				BFD2E01D229D0221008EC33D /* CRANetworkingRequestHTTPMethod.swift */,
+				BFD2E01F229D0221008EC33D /* CRANetworkingRequestValidation.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -527,14 +566,17 @@
 				BFB7B72D229DE04B001CCD49 /* CRACache.swift in Sources */,
 				BF256DBB229CD77900794D56 /* Films.xcdatamodeld in Sources */,
 				BFD2DFEF229CFDD6008EC33D /* UINestedCollectionViewRowCellViewModelProtocol.swift in Sources */,
-				BFD2E01B229D01D8008EC33D /* NetworkingService.swift in Sources */,
+				BFD2E01B229D01D8008EC33D /* CRANetworkingService.swift in Sources */,
+				BF8BFCAD229E2EA40035AB90 /* CRAGenericCollectionViewDataSource.swift in Sources */,
+				BF8BFCA5229E2DCC0035AB90 /* CRAGenericCollectionDataSource.swift in Sources */,
 				BFD2E003229D00E6008EC33D /* StoryboardIdentifiable+Self.swift in Sources */,
-				BFD2E019229D01D8008EC33D /* NetworkingServiceResponse.swift in Sources */,
+				BFD2E019229D01D8008EC33D /* CRANetworkingServiceResponse.swift in Sources */,
 				BFD2DFEA229CFD68008EC33D /* UINestedCollectionViewItemCell.swift in Sources */,
 				BF8BFC9C229DE7310035AB90 /* UserDefaultable.swift in Sources */,
 				BFD2E008229D00E6008EC33D /* UITableView+StoryboardIdentifiable.swift in Sources */,
 				BFD2DFF8229D00DB008EC33D /* SegueIdentifiable.swift in Sources */,
 				BFD2E01A229D01D8008EC33D /* NetworkingServiceError.swift in Sources */,
+				BF8BFCA7229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift in Sources */,
 				BFD2E00E229D0131008EC33D /* KeyNamespaceable.swift in Sources */,
 				BFD2DFF9229D00DB008EC33D /* SegueIdentifiable+UIViewController.swift in Sources */,
 				BF8BFC9E229DEA120035AB90 /* StoryboardIdentifiable++.swift in Sources */,
@@ -542,17 +584,19 @@
 				BF256DB3229CD77900794D56 /* AppDelegate.swift in Sources */,
 				BFB7B72F229DE13B001CCD49 /* CRADiskCache.swift in Sources */,
 				BFD2E00A229D00E6008EC33D /* StoryboardIdentifiable.swift in Sources */,
-				BFD2E021229D0221008EC33D /* NetworkingRequest.swift in Sources */,
-				BFD2E022229D0221008EC33D /* NetworkingRequestValidation.swift in Sources */,
+				BFD2E021229D0221008EC33D /* CRANetworkingRequest.swift in Sources */,
+				BFD2E022229D0221008EC33D /* CRANetworkingRequestValidation.swift in Sources */,
 				BFD2E006229D00E6008EC33D /* UIStoryboardSegue+StoryboardIdentifiable.swift in Sources */,
 				BFD2DFE7229CFD68008EC33D /* UINestedCollectionViewRowCell.swift in Sources */,
+				BF8BFCA0229E1B250035AB90 /* CRANetworkingProviderResponse.swift in Sources */,
 				BFD2E007229D00E6008EC33D /* UICollectionView+StoryboardIdentifiable.swift in Sources */,
-				BFD2E015229D01BE008EC33D /* NetworkingProviderError.swift in Sources */,
+				BFD2E015229D01BE008EC33D /* CRANetworkingProviderError.swift in Sources */,
 				BFB7B72B229DCC34001CCD49 /* UIImageView+MemoryCache.swift in Sources */,
 				BFD2E004229D00E6008EC33D /* UIStoryboard+StoryboardIdentifiable.swift in Sources */,
-				BFD2E014229D01BE008EC33D /* NetworkingProvider.swift in Sources */,
+				BFD2E014229D01BE008EC33D /* CRANetworkingProvider.swift in Sources */,
+				BF8BFCAA229E2E490035AB90 /* CRAGenericTableViewDataSource.swift in Sources */,
 				BFB7B728229DC85D001CCD49 /* CRAMemoryCache.swift in Sources */,
-				BFD2E020229D0221008EC33D /* NetworkingRequestHTTPMethod.swift in Sources */,
+				BFD2E020229D0221008EC33D /* CRANetworkingRequestHTTPMethod.swift in Sources */,
 				BFD2DFF2229D0022008EC33D /* Array++.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -722,7 +766,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8T6KWW939D;
-				INFOPLIST_FILE = Films/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Films/Storage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -740,7 +784,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8T6KWW939D;
-				INFOPLIST_FILE = Films/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Films/Storage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
