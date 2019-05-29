@@ -51,7 +51,7 @@
 		BFD2DFE8229CFD68008EC33D /* CRANestedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFE4229CFD67008EC33D /* CRANestedCollectionViewController.swift */; };
 		BFD2DFE9229CFD68008EC33D /* CRANestedCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD2DFE5229CFD68008EC33D /* CRANestedCollection.storyboard */; };
 		BFD2DFEA229CFD68008EC33D /* CRANestedCollectionViewRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFE6229CFD68008EC33D /* CRANestedCollectionViewRowCell.swift */; };
-		BFD2DFEF229CFDD6008EC33D /* CRANestedCollectionViewRowCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFEE229CFDD6008EC33D /* CRANestedCollectionViewRowCellViewModelProtocol.swift */; };
+		BFD2DFEF229CFDD6008EC33D /* CRANestedCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFEE229CFDD6008EC33D /* CRANestedCollectionViewItem.swift */; };
 		BFD2DFF2229D0022008EC33D /* Array++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFF1229D0022008EC33D /* Array++.swift */; };
 		BFD2DFF8229D00DB008EC33D /* SegueIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFF6229D00DB008EC33D /* SegueIdentifiable.swift */; };
 		BFD2DFF9229D00DB008EC33D /* SegueIdentifiable+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2DFF7229D00DB008EC33D /* SegueIdentifiable+UIViewController.swift */; };
@@ -140,7 +140,7 @@
 		BFD2DFE4229CFD67008EC33D /* CRANestedCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewController.swift; sourceTree = "<group>"; };
 		BFD2DFE5229CFD68008EC33D /* CRANestedCollection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CRANestedCollection.storyboard; sourceTree = "<group>"; };
 		BFD2DFE6229CFD68008EC33D /* CRANestedCollectionViewRowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewRowCell.swift; sourceTree = "<group>"; };
-		BFD2DFEE229CFDD6008EC33D /* CRANestedCollectionViewRowCellViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewRowCellViewModelProtocol.swift; sourceTree = "<group>"; };
+		BFD2DFEE229CFDD6008EC33D /* CRANestedCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewItem.swift; sourceTree = "<group>"; };
 		BFD2DFF1229D0022008EC33D /* Array++.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array++.swift"; sourceTree = "<group>"; };
 		BFD2DFF6229D00DB008EC33D /* SegueIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifiable.swift; sourceTree = "<group>"; };
 		BFD2DFF7229D00DB008EC33D /* SegueIdentifiable+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SegueIdentifiable+UIViewController.swift"; sourceTree = "<group>"; };
@@ -402,7 +402,7 @@
 		BFD2DFED229CFDC9008EC33D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BFD2DFEE229CFDD6008EC33D /* CRANestedCollectionViewRowCellViewModelProtocol.swift */,
+				BFD2DFEE229CFDD6008EC33D /* CRANestedCollectionViewItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -637,7 +637,7 @@
 				BFB7B72D229DE04B001CCD49 /* CRACache.swift in Sources */,
 				BF8BFCE7229E462F0035AB90 /* NavigationBuilder.swift in Sources */,
 				BF256DBB229CD77900794D56 /* Films.xcdatamodeld in Sources */,
-				BFD2DFEF229CFDD6008EC33D /* CRANestedCollectionViewRowCellViewModelProtocol.swift in Sources */,
+				BFD2DFEF229CFDD6008EC33D /* CRANestedCollectionViewItem.swift in Sources */,
 				BFD2E01B229D01D8008EC33D /* CRANetworkingService.swift in Sources */,
 				BF8BFCAD229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift in Sources */,
 				BF8BFCB4229E3AEC0035AB90 /* CRANestedCollectionViewDelegate.swift in Sources */,

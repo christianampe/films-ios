@@ -1,5 +1,5 @@
 //
-//  UINestedCollectionViewRowCellViewModelProtocol.swift
+//  UINestedCollectionViewItem.swift
 //  Films
 //
 //  Created by Christian Ampe on 5/11/19.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol CRANestedCollectionViewRowCellViewModelProtocol {
+protocol CRANestedCollectionViewItem {
     var backgroundImageURLString: String { get }
 }

@@ -53,7 +53,7 @@ extension CRANestedCollectionViewController: CRANestedCollectionViewRowCellDataS
     }
     
     func nestedCollectionViewRowCell(_ nestedCollectionViewRowCell: CRANestedCollectionViewRowCell,
-                                     viewModelAtIndex index: Int) -> CRANestedCollectionViewRowCellViewModelProtocol? {
+                                     viewModelAtIndex index: Int) -> CRANestedCollectionViewItem? {
         
         return dataSource?.nestedCollectionViewController(self, viewModelAtIndexPath: IndexPath(item: index,
                                                                                                section: nestedCollectionViewRowCell.rowIndex))

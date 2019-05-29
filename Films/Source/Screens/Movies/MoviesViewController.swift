@@ -8,6 +8,10 @@
 
 import UIKit
 
+struct Movie: CRANestedCollectionViewItem {
+    let backgroundImageURLString: String
+}
+
 final class MoviesViewController: UIViewController, MoviesViewProtocol {
     var input: MoviesInputProtocol?
     var viewModel: MoviesViewModelProtocol?
@@ -16,6 +20,14 @@ final class MoviesViewController: UIViewController, MoviesViewProtocol {
     weak var delegate: MoviesDelegateProtocol?
     
     private var nestedCollection: CRANestedCollectionViewController!
+    
+    
+    var items: [[Movie]] = {
+        let movie = Movie(backgroundImageURLString: "https://m.media-amazon.com/images/M/MV5BN2I3NzVlMTktNWZmYi00ODk1LWE1YzUtYzVlMmY5ZjYwMTk1XkEyXkFqcGdeQXVyMzU0NzkwMDg@._V1_SX300.jpg")
+        let movies = [movie, movie, movie, movie]
+        
+        return [movies, movies.dropLast(2), movies + movies]
+    }()
 }
 
 // MARK: - Lifecycle
@@ -24,7 +36,26 @@ extension MoviesViewController {
         switch segueCase(for: segue) {
         case .embedNestedCollection:
             nestedCollection = segue.viewController()
+            nestedCollection.dataSource = self
         }
+    }
+}
+
+extension MoviesViewController: CRANestedCollectionViewDataSource {
+    func numberOfRows(in nestedCollectionViewController: CRANestedCollectionViewController) -> Int {
+        return items.count
+    }
+    
+    func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
+                                        numberOfItemsInRow row: Int) -> Int {
+        
+        return items[row].count
+    }
+    
+    func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
+                                        viewModelAtIndexPath indexPath: IndexPath) -> CRANestedCollectionViewItem {
+        
+        return items[indexPath.section][indexPath.item]
     }
 }
 

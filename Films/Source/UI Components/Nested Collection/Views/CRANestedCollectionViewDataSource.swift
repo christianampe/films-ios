@@ -15,5 +15,5 @@ protocol CRANestedCollectionViewDataSource: class {
                                         numberOfItemsInRow row: Int) -> Int
     
     func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
-                                        viewModelAtIndexPath indexPath: IndexPath) -> CRANestedCollectionViewRowCellViewModelProtocol
+                                        viewModelAtIndexPath indexPath: IndexPath) -> CRANestedCollectionViewItem
 }
