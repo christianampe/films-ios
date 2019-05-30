@@ -48,6 +48,11 @@ extension CRANavigationDropdownViewController {
         // configure the view
         view.translatesAutoresizingMaskIntoConstraints = false
         
+        // configure the navigation bar
+        sourceNavigationController.navigationBar.tintColor = .black
+        sourceNavigationController.navigationBar.barTintColor = .black
+        sourceNavigationController.navigationBar.isTranslucent = false
+
         // assign self properties
         self.tableView = tableView
         self.sourceNavigationController = sourceNavigationController
@@ -82,7 +87,7 @@ extension CRANavigationDropdownViewController {
         tableViewBottomConstraint.constant = tableViewHeight
         
         // animate the constraint and the background color to an opaque black
-        UIView.animate(withDuration: 1, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut], animations: {
             self.view.layoutIfNeeded()
             self.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
         }, completion: { _ in
@@ -99,7 +104,7 @@ extension CRANavigationDropdownViewController {
         tableViewBottomConstraint.constant = 0
         
         // animate the constraint and the background color to clear
-        UIView.animate(withDuration: 1, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut], animations: {
             self.view.layoutIfNeeded()
             self.view.backgroundColor = UIColor.black.withAlphaComponent(0)
         }, completion: { _ in

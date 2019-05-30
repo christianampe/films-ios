@@ -37,29 +37,29 @@ extension MoviesViewController {
         switch segueCase(for: segue) {
         case .embedNestedCollection:
             break
-//            nestedCollection = segue.viewController()
-//            nestedCollection.dataSource = self
+            nestedCollection = segue.viewController()
+            nestedCollection.dataSource = self
         }
     }
 }
 
-//extension MoviesViewController: CRANestedCollectionViewDataSource {
-//    func numberOfRows(in nestedCollectionViewController: CRANestedCollectionViewController) -> Int {
-//        return items.count
-//    }
-//
-//    func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
-//                                        numberOfItemsInRow row: Int) -> Int {
-//
-//        return items[row].count
-//    }
-//
-//    func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
-//                                        viewModelAtIndexPath indexPath: IndexPath) -> CRANestedCollectionViewItem {
-//
-//        return items[indexPath.section][indexPath.item]
-//    }
-//}
+extension MoviesViewController: CRANestedCollectionViewDataSource {
+    func numberOfRows(in nestedCollectionViewController: CRANestedCollectionViewController) -> Int {
+        return items.count
+    }
+
+    func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
+                                        numberOfItemsInRow row: Int) -> Int {
+
+        return items[row].count
+    }
+
+    func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
+                                        viewModelAtIndexPath indexPath: IndexPath) -> CRANestedCollectionViewItem {
+
+        return items[indexPath.section][indexPath.item]
+    }
+}
 
 // MARK: - SegueIdentifiable
 extension MoviesViewController: SegueIdentifiable {
