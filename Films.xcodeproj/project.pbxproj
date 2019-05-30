@@ -20,7 +20,6 @@
 		BF8BFCA7229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCA6229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift */; };
 		BF8BFCAA229E2E490035AB90 /* CRAGenericTableViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCA9229E2E480035AB90 /* CRAGenericTableViewSource.swift */; };
 		BF8BFCAD229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCAC229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift */; };
-		BF8BFCB0229E32700035AB90 /* CANestedCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCAF229E32700035AB90 /* CANestedCollectionViewDataSource.swift */; };
 		BF8BFCB2229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCB1229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift */; };
 		BF8BFCB4229E3AEC0035AB90 /* CRANestedCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCB3229E3AEC0035AB90 /* CRANestedCollectionViewDelegate.swift */; };
 		BF8BFCB9229E41010035AB90 /* CRANestedCollectionViewRowCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCB8229E41010035AB90 /* CRANestedCollectionViewRowCellDataSource.swift */; };
@@ -45,6 +44,10 @@
 		BF8BFCE8229E462F0035AB90 /* NavigationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCDE229E462F0035AB90 /* NavigationInteractor.swift */; };
 		BF8BFCED229F03D80035AB90 /* CRANavigationDropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCEC229F03D80035AB90 /* CRANavigationDropdownViewController.swift */; };
 		BF8BFD30229F52DB0035AB90 /* CRANavigationDropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFD2F229F52DB0035AB90 /* CRANavigationDropdownCell.swift */; };
+		BF8BFD39229F90280035AB90 /* NetflixNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFD38229F90280035AB90 /* NetflixNetworking.swift */; };
+		BF8BFD3B229F909C0035AB90 /* NetflixNetworkingTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFD3A229F909C0035AB90 /* NetflixNetworkingTarget.swift */; };
+		BF8BFD3D229F916A0035AB90 /* NetflixNetworkingResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFD3C229F916A0035AB90 /* NetflixNetworkingResponses.swift */; };
+		BF8BFD3F229FAFDB0035AB90 /* NetflixNetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFD3E229FAFDB0035AB90 /* NetflixNetworkingError.swift */; };
 		BFB7B728229DC85D001CCD49 /* CRAMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B727229DC85D001CCD49 /* CRAMemoryCache.swift */; };
 		BFB7B72B229DCC34001CCD49 /* UIImageView+MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */; };
 		BFB7B72D229DE04B001CCD49 /* CRACache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B72C229DE04B001CCD49 /* CRACache.swift */; };
@@ -71,7 +74,6 @@
 		BFD2E01B229D01D8008EC33D /* CRANetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E018229D01D8008EC33D /* CRANetworkingService.swift */; };
 		BFD2E020229D0221008EC33D /* CRANetworkingRequestHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E01D229D0221008EC33D /* CRANetworkingRequestHTTPMethod.swift */; };
 		BFD2E021229D0221008EC33D /* CRANetworkingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E01E229D0221008EC33D /* CRANetworkingRequest.swift */; };
-		BFD2E022229D0221008EC33D /* CRANetworkingRequestValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E01F229D0221008EC33D /* CRANetworkingRequestValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,7 +113,6 @@
 		BF8BFCA6229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericCollectionCellProtocol.swift; sourceTree = "<group>"; };
 		BF8BFCA9229E2E480035AB90 /* CRAGenericTableViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericTableViewSource.swift; sourceTree = "<group>"; };
 		BF8BFCAC229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericCollectionViewSource.swift; sourceTree = "<group>"; };
-		BF8BFCAF229E32700035AB90 /* CANestedCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CANestedCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		BF8BFCB1229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		BF8BFCB3229E3AEC0035AB90 /* CRANestedCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		BF8BFCB8229E41010035AB90 /* CRANestedCollectionViewRowCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewRowCellDataSource.swift; sourceTree = "<group>"; };
@@ -136,6 +137,10 @@
 		BF8BFCDE229E462F0035AB90 /* NavigationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationInteractor.swift; sourceTree = "<group>"; };
 		BF8BFCEC229F03D80035AB90 /* CRANavigationDropdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANavigationDropdownViewController.swift; sourceTree = "<group>"; };
 		BF8BFD2F229F52DB0035AB90 /* CRANavigationDropdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANavigationDropdownCell.swift; sourceTree = "<group>"; };
+		BF8BFD38229F90280035AB90 /* NetflixNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixNetworking.swift; sourceTree = "<group>"; };
+		BF8BFD3A229F909C0035AB90 /* NetflixNetworkingTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixNetworkingTarget.swift; sourceTree = "<group>"; };
+		BF8BFD3C229F916A0035AB90 /* NetflixNetworkingResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixNetworkingResponses.swift; sourceTree = "<group>"; };
+		BF8BFD3E229FAFDB0035AB90 /* NetflixNetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixNetworkingError.swift; sourceTree = "<group>"; };
 		BFB7B727229DC85D001CCD49 /* CRAMemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAMemoryCache.swift; sourceTree = "<group>"; };
 		BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+MemoryCache.swift"; sourceTree = "<group>"; };
 		BFB7B72C229DE04B001CCD49 /* CRACache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRACache.swift; sourceTree = "<group>"; };
@@ -162,7 +167,6 @@
 		BFD2E018229D01D8008EC33D /* CRANetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANetworkingService.swift; sourceTree = "<group>"; };
 		BFD2E01D229D0221008EC33D /* CRANetworkingRequestHTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANetworkingRequestHTTPMethod.swift; sourceTree = "<group>"; };
 		BFD2E01E229D0221008EC33D /* CRANetworkingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANetworkingRequest.swift; sourceTree = "<group>"; };
-		BFD2E01F229D0221008EC33D /* CRANetworkingRequestValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANetworkingRequestValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,16 +285,9 @@
 		BF256DE7229CD82700794D56 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
-				BF8BFCC2229E425F0035AB90 /* Movies.storyboard */,
-				BF8BFCC4229E425F0035AB90 /* MoviesProtocols.swift */,
-				BF8BFCC3229E425F0035AB90 /* MoviesViewController.swift */,
-				BF8BFCC0229E425F0035AB90 /* MoviesPresenter.swift */,
-				BF8BFCC6229E425F0035AB90 /* MoviesInteractor.swift */,
-				BF8BFCC1229E425F0035AB90 /* MoviesRouter.swift */,
-				BF8BFCC5229E425F0035AB90 /* MoviesBuilder.swift */,
-				BF8BFCBF229E425F0035AB90 /* MoviesInput.swift */,
-				BF8BFCC7229E425F0035AB90 /* MoviesOutput.swift */,
-				BF8BFCC8229E425F0035AB90 /* MoviesViewModel.swift */,
+				BF8BFD33229F8EA70035AB90 /* Interface */,
+				BF8BFD32229F8EA30035AB90 /* Viper */,
+				BF8BFD34229F8EB40035AB90 /* Models */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -360,6 +357,67 @@
 			path = "Navigation Dropdown";
 			sourceTree = "<group>";
 		};
+		BF8BFD31229F89420035AB90 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BF8BFCB1229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift */,
+				BF8BFCB3229E3AEC0035AB90 /* CRANestedCollectionViewDelegate.swift */,
+				BF8BFCB8229E41010035AB90 /* CRANestedCollectionViewRowCellDataSource.swift */,
+				BF8BFCBA229E41130035AB90 /* CRANestedCollectionViewRowCellDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BF8BFD32229F8EA30035AB90 /* Viper */ = {
+			isa = PBXGroup;
+			children = (
+				BF8BFCC4229E425F0035AB90 /* MoviesProtocols.swift */,
+				BF8BFCC3229E425F0035AB90 /* MoviesViewController.swift */,
+				BF8BFCC0229E425F0035AB90 /* MoviesPresenter.swift */,
+				BF8BFCC6229E425F0035AB90 /* MoviesInteractor.swift */,
+				BF8BFCC1229E425F0035AB90 /* MoviesRouter.swift */,
+				BF8BFCC5229E425F0035AB90 /* MoviesBuilder.swift */,
+			);
+			path = Viper;
+			sourceTree = "<group>";
+		};
+		BF8BFD33229F8EA70035AB90 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				BF8BFCC2229E425F0035AB90 /* Movies.storyboard */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		BF8BFD34229F8EB40035AB90 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF8BFCBF229E425F0035AB90 /* MoviesInput.swift */,
+				BF8BFCC7229E425F0035AB90 /* MoviesOutput.swift */,
+				BF8BFCC8229E425F0035AB90 /* MoviesViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF8BFD36229F8FEC0035AB90 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BF8BFD37229F8FF50035AB90 /* Netflix */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BF8BFD37229F8FF50035AB90 /* Netflix */ = {
+			isa = PBXGroup;
+			children = (
+				BF8BFD38229F90280035AB90 /* NetflixNetworking.swift */,
+				BF8BFD3A229F909C0035AB90 /* NetflixNetworkingTarget.swift */,
+				BF8BFD3C229F916A0035AB90 /* NetflixNetworkingResponses.swift */,
+				BF8BFD3E229FAFDB0035AB90 /* NetflixNetworkingError.swift */,
+			);
+			path = Netflix;
+			sourceTree = "<group>";
+		};
 		BFB7B726229DC84E001CCD49 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,8 +432,8 @@
 			isa = PBXGroup;
 			children = (
 				BF8BFCEB229F03810035AB90 /* Navigation Dropdown */,
-				BF8BFCA1229E1E690035AB90 /* Generic Collections */,
 				BFD2DFE2229CFD4F008EC33D /* Nested Collection */,
+				BF8BFCA1229E1E690035AB90 /* Generic Collections */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -386,7 +444,7 @@
 				BFD2DFEB229CFDA8008EC33D /* Interface */,
 				BFD2DFEC229CFDB1008EC33D /* Views */,
 				BFD2DFED229CFDC9008EC33D /* Models */,
-				BF8BFCAF229E32700035AB90 /* CANestedCollectionViewDataSource.swift */,
+				BF8BFD31229F89420035AB90 /* Protocols */,
 			);
 			path = "Nested Collection";
 			sourceTree = "<group>";
@@ -402,11 +460,7 @@
 		BFD2DFEC229CFDB1008EC33D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BF8BFCB1229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift */,
-				BF8BFCB3229E3AEC0035AB90 /* CRANestedCollectionViewDelegate.swift */,
 				BFD2DFE4229CFD67008EC33D /* CRANestedCollectionViewController.swift */,
-				BF8BFCB8229E41010035AB90 /* CRANestedCollectionViewRowCellDataSource.swift */,
-				BF8BFCBA229E41130035AB90 /* CRANestedCollectionViewRowCellDelegate.swift */,
 				BFD2DFE6229CFD68008EC33D /* CRANestedCollectionViewRowCell.swift */,
 				BFD2DFE3229CFD67008EC33D /* CRANestedCollectionViewItemCell.swift */,
 			);
@@ -481,6 +535,7 @@
 				BFD2E010229D018A008EC33D /* Provider */,
 				BFD2E01C229D020F008EC33D /* Request */,
 				BFD2E011229D018F008EC33D /* Service */,
+				BF8BFD36229F8FEC0035AB90 /* Services */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -510,7 +565,6 @@
 			children = (
 				BFD2E01E229D0221008EC33D /* CRANetworkingRequest.swift */,
 				BFD2E01D229D0221008EC33D /* CRANetworkingRequestHTTPMethod.swift */,
-				BFD2E01F229D0221008EC33D /* CRANetworkingRequestValidation.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -652,15 +706,16 @@
 				BF8BFCE7229E462F0035AB90 /* NavigationBuilder.swift in Sources */,
 				BF8BFCED229F03D80035AB90 /* CRANavigationDropdownViewController.swift in Sources */,
 				BF256DBB229CD77900794D56 /* Films.xcdatamodeld in Sources */,
+				BF8BFD3B229F909C0035AB90 /* NetflixNetworkingTarget.swift in Sources */,
 				BFD2DFEF229CFDD6008EC33D /* CRANestedCollectionViewItem.swift in Sources */,
 				BFD2E01B229D01D8008EC33D /* CRANetworkingService.swift in Sources */,
 				BF8BFCAD229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift in Sources */,
 				BF8BFCB4229E3AEC0035AB90 /* CRANestedCollectionViewDelegate.swift in Sources */,
 				BF8BFCA5229E2DCC0035AB90 /* CRAGenericCollectionDataSource.swift in Sources */,
-				BF8BFCB0229E32700035AB90 /* CANestedCollectionViewDataSource.swift in Sources */,
 				BFD2E003229D00E6008EC33D /* StoryboardIdentifiable+Self.swift in Sources */,
 				BFD2E019229D01D8008EC33D /* CRANetworkingServiceResponse.swift in Sources */,
 				BF8BFCCF229E425F0035AB90 /* MoviesBuilder.swift in Sources */,
+				BF8BFD39229F90280035AB90 /* NetflixNetworking.swift in Sources */,
 				BFD2DFEA229CFD68008EC33D /* CRANestedCollectionViewRowCell.swift in Sources */,
 				BF8BFCE8229E462F0035AB90 /* NavigationInteractor.swift in Sources */,
 				BF8BFCE5229E462F0035AB90 /* NavigationViewController.swift in Sources */,
@@ -677,6 +732,8 @@
 				BFD2DFF9229D00DB008EC33D /* SegueIdentifiable+UIViewController.swift in Sources */,
 				BF8BFCCE229E425F0035AB90 /* MoviesProtocols.swift in Sources */,
 				BF8BFCBB229E41140035AB90 /* CRANestedCollectionViewRowCellDelegate.swift in Sources */,
+				BF8BFD3D229F916A0035AB90 /* NetflixNetworkingResponses.swift in Sources */,
+				BF8BFD3F229FAFDB0035AB90 /* NetflixNetworkingError.swift in Sources */,
 				BF8BFC9E229DEA120035AB90 /* StoryboardIdentifiable++.swift in Sources */,
 				BFD2DFE8229CFD68008EC33D /* CRANestedCollectionViewController.swift in Sources */,
 				BF256DB3229CD77900794D56 /* AppDelegate.swift in Sources */,
@@ -687,7 +744,6 @@
 				BF8BFCE3229E462F0035AB90 /* NavigationRouter.swift in Sources */,
 				BF8BFCD0229E425F0035AB90 /* MoviesInteractor.swift in Sources */,
 				BFD2E021229D0221008EC33D /* CRANetworkingRequest.swift in Sources */,
-				BFD2E022229D0221008EC33D /* CRANetworkingRequestValidation.swift in Sources */,
 				BFD2E006229D00E6008EC33D /* UIStoryboardSegue+StoryboardIdentifiable.swift in Sources */,
 				BFD2DFE7229CFD68008EC33D /* CRANestedCollectionViewItemCell.swift in Sources */,
 				BF8BFCA0229E1B250035AB90 /* CRANetworkingProviderResponse.swift in Sources */,

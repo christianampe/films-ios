@@ -52,10 +52,37 @@ extension CRANavigationDropdownViewController {
         sourceNavigationController.navigationBar.tintColor = .black
         sourceNavigationController.navigationBar.barTintColor = .black
         sourceNavigationController.navigationBar.isTranslucent = false
+        
+        // add navigation label tap gesture recognizer
+        let navigationBarTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleNavigationBarTap(_:)))
+        sourceNavigationController.navigationBar.addGestureRecognizer(navigationBarTapGestureRecognizer)
+        
+        let backgroundViewTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleBackgroundViewTap(_:)))
+        view.addGestureRecognizer(backgroundViewTapGestureRecognizer)
 
         // assign self properties
         self.tableView = tableView
         self.sourceNavigationController = sourceNavigationController
+    }
+}
+
+private extension CRANavigationDropdownViewController {
+    @objc func handleNavigationBarTap(_ sender: UITapGestureRecognizer) {
+        
+        // get the view which was touched
+        let location = sender.location(in: sourceNavigationController.navigationBar)
+        let hitView = sourceNavigationController.navigationBar.hitTest(location, with: nil)
+        
+        // if the view is a control abort
+        guard !(hitView is UIControl) else {
+            return
+        }
+        
+        toggle()
+    }
+    
+    @objc func handleBackgroundViewTap(_ sender: UITapGestureRecognizer) {
+        hide()
     }
 }
 
@@ -67,6 +94,11 @@ extension CRANavigationDropdownViewController {
     }
     
     func show(_ animated: Bool = true) {
+        
+        // exit execution if the dropdown is already shown
+        guard !isShown else {
+            return
+        }
         
         // add views to view controller
         add(view, to: sourceNavigationController)
@@ -97,6 +129,11 @@ extension CRANavigationDropdownViewController {
     
     func hide(_ animated: Bool = true) {
         
+        // exit execution if the dropdown is already hidden
+        guard isShown else {
+            return
+        }
+        
         // background color to be animated
         view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
         
@@ -115,7 +152,7 @@ extension CRANavigationDropdownViewController {
     }
     
     func toggle(_ animated: Bool = true) {
-        isShown ? show(animated) : hide(animated)
+        isShown ? hide(animated) : show(animated)
     }
 }
 

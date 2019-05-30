@@ -1,14 +1,13 @@
 import Foundation
 
 protocol CRANetworkingProviderProtocol {
-    associatedtype T: CRANetworkingRequestProtocol
-    associatedtype R: CRANetworkingProviderResponseProtocol
+    associatedtype T: CRANetworkingRequest
     
-    func request(_ target: T, completion: @escaping (Result<R, CRANetworkingProviderError>) -> Void) -> URLSessionDataTask
+    func request(_ target: T, completion: @escaping (Result<CRANetworkingProviderResponse, CRANetworkingProviderError>) -> Void) -> URLSessionDataTask
 }
 
 // MARK: - Networking Class
-class CRANetworkingProvider<T: CRANetworkingRequestProtocol> {
+class CRANetworkingProvider<T: CRANetworkingRequest> {
     
     /// Initialized provider holding reference
     /// to the innerworkings of the service layer.

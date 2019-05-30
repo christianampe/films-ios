@@ -8,13 +8,7 @@
 
 import Foundation
 
-protocol CRANetworkingProviderResponseProtocol {
-    var data: Data { get }
-    var request: URLRequest { get }
-    var response: HTTPURLResponse { get }
-}
-
-struct CRANetworkingProviderResponse: CRANetworkingProviderResponseProtocol {
+struct CRANetworkingProviderResponse {
     
     /// Data returned from the network request.
     let data: Data

@@ -1,7 +1,7 @@
 import Foundation
 
 // MARK: - Network Request Protocol
-protocol CRANetworkingRequestProtocol {
+protocol CRANetworkingRequest {
     
     /// The target's base url.
     var baseURL: URL { get }
@@ -22,7 +22,7 @@ protocol CRANetworkingRequestProtocol {
 }
 
 // MARK: - Public Constructor
-extension CRANetworkingRequestProtocol {
+extension CRANetworkingRequest {
     
     /// URL request constructed from the object.
     var urlRequest: URLRequest {
@@ -48,7 +48,7 @@ extension CRANetworkingRequestProtocol {
 }
 
 // MARK: - Private Request Constructor Helpers
-private extension CRANetworkingRequestProtocol {
+private extension CRANetworkingRequest {
     
     /// Adds the http method type to the request.
     ///

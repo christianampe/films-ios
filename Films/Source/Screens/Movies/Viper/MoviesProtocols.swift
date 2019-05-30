@@ -8,7 +8,9 @@
 
 protocol MoviesInputProtocol {}
 
-protocol MoviesViewModelProtocol {}
+protocol MoviesViewModelProtocol: CRANestedCollectionViewDataSource {
+    
+}
 
 protocol MoviesOutputProtocol {}
 
