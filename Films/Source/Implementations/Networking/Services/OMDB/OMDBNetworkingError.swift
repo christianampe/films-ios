@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+extension OMDB.Networking {
+    enum Error: Swift.Error {
+        case mapping
+        case service(CRANetworkingServiceError)
+    }
+}

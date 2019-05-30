@@ -17,14 +17,14 @@ enum Netflix {
 
 extension Netflix.Networking {
     func films(_ completion: @escaping (Result<[Netflix.Networking.Responses.Movie], Netflix.Networking.Error>) -> Void) {
-        provider.request(.films) { [weak self] result in
-            guard let self = self else { return }
+        provider.request(.films) { [weak jsonDecoder] result in
+            guard let jsonDecoder = jsonDecoder else { return }
             
             switch result {
             case .success(let response):
                 do {
-                    let movies = try self.jsonDecoder.decode([Netflix.Networking.Responses.Movie].self,
-                                                             from: response.data)
+                    let movies = try jsonDecoder.decode([Netflix.Networking.Responses.Movie].self,
+                                                        from: response.data)
                     completion(.success(movies))
                 } catch {
                     completion(.failure(.mapping))

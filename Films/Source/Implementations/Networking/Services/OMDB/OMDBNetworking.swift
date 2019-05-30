@@ -16,16 +16,18 @@ enum OMDB {
 }
 
 extension OMDB.Networking {
-    func films(_ completion: @escaping (Result<[Netflix.Networking.Responses.Movie], Netflix.Networking.Error>) -> Void) {
-        provider.request(.films) { [weak self] result in
-            guard let self = self else { return }
+    func filmInfo(title: String,
+                  _ completion: @escaping (Result<OMDB.Networking.Responses.Info, OMDB.Networking.Error>) -> Void) {
+        
+        provider.request(.info(film: title)) { [weak jsonDecoder] result in
+            guard let jsonDecoder = jsonDecoder else { return }
             
             switch result {
             case .success(let response):
                 do {
-                    let movies = try self.jsonDecoder.decode([Netflix.Networking.Responses.Movie].self,
-                                                             from: response.data)
-                    completion(.success(movies))
+                    let filmInfo = try jsonDecoder.decode(OMDB.Networking.Responses.Info.self,
+                                                          from: response.data)
+                    completion(.success(filmInfo))
                 } catch {
                     completion(.failure(.mapping))
                 }
