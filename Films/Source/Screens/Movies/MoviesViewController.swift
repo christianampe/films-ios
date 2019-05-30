@@ -19,45 +19,47 @@ final class MoviesViewController: UIViewController, MoviesViewProtocol {
     var presenter: MoviesPresenterProtocol?
     weak var delegate: MoviesDelegateProtocol?
     
-    private var nestedCollection: CRANestedCollectionViewController!
-    
-    
-    var items: [[Movie]] = {
-        let movie = Movie(backgroundImageURLString: "https://m.media-amazon.com/images/M/MV5BN2I3NzVlMTktNWZmYi00ODk1LWE1YzUtYzVlMmY5ZjYwMTk1XkEyXkFqcGdeQXVyMzU0NzkwMDg@._V1_SX300.jpg")
-        let movies = [movie, movie, movie, movie]
-        
-        return [movies, movies.dropLast(2), movies + movies]
-    }()
+    private var nestedCollection: CRANestedCollectionViewController?
+    private lazy var navigationDropdown = CRANavigationDropdownViewController(self)
+    @IBAction func didPress(_ sender: Any) {
+        navigationDropdown.show()
+    }
 }
 
 // MARK: - Lifecycle
 extension MoviesViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationDropdown.set(["Hello", "This", "Is", "A", "Test"])
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segueCase(for: segue) {
         case .embedNestedCollection:
-            nestedCollection = segue.viewController()
-            nestedCollection.dataSource = self
+            break
+//            nestedCollection = segue.viewController()
+//            nestedCollection.dataSource = self
         }
     }
 }
 
-extension MoviesViewController: CRANestedCollectionViewDataSource {
-    func numberOfRows(in nestedCollectionViewController: CRANestedCollectionViewController) -> Int {
-        return items.count
-    }
-    
-    func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
-                                        numberOfItemsInRow row: Int) -> Int {
-        
-        return items[row].count
-    }
-    
-    func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
-                                        viewModelAtIndexPath indexPath: IndexPath) -> CRANestedCollectionViewItem {
-        
-        return items[indexPath.section][indexPath.item]
-    }
-}
+//extension MoviesViewController: CRANestedCollectionViewDataSource {
+//    func numberOfRows(in nestedCollectionViewController: CRANestedCollectionViewController) -> Int {
+//        return items.count
+//    }
+//
+//    func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
+//                                        numberOfItemsInRow row: Int) -> Int {
+//
+//        return items[row].count
+//    }
+//
+//    func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
+//                                        viewModelAtIndexPath indexPath: IndexPath) -> CRANestedCollectionViewItem {
+//
+//        return items[indexPath.section][indexPath.item]
+//    }
+//}
 
 // MARK: - SegueIdentifiable
 extension MoviesViewController: SegueIdentifiable {

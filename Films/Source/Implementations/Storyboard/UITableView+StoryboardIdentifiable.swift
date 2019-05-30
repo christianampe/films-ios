@@ -25,4 +25,8 @@ extension UITableView {
     func registerTableViewCell<T: UITableViewCell>(xibCell: T.Type) {
         register(UINib(nibName: T.storyboardIdentifier, bundle: nil), forCellReuseIdentifier: T.storyboardIdentifier)
     }
+    
+    func registerTableViewCell<T: UITableViewCell>(cell: T.Type) {
+        register(T.self, forCellReuseIdentifier: T.storyboardIdentifier)
+    }
 }

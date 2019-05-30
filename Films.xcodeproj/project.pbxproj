@@ -43,6 +43,8 @@
 		BF8BFCE6229E462F0035AB90 /* NavigationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCDC229E462F0035AB90 /* NavigationProtocols.swift */; };
 		BF8BFCE7229E462F0035AB90 /* NavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCDD229E462F0035AB90 /* NavigationBuilder.swift */; };
 		BF8BFCE8229E462F0035AB90 /* NavigationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCDE229E462F0035AB90 /* NavigationInteractor.swift */; };
+		BF8BFCED229F03D80035AB90 /* CRANavigationDropdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCEC229F03D80035AB90 /* CRANavigationDropdownViewController.swift */; };
+		BF8BFD30229F52DB0035AB90 /* CRANavigationDropdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFD2F229F52DB0035AB90 /* CRANavigationDropdownCell.swift */; };
 		BFB7B728229DC85D001CCD49 /* CRAMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B727229DC85D001CCD49 /* CRAMemoryCache.swift */; };
 		BFB7B72B229DCC34001CCD49 /* UIImageView+MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */; };
 		BFB7B72D229DE04B001CCD49 /* CRACache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B72C229DE04B001CCD49 /* CRACache.swift */; };
@@ -132,6 +134,8 @@
 		BF8BFCDC229E462F0035AB90 /* NavigationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationProtocols.swift; sourceTree = "<group>"; };
 		BF8BFCDD229E462F0035AB90 /* NavigationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBuilder.swift; sourceTree = "<group>"; };
 		BF8BFCDE229E462F0035AB90 /* NavigationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationInteractor.swift; sourceTree = "<group>"; };
+		BF8BFCEC229F03D80035AB90 /* CRANavigationDropdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANavigationDropdownViewController.swift; sourceTree = "<group>"; };
+		BF8BFD2F229F52DB0035AB90 /* CRANavigationDropdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANavigationDropdownCell.swift; sourceTree = "<group>"; };
 		BFB7B727229DC85D001CCD49 /* CRAMemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAMemoryCache.swift; sourceTree = "<group>"; };
 		BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+MemoryCache.swift"; sourceTree = "<group>"; };
 		BFB7B72C229DE04B001CCD49 /* CRACache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRACache.swift; sourceTree = "<group>"; };
@@ -347,6 +351,15 @@
 			path = Namespace;
 			sourceTree = "<group>";
 		};
+		BF8BFCEB229F03810035AB90 /* Navigation Dropdown */ = {
+			isa = PBXGroup;
+			children = (
+				BF8BFCEC229F03D80035AB90 /* CRANavigationDropdownViewController.swift */,
+				BF8BFD2F229F52DB0035AB90 /* CRANavigationDropdownCell.swift */,
+			);
+			path = "Navigation Dropdown";
+			sourceTree = "<group>";
+		};
 		BFB7B726229DC84E001CCD49 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +373,7 @@
 		BFD2DFE1229CFD42008EC33D /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				BF8BFCEB229F03810035AB90 /* Navigation Dropdown */,
 				BF8BFCA1229E1E690035AB90 /* Generic Collections */,
 				BFD2DFE2229CFD4F008EC33D /* Nested Collection */,
 			);
@@ -636,6 +650,7 @@
 			files = (
 				BFB7B72D229DE04B001CCD49 /* CRACache.swift in Sources */,
 				BF8BFCE7229E462F0035AB90 /* NavigationBuilder.swift in Sources */,
+				BF8BFCED229F03D80035AB90 /* CRANavigationDropdownViewController.swift in Sources */,
 				BF256DBB229CD77900794D56 /* Films.xcdatamodeld in Sources */,
 				BFD2DFEF229CFDD6008EC33D /* CRANestedCollectionViewItem.swift in Sources */,
 				BFD2E01B229D01D8008EC33D /* CRANetworkingService.swift in Sources */,
@@ -686,6 +701,7 @@
 				BF8BFCAA229E2E490035AB90 /* CRAGenericTableViewSource.swift in Sources */,
 				BFB7B728229DC85D001CCD49 /* CRAMemoryCache.swift in Sources */,
 				BF8BFCC9229E425F0035AB90 /* MoviesInput.swift in Sources */,
+				BF8BFD30229F52DB0035AB90 /* CRANavigationDropdownCell.swift in Sources */,
 				BF8BFCB9229E41010035AB90 /* CRANestedCollectionViewRowCellDataSource.swift in Sources */,
 				BF8BFCD4229E45190035AB90 /* UIStoryboard+Identifiers.swift in Sources */,
 				BFD2E020229D0221008EC33D /* CRANetworkingRequestHTTPMethod.swift in Sources */,
