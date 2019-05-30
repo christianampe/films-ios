@@ -10,6 +10,16 @@ import Foundation
 
 extension Netflix.Networking {
     enum Responses {
-        
+        struct Movie: Decodable {
+            let actors: [String]
+            let director: String
+            let latitude: Double
+            let locations: String
+            let longitude: Double
+            let productionCompany: String
+            let releaseYear: String
+            let title: String
+            let writers: [String]
+        }
     }
 }
