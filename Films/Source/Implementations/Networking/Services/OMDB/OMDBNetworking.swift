@@ -1,21 +1,21 @@
 //
-//  Netflix.swift
+//  OMDBNetworking.swift
 //  Films
 //
-//  Created by Christian Ampe on 5/29/19.
+//  Created by Christian Ampe on 5/30/19.
 //  Copyright © 2019 christianampe. All rights reserved.
 //
 
 import Foundation
 
-enum Netflix {
+enum OMDB {
     class Networking {
-        private let provider = CRANetworkingProvider<Netflix.Networking.Target>()
+        private let provider = CRANetworkingProvider<OMDB.Networking.Target>()
         private let jsonDecoder = JSONDecoder(.convertFromSnakeCase)
     }
 }
 
-extension Netflix.Networking {
+extension OMDB.Networking {
     func films(_ completion: @escaping (Result<[Netflix.Networking.Responses.Movie], Netflix.Networking.Error>) -> Void) {
         provider.request(.films) { [weak self] result in
             guard let self = self else { return }

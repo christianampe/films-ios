@@ -9,8 +9,8 @@
 import Foundation
 
 class MoviesViewModel: MoviesViewModelProtocol {
-    
-    
+    var filters: [String] = []
+    var movies: [Netflix.Networking.Responses.Movie] = []
 }
 
 // MARK: - CRANestedCollectionViewDataSource

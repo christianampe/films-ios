@@ -20,6 +20,17 @@ final class MoviesViewController: UIViewController, MoviesViewProtocol {
     private lazy var navigationDropdown = CRANavigationDropdownViewController(self)
 }
 
+// MARK: - Viper
+extension MoviesViewController {
+    func show(movies: [Netflix.Networking.Responses.Movie]) {
+        viewModel?.movies = movies
+    }
+    
+    func show(error: Error) {
+        // TODO: handle error
+    }
+}
+
 // MARK: - Lifecycle
 extension MoviesViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

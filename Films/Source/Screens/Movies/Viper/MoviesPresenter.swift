@@ -13,3 +13,13 @@ final class MoviesPresenter: MoviesPresenterProtocol {
     var interactor: MoviesInteractorProtocol?
     var router: MoviesRouterProtocol?
 }
+
+extension MoviesPresenter {
+    func fetched(movies: [Netflix.Networking.Responses.Movie]) {
+        view?.show(movies: movies)
+    }
+    
+    func encountered(error: Error) {
+        view?.show(error: error)
+    }
+}

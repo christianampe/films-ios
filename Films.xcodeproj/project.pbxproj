@@ -49,6 +49,10 @@
 		BF8BFD3D229F916A0035AB90 /* NetflixNetworkingResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFD3C229F916A0035AB90 /* NetflixNetworkingResponses.swift */; };
 		BF8BFD3F229FAFDB0035AB90 /* NetflixNetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFD3E229FAFDB0035AB90 /* NetflixNetworkingError.swift */; };
 		BF8BFD4122A05ED80035AB90 /* JSONDecoder++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFD4022A05ED80035AB90 /* JSONDecoder++.swift */; };
+		BF8BFD4422A06E7D0035AB90 /* OMDBNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFD4322A06E7D0035AB90 /* OMDBNetworking.swift */; };
+		BF8BFD4622A06E880035AB90 /* OMDBNetworkingTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFD4522A06E880035AB90 /* OMDBNetworkingTarget.swift */; };
+		BF8BFD4822A06E940035AB90 /* OMDBNetworkingResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFD4722A06E940035AB90 /* OMDBNetworkingResponses.swift */; };
+		BF8BFD4A22A06E9E0035AB90 /* OMDBNetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFD4922A06E9E0035AB90 /* OMDBNetworkingError.swift */; };
 		BFB7B728229DC85D001CCD49 /* CRAMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B727229DC85D001CCD49 /* CRAMemoryCache.swift */; };
 		BFB7B72B229DCC34001CCD49 /* UIImageView+MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */; };
 		BFB7B72D229DE04B001CCD49 /* CRACache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB7B72C229DE04B001CCD49 /* CRACache.swift */; };
@@ -143,6 +147,10 @@
 		BF8BFD3C229F916A0035AB90 /* NetflixNetworkingResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixNetworkingResponses.swift; sourceTree = "<group>"; };
 		BF8BFD3E229FAFDB0035AB90 /* NetflixNetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixNetworkingError.swift; sourceTree = "<group>"; };
 		BF8BFD4022A05ED80035AB90 /* JSONDecoder++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder++.swift"; sourceTree = "<group>"; };
+		BF8BFD4322A06E7D0035AB90 /* OMDBNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBNetworking.swift; sourceTree = "<group>"; };
+		BF8BFD4522A06E880035AB90 /* OMDBNetworkingTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBNetworkingTarget.swift; sourceTree = "<group>"; };
+		BF8BFD4722A06E940035AB90 /* OMDBNetworkingResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBNetworkingResponses.swift; sourceTree = "<group>"; };
+		BF8BFD4922A06E9E0035AB90 /* OMDBNetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMDBNetworkingError.swift; sourceTree = "<group>"; };
 		BFB7B727229DC85D001CCD49 /* CRAMemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAMemoryCache.swift; sourceTree = "<group>"; };
 		BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+MemoryCache.swift"; sourceTree = "<group>"; };
 		BFB7B72C229DE04B001CCD49 /* CRACache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRACache.swift; sourceTree = "<group>"; };
@@ -404,6 +412,7 @@
 		BF8BFD36229F8FEC0035AB90 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BF8BFD4222A06E570035AB90 /* OMDB */,
 				BF8BFD37229F8FF50035AB90 /* Netflix */,
 			);
 			path = Services;
@@ -418,6 +427,17 @@
 				BF8BFD3E229FAFDB0035AB90 /* NetflixNetworkingError.swift */,
 			);
 			path = Netflix;
+			sourceTree = "<group>";
+		};
+		BF8BFD4222A06E570035AB90 /* OMDB */ = {
+			isa = PBXGroup;
+			children = (
+				BF8BFD4322A06E7D0035AB90 /* OMDBNetworking.swift */,
+				BF8BFD4522A06E880035AB90 /* OMDBNetworkingTarget.swift */,
+				BF8BFD4722A06E940035AB90 /* OMDBNetworkingResponses.swift */,
+				BF8BFD4922A06E9E0035AB90 /* OMDBNetworkingError.swift */,
+			);
+			path = OMDB;
 			sourceTree = "<group>";
 		};
 		BFB7B726229DC84E001CCD49 /* Cache */ = {
@@ -481,9 +501,9 @@
 			isa = PBXGroup;
 			children = (
 				BFD2DFF1229D0022008EC33D /* Array++.swift */,
+				BF8BFD4022A05ED80035AB90 /* JSONDecoder++.swift */,
 				BFB7B72A229DCC34001CCD49 /* UIImageView+MemoryCache.swift */,
 				BF8BFCD3229E45190035AB90 /* UIStoryboard+Identifiers.swift */,
-				BF8BFD4022A05ED80035AB90 /* JSONDecoder++.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -708,6 +728,8 @@
 				BFB7B72D229DE04B001CCD49 /* CRACache.swift in Sources */,
 				BF8BFCE7229E462F0035AB90 /* NavigationBuilder.swift in Sources */,
 				BF8BFCED229F03D80035AB90 /* CRANavigationDropdownViewController.swift in Sources */,
+				BF8BFD4622A06E880035AB90 /* OMDBNetworkingTarget.swift in Sources */,
+				BF8BFD4822A06E940035AB90 /* OMDBNetworkingResponses.swift in Sources */,
 				BF256DBB229CD77900794D56 /* Films.xcdatamodeld in Sources */,
 				BF8BFD3B229F909C0035AB90 /* NetflixNetworkingTarget.swift in Sources */,
 				BFD2DFEF229CFDD6008EC33D /* CRANestedCollectionViewItem.swift in Sources */,
@@ -728,6 +750,7 @@
 				BFD2DFF8229D00DB008EC33D /* SegueIdentifiable.swift in Sources */,
 				BF8BFCE2229E462F0035AB90 /* NavigationPresenter.swift in Sources */,
 				BFD2E01A229D01D8008EC33D /* NetworkingServiceError.swift in Sources */,
+				BF8BFD4422A06E7D0035AB90 /* OMDBNetworking.swift in Sources */,
 				BF8BFCD1229E425F0035AB90 /* MoviesOutput.swift in Sources */,
 				BF8BFCD2229E425F0035AB90 /* MoviesViewModel.swift in Sources */,
 				BF8BFCA7229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift in Sources */,
@@ -743,6 +766,7 @@
 				BFB7B72F229DE13B001CCD49 /* CRADiskCache.swift in Sources */,
 				BF8BFCCB229E425F0035AB90 /* MoviesRouter.swift in Sources */,
 				BF8BFCE6229E462F0035AB90 /* NavigationProtocols.swift in Sources */,
+				BF8BFD4A22A06E9E0035AB90 /* OMDBNetworkingError.swift in Sources */,
 				BFD2E00A229D00E6008EC33D /* StoryboardIdentifiable.swift in Sources */,
 				BF8BFCE3229E462F0035AB90 /* NavigationRouter.swift in Sources */,
 				BF8BFCD0229E425F0035AB90 /* MoviesInteractor.swift in Sources */,
