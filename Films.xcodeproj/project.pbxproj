@@ -13,6 +13,8 @@
 		BF256DC0229CD77A00794D56 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF256DBE229CD77A00794D56 /* Launch.storyboard */; };
 		BF256DCB229CD77A00794D56 /* FilmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF256DCA229CD77A00794D56 /* FilmsTests.swift */; };
 		BF256DD6229CD77A00794D56 /* FilmsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF256DD5229CD77A00794D56 /* FilmsUITests.swift */; };
+		BF40CBAC22A11B9400FD39E3 /* CRANestedCollectionViewRowCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF40CBAA22A11B9400FD39E3 /* CRANestedCollectionViewRowCellDelegate.swift */; };
+		BF40CBAD22A11B9400FD39E3 /* CRANestedCollectionViewRowCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF40CBAB22A11B9400FD39E3 /* CRANestedCollectionViewRowCellDataSource.swift */; };
 		BF8BFC9C229DE7310035AB90 /* CRAUserDefaultable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFC9B229DE7310035AB90 /* CRAUserDefaultable.swift */; };
 		BF8BFC9E229DEA120035AB90 /* StoryboardIdentifiable++.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFC9D229DEA120035AB90 /* StoryboardIdentifiable++.swift */; };
 		BF8BFCA0229E1B250035AB90 /* CRANetworkingProviderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFC9F229E1B250035AB90 /* CRANetworkingProviderResponse.swift */; };
@@ -107,6 +109,8 @@
 		BF256DD1229CD77A00794D56 /* FilmsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FilmsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF256DD5229CD77A00794D56 /* FilmsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsUITests.swift; sourceTree = "<group>"; };
 		BF256DD7229CD77A00794D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF40CBAA22A11B9400FD39E3 /* CRANestedCollectionViewRowCellDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewRowCellDelegate.swift; sourceTree = "<group>"; };
+		BF40CBAB22A11B9400FD39E3 /* CRANestedCollectionViewRowCellDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewRowCellDataSource.swift; sourceTree = "<group>"; };
 		BF8BFC9B229DE7310035AB90 /* CRAUserDefaultable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAUserDefaultable.swift; sourceTree = "<group>"; };
 		BF8BFC9D229DEA120035AB90 /* StoryboardIdentifiable++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryboardIdentifiable++.swift"; sourceTree = "<group>"; };
 		BF8BFC9F229E1B250035AB90 /* CRANetworkingProviderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANetworkingProviderResponse.swift; sourceTree = "<group>"; };
@@ -364,6 +368,8 @@
 			children = (
 				BF8BFCB3229E3AEC0035AB90 /* CRANestedCollectionViewDelegate.swift */,
 				BF8BFCB1229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift */,
+				BF40CBAA22A11B9400FD39E3 /* CRANestedCollectionViewRowCellDelegate.swift */,
+				BF40CBAB22A11B9400FD39E3 /* CRANestedCollectionViewRowCellDataSource.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -749,6 +755,7 @@
 				BF8BFC9E229DEA120035AB90 /* StoryboardIdentifiable++.swift in Sources */,
 				BFD2DFE8229CFD68008EC33D /* CRANestedCollectionViewController.swift in Sources */,
 				BF256DB3229CD77900794D56 /* AppDelegate.swift in Sources */,
+				BF40CBAC22A11B9400FD39E3 /* CRANestedCollectionViewRowCellDelegate.swift in Sources */,
 				BFB7B72F229DE13B001CCD49 /* CRADiskCache.swift in Sources */,
 				BF8BFCCB229E425F0035AB90 /* MoviesRouter.swift in Sources */,
 				BF8BFCE6229E462F0035AB90 /* NavigationProtocols.swift in Sources */,
@@ -766,6 +773,7 @@
 				BF8BFCB2229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift in Sources */,
 				BFD2E004229D00E6008EC33D /* UIStoryboard+StoryboardIdentifiable.swift in Sources */,
 				BFD2E014229D01BE008EC33D /* CRANetworkingProvider.swift in Sources */,
+				BF40CBAD22A11B9400FD39E3 /* CRANestedCollectionViewRowCellDataSource.swift in Sources */,
 				BF8BFCCA229E425F0035AB90 /* MoviesPresenter.swift in Sources */,
 				BF8BFCAA229E2E490035AB90 /* CRAGenericTableViewSource.swift in Sources */,
 				BFB7B728229DC85D001CCD49 /* CRAMemoryCache.swift in Sources */,
