@@ -8,16 +8,20 @@
 
 import UIKit.UICollectionView
 
-protocol CRANestedCollectionViewRowCellDelegate: class {
+protocol MoviesNestedCollectionViewRowCellDelegate: class {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAtIndexPath index: Int)
     
     func collectionView(_ collectionView: UICollectionView,
                         willDisplay cell: UICollectionViewCell,
                         forItemAt indexPath: IndexPath)
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        didEndDisplaying cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath)
 }
 
-extension CRANestedCollectionViewRowCellDelegate {
+extension MoviesNestedCollectionViewRowCellDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAtIndexPath index: Int) {}
 }

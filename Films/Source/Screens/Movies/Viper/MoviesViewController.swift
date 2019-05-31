@@ -12,14 +12,25 @@ final class MoviesViewController: UIViewController {
     var presenter: MoviesPresenterProtocol?
     weak var delegate: MoviesDelegateProtocol?
     
-    private var nestedCollection: CRANestedCollectionViewController!
-    private lazy var navigationDropdown = CRANavigationDropdownViewController(self)
+    private var nestedCollection: MoviesNestedCollectionViewController!
+    private var navigationDropdown: CRANavigationDropdownViewController!
 }
 
+// MARK: - Lifecycle
 extension MoviesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationDropdown = CRANavigationDropdownViewController(self)
         presenter?.viewDidLoad()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segueCase(for: segue) {
+        case .embedNestedCollection:
+            nestedCollection = segue.viewController()
+            nestedCollection.delegate = presenter
+            nestedCollection.dataSource = presenter
+        }
     }
 }
 
@@ -29,24 +40,8 @@ extension MoviesViewController: MoviesViewProtocol {
         nestedCollection.reloadData()
     }
     
-    func show(info: OMDB.Networking.Responses.Info) {
-        
-    }
-    
     func show(error: Error) {
         // TODO: handle error
-    }
-}
-
-// MARK: - Lifecycle
-extension MoviesViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segueCase(for: segue) {
-        case .embedNestedCollection:
-            nestedCollection = segue.viewController()
-            nestedCollection.delegate = presenter
-            nestedCollection.dataSource = presenter
-        }
     }
 }
 

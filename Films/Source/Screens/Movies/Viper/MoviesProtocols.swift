@@ -17,12 +17,11 @@ protocol MoviesViewProtocol: class {
     var delegate: MoviesDelegateProtocol? { get set }
     
     func show(movies: [Netflix.Networking.Responses.Movie])
-    func show(info: OMDB.Networking.Responses.Info)
     
     func show(error: Error)
 }
 
-protocol MoviesPresenterProtocol: CRANestedCollectionViewDataSource, CRANestedCollectionViewDelegate {
+protocol MoviesPresenterProtocol: CRANestedCollectionViewDataSource, MoviesNestedCollectionViewDelegate {
     var view: MoviesViewProtocol? { get set }
     var interactor: MoviesInteractorProtocol? { get set }
     var router: MoviesRouterProtocol? { get set }
@@ -31,16 +30,12 @@ protocol MoviesPresenterProtocol: CRANestedCollectionViewDataSource, CRANestedCo
     
     func fetched(movies: [Netflix.Networking.Responses.Movie])
     func encountered(error: Netflix.Networking.Error)
-    
-    func fetched(info: OMDB.Networking.Responses.Info)
-    func encountered(error: OMDB.Networking.Error)
 }
 
 protocol MoviesInteractorProtocol: class {
     var presenter: MoviesPresenterProtocol?  { get set }
     
     func fetchMovies()
-    func fetchInfo(for movie: String)
 }
 
 protocol MoviesRouterProtocol: class {}

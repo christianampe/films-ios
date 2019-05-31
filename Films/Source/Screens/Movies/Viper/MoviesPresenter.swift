@@ -13,7 +13,7 @@ final class MoviesPresenter: MoviesPresenterProtocol {
     var interactor: MoviesInteractorProtocol?
     var router: MoviesRouterProtocol?
     
-    private lazy var viewModel = MoviesViewModel(delegate: self)
+    private lazy var viewModel = MoviesViewModel()
 }
 
 // MARK: - VIEW TO INTERACTOR
@@ -32,14 +32,6 @@ extension MoviesPresenter {
     func encountered(error: Netflix.Networking.Error) {
         view?.show(error: error)
     }
-    
-    func fetched(info: OMDB.Networking.Responses.Info) {
-        view?.show(info: info)
-    }
-    
-    func encountered(error: OMDB.Networking.Error) {
-        view?.show(error: error)
-    }
 }
 
 // MARK: - MoviesViewModelDelegate
@@ -53,21 +45,27 @@ extension MoviesPresenter: MoviesViewModelDelegate {
 
 // MARK: - CRANestedCollectionViewDelegate
 extension MoviesPresenter {
-    func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
-                                        willDisplay cell: CRANestedCollectionViewItemCell,
+    func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
+                                        willDisplay cell: MoviesNestedCollectionViewItemCell,
                                         forItemAt indexPath: IndexPath) {
         
-        cell.configure(with: CRANestedCollectionViewItem(backgroundImageURLString: "https://m.media-amazon.com/images/M/MV5BN2I3NzVlMTktNWZmYi00ODk1LWE1YzUtYzVlMmY5ZjYwMTk1XkEyXkFqcGdeQXVyMzU0NzkwMDg@._V1_SX300.jpg"))
+        
+    }
+    
+    func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
+                                        didEndDisplaying cell: MoviesNestedCollectionViewItemCell,
+                                        forItemAt indexPath: IndexPath) {
+        
     }
 }
 
 // MARK: - CRANestedCollectionViewDataSource
 extension MoviesPresenter {
-    func numberOfRows(in nestedCollectionViewController: CRANestedCollectionViewController) -> Int {
+    func numberOfRows(in nestedCollectionViewController: MoviesNestedCollectionViewController) -> Int {
         return viewModel.rowTitles.count
     }
     
-    func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
+    func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
                                         numberOfItemsInRow row: Int) -> Int {
         
         guard let rowTitle = viewModel.rowTitles[safe: row] else {
@@ -81,7 +79,7 @@ extension MoviesPresenter {
         return movies.count
     }
     
-    func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
+    func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
                                         titleForRow row: Int) -> String {
         
         guard let rowTitle = viewModel.rowTitles[safe: row] else {

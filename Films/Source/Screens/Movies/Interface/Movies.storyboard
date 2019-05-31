@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="92.753623188405811" y="181.47321428571428"/>
         </scene>
-        <!--CRANestedCollection-->
+        <!--MoviesNestedCollection-->
         <scene sceneID="ZLx-g8-cRg">
             <objects>
-                <viewControllerPlaceholder storyboardName="CRANestedCollection" id="669-pG-ShA" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="MoviesNestedCollection" id="669-pG-ShA" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRt-mf-SnL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="683" y="181"/>

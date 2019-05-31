@@ -14,14 +14,13 @@ protocol MoviesViewModelDelegate: class {
 }
 
 class MoviesViewModel: MoviesViewModelProtocol {
+    private let omdbProvider = OMDB.Networking()
+    private let imageProvider = Image.Networking()
+    
     private(set) var rowTitles: [String] = []
     private(set) var moviesDictionary: [String: [Netflix.Networking.Responses.Movie]] = [:]
     
     weak var delegate: MoviesViewModelDelegate?
-    
-    init(delegate: MoviesViewModelDelegate) {
-        self.delegate = delegate
-    }
 }
 
 extension MoviesViewModel {

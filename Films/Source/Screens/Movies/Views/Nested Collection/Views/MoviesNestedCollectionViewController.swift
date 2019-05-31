@@ -1,5 +1,5 @@
 //
-//  CRANestedCollectionViewController.swift
+//  MoviesNestedCollectionViewController.swift
 //  Films
 //
 //  Created by Christian Ampe on 5/13/19.
@@ -8,29 +8,29 @@
 
 import UIKit
 
-class CRANestedCollectionViewController: UIViewController {
+class MoviesNestedCollectionViewController: UIViewController {
     
     /// A `UITableView` which contains the rows of items to be displayed.
     @IBOutlet private weak var tableView: UITableView!
     
-    weak var delegate: CRANestedCollectionViewDelegate?
+    weak var delegate: MoviesNestedCollectionViewDelegate?
     weak var dataSource: CRANestedCollectionViewDataSource?
 }
 
 // MARK: - Public API
-extension CRANestedCollectionViewController {
+extension MoviesNestedCollectionViewController {
     func reloadData() {
         tableView.reloadData()
     }
 }
 
 // MARK: - UITableViewDelegate
-extension CRANestedCollectionViewController: UITableViewDelegate {
+extension MoviesNestedCollectionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    willDisplay cell: UITableViewCell,
                    forRowAt indexPath: IndexPath) {
         
-        guard let cell = cell as? CRANestedCollectionViewRowCell else {
+        guard let cell = cell as? MoviesNestedCollectionViewRowCell else {
             assertionFailure("incorrect cell type used")
             return
         }
@@ -43,7 +43,7 @@ extension CRANestedCollectionViewController: UITableViewDelegate {
 }
 
 // MARK: - UITableViewDataSource
-extension CRANestedCollectionViewController: UITableViewDataSource {
+extension MoviesNestedCollectionViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return dataSource?.numberOfRows(in: self) ?? 0
     }
@@ -57,7 +57,7 @@ extension CRANestedCollectionViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        return tableView.dequeueReusableCell(for: indexPath) as CRANestedCollectionViewRowCell
+        return tableView.dequeueReusableCell(for: indexPath) as MoviesNestedCollectionViewRowCell
     }
     
     func tableView(_ tableView: UITableView,
@@ -68,12 +68,12 @@ extension CRANestedCollectionViewController: UITableViewDataSource {
     }
 }
 
-extension CRANestedCollectionViewController: CRANestedCollectionViewRowCellDelegate {
+extension MoviesNestedCollectionViewController: MoviesNestedCollectionViewRowCellDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         willDisplay cell: UICollectionViewCell,
                         forItemAt indexPath: IndexPath) {
         
-        guard let cell = cell as? CRANestedCollectionViewItemCell else {
+        guard let cell = cell as? MoviesNestedCollectionViewItemCell else {
             assertionFailure("incorrect cell type used")
             return
         }
@@ -82,9 +82,23 @@ extension CRANestedCollectionViewController: CRANestedCollectionViewRowCellDeleg
                                                  willDisplay: cell,
                                                  forItemAt: indexPath)
     }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        didEndDisplaying cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
+        
+        guard let cell = cell as? MoviesNestedCollectionViewItemCell else {
+            assertionFailure("incorrect cell type used")
+            return
+        }
+        
+        delegate?.nestedCollectionViewController(self,
+                                                 didEndDisplaying: cell,
+                                                 forItemAt: indexPath)
+    }
 }
 
-extension CRANestedCollectionViewController: CRANestedCollectionViewRowCellDataSource {
+extension MoviesNestedCollectionViewController: MoviesNestedCollectionViewRowCellDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         

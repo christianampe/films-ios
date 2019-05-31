@@ -9,11 +9,11 @@
 import Foundation
 
 protocol CRANestedCollectionViewDataSource: class {
-    func numberOfRows(in nestedCollectionViewController: CRANestedCollectionViewController) -> Int
+    func numberOfRows(in nestedCollectionViewController: MoviesNestedCollectionViewController) -> Int
     
-    func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
+    func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
                                         numberOfItemsInRow row: Int) -> Int
     
-    func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
+    func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
                                         titleForRow row: Int) -> String
 }

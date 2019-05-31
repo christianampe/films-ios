@@ -1,5 +1,5 @@
 //
-//  CRANestedCollectionViewRowCellDataSource.swift
+//  MoviesNestedCollectionViewRowCellDataSource.swift
 //  Films
 //
 //  Created by Christian Ampe on 5/28/19.
@@ -8,7 +8,7 @@
 
 import UIKit.UICollectionView
 
-protocol CRANestedCollectionViewRowCellDataSource: class {
+protocol MoviesNestedCollectionViewRowCellDataSource: class {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int
 }
