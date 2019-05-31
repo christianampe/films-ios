@@ -1,19 +1,12 @@
 import Foundation
 
-protocol CRANetworkingServiceProtocol {
-    associatedtype R: CRANetworkingServiceResponseProtocol
-    associatedtype E: Swift.Error
-    
-    func request(_ request: URLRequest, completion: @escaping (Result<R, E>) -> Void) -> URLSessionDataTask
-}
-
 class CRANetworkingService {
     
     /// URL session used to make all network requests.
     private let session = URLSession(configuration: .default)
 }
 
-extension CRANetworkingService: CRANetworkingServiceProtocol {
+extension CRANetworkingService {
     
     /// Core method for making a network request.
     ///

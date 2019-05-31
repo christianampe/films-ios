@@ -23,12 +23,16 @@ extension CRAMemoryCache {
     }
     
     func object(forKey key: String) -> T? {
-        guard let object = storage.object(forKey: key as NSString) as? T else {
+        guard let object = storage.object(forKey: key as NSString) else {
+            return nil
+        }
+        
+        guard let castedObject = object as? T else {
             assertionFailure("corrupt data types")
             return nil
         }
         
-        return object
+        return castedObject
     }
 }
 
