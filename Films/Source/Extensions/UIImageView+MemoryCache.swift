@@ -15,7 +15,7 @@ extension UIImageView {
 
 extension UIImageView {
     func setImage(with url: URL) {
-        let cacheKey = url.absoluteString as NSString
+        let cacheKey = url.absoluteString
         
         if let cachedImage = UIImageView.memoryCache.object(forKey: cacheKey) {
             image = cachedImage
@@ -31,7 +31,7 @@ extension UIImageView {
                         }
                         
                         self.image = fetchedImage
-                        UIImageView.memoryCache.setObject(fetchedImage, forKey: url.absoluteString as NSString)
+                        UIImageView.memoryCache.setObject(fetchedImage, forKey: cacheKey)
                     case .failure:
                         break
                     }

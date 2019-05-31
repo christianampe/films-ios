@@ -11,8 +11,8 @@ import Foundation
 protocol CRACacheProtocol {
     associatedtype T: Any
     
-    func setObject(_ object: T, forKey key: NSString)
-    func object(forKey key: NSString) -> T?
+    func setObject(_ object: T, forKey key: String)
+    func object(forKey key: String) -> T?
 }
 
 class CRACache<T: Any>: CRACacheProtocol {
@@ -20,11 +20,11 @@ class CRACache<T: Any>: CRACacheProtocol {
 }
 
 extension CRACache {
-    func setObject(_ object: T, forKey key: NSString) {
+    func setObject(_ object: T, forKey key: String) {
         
     }
     
-    func object(forKey key: NSString) -> T? {
+    func object(forKey key: String) -> T? {
         return nil
     }
 }

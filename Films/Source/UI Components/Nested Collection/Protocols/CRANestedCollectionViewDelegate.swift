@@ -11,6 +11,10 @@ import Foundation
 protocol CRANestedCollectionViewDelegate: class {
     func nestedCollectionView(_ nestedCollectionViewController: CRANestedCollectionViewController,
                               didSelectItemAtIndexPath indexPath: IndexPath)
+    
+    func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
+                                        willDisplay cell: CRANestedCollectionViewItemCell,
+                                        forItemAt indexPath: IndexPath)
 }
 
 extension CRANestedCollectionViewDelegate {

@@ -13,11 +13,9 @@ final class NavigationRouter: NavigationRouterProtocol {
 }
 
 extension NavigationRouter {
-    func presentMovies(_ delegate: MoviesDelegateProtocol,
-                       input: MoviesInput) {
+    func presentMovies(_ delegate: MoviesDelegateProtocol) {
         
-        navigationController?.setViewControllers([MoviesBuilder.create(delegate,
-                                                                       input: input)],
+        navigationController?.setViewControllers([MoviesBuilder.create(delegate)],
                                                  animated: true)
     }
 }

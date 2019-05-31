@@ -11,20 +11,25 @@ import Foundation
 enum Netflix {
     class Networking {
         private let provider = CRANetworkingProvider<Netflix.Networking.Target>()
+        private let memoryCache = CRAMemoryCache<[Netflix.Networking.Responses.Movie]>()
         private let jsonDecoder = JSONDecoder(.convertFromSnakeCase)
     }
 }
 
 extension Netflix.Networking {
-    func films(_ completion: @escaping (Result<[Netflix.Networking.Responses.Movie], Netflix.Networking.Error>) -> Void) {
-        provider.request(.films) { [weak jsonDecoder] result in
-            guard let jsonDecoder = jsonDecoder else { return }
+    func movies(_ completion: @escaping (Result<[Netflix.Networking.Responses.Movie], Netflix.Networking.Error>) -> Void) {
+        provider.request(.films) { [weak jsonDecoder, weak memoryCache] result in
+            guard let jsonDecoder = jsonDecoder, let memoryCache = memoryCache else { return }
             
             switch result {
             case .success(let response):
                 do {
                     let movies = try jsonDecoder.decode([Netflix.Networking.Responses.Movie].self,
                                                         from: response.data)
+                    if let requestURL = response.request.url {
+                        memoryCache.setObject(movies, forKey: requestURL.absoluteString)
+                    }
+                    
                     completion(.success(movies))
                 } catch {
                     completion(.failure(.mapping))

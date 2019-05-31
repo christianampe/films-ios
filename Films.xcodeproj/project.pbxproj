@@ -22,9 +22,6 @@
 		BF8BFCAD229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCAC229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift */; };
 		BF8BFCB2229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCB1229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift */; };
 		BF8BFCB4229E3AEC0035AB90 /* CRANestedCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCB3229E3AEC0035AB90 /* CRANestedCollectionViewDelegate.swift */; };
-		BF8BFCB9229E41010035AB90 /* CRANestedCollectionViewRowCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCB8229E41010035AB90 /* CRANestedCollectionViewRowCellDataSource.swift */; };
-		BF8BFCBB229E41140035AB90 /* CRANestedCollectionViewRowCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCBA229E41130035AB90 /* CRANestedCollectionViewRowCellDelegate.swift */; };
-		BF8BFCC9229E425F0035AB90 /* MoviesInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCBF229E425F0035AB90 /* MoviesInput.swift */; };
 		BF8BFCCA229E425F0035AB90 /* MoviesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCC0229E425F0035AB90 /* MoviesPresenter.swift */; };
 		BF8BFCCB229E425F0035AB90 /* MoviesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCC1229E425F0035AB90 /* MoviesRouter.swift */; };
 		BF8BFCCC229E425F0035AB90 /* Movies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF8BFCC2229E425F0035AB90 /* Movies.storyboard */; };
@@ -32,7 +29,6 @@
 		BF8BFCCE229E425F0035AB90 /* MoviesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCC4229E425F0035AB90 /* MoviesProtocols.swift */; };
 		BF8BFCCF229E425F0035AB90 /* MoviesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCC5229E425F0035AB90 /* MoviesBuilder.swift */; };
 		BF8BFCD0229E425F0035AB90 /* MoviesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCC6229E425F0035AB90 /* MoviesInteractor.swift */; };
-		BF8BFCD1229E425F0035AB90 /* MoviesOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCC7229E425F0035AB90 /* MoviesOutput.swift */; };
 		BF8BFCD2229E425F0035AB90 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCC8229E425F0035AB90 /* MoviesViewModel.swift */; };
 		BF8BFCD4229E45190035AB90 /* UIStoryboard+Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCD3229E45190035AB90 /* UIStoryboard+Identifiers.swift */; };
 		BF8BFCE2229E462F0035AB90 /* NavigationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8BFCD8229E462F0035AB90 /* NavigationPresenter.swift */; };
@@ -120,9 +116,6 @@
 		BF8BFCAC229E2EA40035AB90 /* CRAGenericCollectionViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAGenericCollectionViewSource.swift; sourceTree = "<group>"; };
 		BF8BFCB1229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		BF8BFCB3229E3AEC0035AB90 /* CRANestedCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewDelegate.swift; sourceTree = "<group>"; };
-		BF8BFCB8229E41010035AB90 /* CRANestedCollectionViewRowCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewRowCellDataSource.swift; sourceTree = "<group>"; };
-		BF8BFCBA229E41130035AB90 /* CRANestedCollectionViewRowCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANestedCollectionViewRowCellDelegate.swift; sourceTree = "<group>"; };
-		BF8BFCBF229E425F0035AB90 /* MoviesInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesInput.swift; sourceTree = "<group>"; };
 		BF8BFCC0229E425F0035AB90 /* MoviesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesPresenter.swift; sourceTree = "<group>"; };
 		BF8BFCC1229E425F0035AB90 /* MoviesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRouter.swift; sourceTree = "<group>"; };
 		BF8BFCC2229E425F0035AB90 /* Movies.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movies.storyboard; sourceTree = "<group>"; };
@@ -130,7 +123,6 @@
 		BF8BFCC4229E425F0035AB90 /* MoviesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesProtocols.swift; sourceTree = "<group>"; };
 		BF8BFCC5229E425F0035AB90 /* MoviesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesBuilder.swift; sourceTree = "<group>"; };
 		BF8BFCC6229E425F0035AB90 /* MoviesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesInteractor.swift; sourceTree = "<group>"; };
-		BF8BFCC7229E425F0035AB90 /* MoviesOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesOutput.swift; sourceTree = "<group>"; };
 		BF8BFCC8229E425F0035AB90 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		BF8BFCD3229E45190035AB90 /* UIStoryboard+Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Identifiers.swift"; sourceTree = "<group>"; };
 		BF8BFCD8229E462F0035AB90 /* NavigationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPresenter.swift; sourceTree = "<group>"; };
@@ -370,10 +362,8 @@
 		BF8BFD31229F89420035AB90 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				BF8BFCB1229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift */,
 				BF8BFCB3229E3AEC0035AB90 /* CRANestedCollectionViewDelegate.swift */,
-				BF8BFCB8229E41010035AB90 /* CRANestedCollectionViewRowCellDataSource.swift */,
-				BF8BFCBA229E41130035AB90 /* CRANestedCollectionViewRowCellDelegate.swift */,
+				BF8BFCB1229E3AD50035AB90 /* CRANestedCollectionViewDataSource.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -402,8 +392,6 @@
 		BF8BFD34229F8EB40035AB90 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BF8BFCBF229E425F0035AB90 /* MoviesInput.swift */,
-				BF8BFCC7229E425F0035AB90 /* MoviesOutput.swift */,
 				BF8BFCC8229E425F0035AB90 /* MoviesViewModel.swift */,
 			);
 			path = Models;
@@ -751,13 +739,11 @@
 				BF8BFCE2229E462F0035AB90 /* NavigationPresenter.swift in Sources */,
 				BFD2E01A229D01D8008EC33D /* NetworkingServiceError.swift in Sources */,
 				BF8BFD4422A06E7D0035AB90 /* OMDBNetworking.swift in Sources */,
-				BF8BFCD1229E425F0035AB90 /* MoviesOutput.swift in Sources */,
 				BF8BFCD2229E425F0035AB90 /* MoviesViewModel.swift in Sources */,
 				BF8BFCA7229E2DFF0035AB90 /* CRAGenericCollectionCellProtocol.swift in Sources */,
 				BFD2E00E229D0131008EC33D /* CRAKeyNamespaceable.swift in Sources */,
 				BFD2DFF9229D00DB008EC33D /* SegueIdentifiable+UIViewController.swift in Sources */,
 				BF8BFCCE229E425F0035AB90 /* MoviesProtocols.swift in Sources */,
-				BF8BFCBB229E41140035AB90 /* CRANestedCollectionViewRowCellDelegate.swift in Sources */,
 				BF8BFD3D229F916A0035AB90 /* NetflixNetworkingResponses.swift in Sources */,
 				BF8BFD3F229FAFDB0035AB90 /* NetflixNetworkingError.swift in Sources */,
 				BF8BFC9E229DEA120035AB90 /* StoryboardIdentifiable++.swift in Sources */,
@@ -783,9 +769,7 @@
 				BF8BFCCA229E425F0035AB90 /* MoviesPresenter.swift in Sources */,
 				BF8BFCAA229E2E490035AB90 /* CRAGenericTableViewSource.swift in Sources */,
 				BFB7B728229DC85D001CCD49 /* CRAMemoryCache.swift in Sources */,
-				BF8BFCC9229E425F0035AB90 /* MoviesInput.swift in Sources */,
 				BF8BFD30229F52DB0035AB90 /* CRANavigationDropdownCell.swift in Sources */,
-				BF8BFCB9229E41010035AB90 /* CRANestedCollectionViewRowCellDataSource.swift in Sources */,
 				BF8BFCD4229E45190035AB90 /* UIStoryboard+Identifiers.swift in Sources */,
 				BF8BFD4122A05ED80035AB90 /* JSONDecoder++.swift in Sources */,
 				BFD2E020229D0221008EC33D /* CRANetworkingRequestHTTPMethod.swift in Sources */,

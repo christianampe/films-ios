@@ -9,5 +9,6 @@
 import Foundation
 
 protocol CRANestedCollectionViewItem {
+    var title: String { get }
     var backgroundImageURLString: String { get }
 }

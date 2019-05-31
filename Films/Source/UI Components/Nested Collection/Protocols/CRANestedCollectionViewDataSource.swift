@@ -15,8 +15,5 @@ protocol CRANestedCollectionViewDataSource: class {
                                         numberOfItemsInRow row: Int) -> Int
     
     func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
-                                        viewModelAtIndexPath indexPath: IndexPath) -> CRANestedCollectionViewItem
-    
-    func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
                                         titleForRow row: Int) -> String
 }

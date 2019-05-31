@@ -9,10 +9,17 @@
 import UIKit
 
 class CRANestedCollectionViewController: UIViewController {
-    @IBOutlet private weak var tableView: UITableView!
     
-    weak var dataSource: CRANestedCollectionViewDataSource?
+    /// A `UITableView` which contains the rows of items to be displayed.
+    @IBOutlet private weak var tableView: UITableView! {
+        didSet  {
+            tableView.delegate = self
+            tableView.dataSource = self
+        }
+    }
+    
     weak var delegate: CRANestedCollectionViewDelegate?
+    weak var dataSource: CRANestedCollectionViewDataSource?
 }
 
 // MARK: - Public API
@@ -22,6 +29,24 @@ extension CRANestedCollectionViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
+extension CRANestedCollectionViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView,
+                   willDisplay cell: UITableViewCell,
+                   forRowAt indexPath: IndexPath) {
+        
+        guard let cell = cell as? CRANestedCollectionViewRowCell else {
+            assertionFailure("incorrect cell type used")
+            return
+        }
+        
+        cell.delegate = self
+        cell.dataSource = self
+        cell.index = indexPath.row
+    }
+}
+
+// MARK: - UITableViewDataSource
 extension CRANestedCollectionViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
@@ -32,34 +57,42 @@ extension CRANestedCollectionViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(for: indexPath) as CRANestedCollectionViewRowCell
-        
-        cell.rowIndex = indexPath.section
-        cell.dataSource = self
-        cell.delegate = self
-        
-        return cell
+        return tableView.dequeueReusableCell(for: indexPath) as CRANestedCollectionViewRowCell
     }
 }
 
-extension CRANestedCollectionViewController: UITableViewDelegate {
-    
-}
-
-extension CRANestedCollectionViewController: CRANestedCollectionViewRowCellDataSource {
-    func numberOfItems(in nestedCollectionViewRowCell: CRANestedCollectionViewRowCell) -> Int {
-        return dataSource?.nestedCollectionViewController(self,
-                                                          numberOfItemsInRow: nestedCollectionViewRowCell.rowIndex) ?? 0
-    }
-    
-    func nestedCollectionViewRowCell(_ nestedCollectionViewRowCell: CRANestedCollectionViewRowCell,
-                                     viewModelAtIndex index: Int) -> CRANestedCollectionViewItem? {
+extension CRANestedCollectionViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
         
-        return dataSource?.nestedCollectionViewController(self, viewModelAtIndexPath: IndexPath(item: index,
-                                                                                               section: nestedCollectionViewRowCell.rowIndex))
+        guard let parentCell = collectionView.superview as? CRANestedCollectionViewRowCell else {
+            assertionFailure("embedding hierarchy incorrect")
+            return
+        }
+        
+        guard let cell = cell as? CRANestedCollectionViewItemCell else {
+            assertionFailure("incorrect cell type used")
+            return
+        }
+        
+        delegate?.nestedCollectionViewController(self,
+                                                 willDisplay: cell,
+                                                 forItemAt: IndexPath(row: parentCell.index,
+                                                                      section: indexPath.item))
     }
 }
 
-extension CRANestedCollectionViewController: CRANestedCollectionViewRowCellDelegate {
+extension CRANestedCollectionViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
+        
+        return dataSource?.nestedCollectionViewController(self, numberOfItemsInRow: section) ?? 0
+    }
     
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        return collectionView.dequeueReusableCell(for: indexPath) as CRANestedCollectionViewItemCell
+    }
 }

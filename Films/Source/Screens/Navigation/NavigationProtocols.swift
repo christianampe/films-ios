@@ -18,5 +18,5 @@ protocol NavigationInteractorProtocol: class {
 }
 
 protocol NavigationRouterProtocol: class {
-    func presentMovies(_ delegate: MoviesDelegateProtocol, input: MoviesInput)
+    func presentMovies(_ delegate: MoviesDelegateProtocol)
 }

@@ -13,17 +13,17 @@ class CRAMemoryCache<T: Any>: CRACacheProtocol {
 }
 
 extension CRAMemoryCache {
-    func setObject(_ object: T, forKey key: NSString) {
+    func setObject(_ object: T, forKey key: String) {
         guard let classObject = classObject(from: object) else {
             assertionFailure("this point should never be reached")
             return
         }
         
-        storage.setObject(classObject, forKey: key)
+        storage.setObject(classObject, forKey: key as NSString)
     }
     
-    func object(forKey key: NSString) -> T? {
-        guard let object = storage.object(forKey: key) as? T else {
+    func object(forKey key: String) -> T? {
+        guard let object = storage.object(forKey: key as NSString) as? T else {
             assertionFailure("corrupt data types")
             return nil
         }
@@ -41,6 +41,8 @@ private extension CRAMemoryCache {
         
         switch displayStyle {
         case .class:
+            return object as AnyObject
+        case .collection:
             return object as AnyObject
         case .struct:
             return CRAStructContainer(object: object)

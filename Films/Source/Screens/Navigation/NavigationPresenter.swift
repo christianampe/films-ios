@@ -15,6 +15,6 @@ final class NavigationPresenter: NavigationPresenterProtocol {
 
 extension NavigationPresenter {
     func start() {
-        router?.presentMovies(self, input: MoviesInput())
+        router?.presentMovies(self)
     }
 }

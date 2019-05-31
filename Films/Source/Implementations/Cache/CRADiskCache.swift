@@ -13,11 +13,11 @@ class CRADiskCache<T: AnyObject>: CRACacheProtocol {
 }
 
 extension CRADiskCache {
-    func setObject(_ object: T, forKey key: NSString) {
+    func setObject(_ object: T, forKey key: String) {
         
     }
     
-    func object(forKey key: NSString) -> T? {
+    func object(forKey key: String) -> T? {
         return nil
     }
 }

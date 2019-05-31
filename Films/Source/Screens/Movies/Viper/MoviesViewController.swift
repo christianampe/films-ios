@@ -8,11 +8,7 @@
 
 import UIKit
 
-final class MoviesViewController: UIViewController, MoviesViewProtocol {
-    var input: MoviesInputProtocol?
-    var viewModel: MoviesViewModelProtocol?
-    var output: MoviesOutputProtocol?
-    
+final class MoviesViewController: UIViewController {
     var presenter: MoviesPresenterProtocol?
     weak var delegate: MoviesDelegateProtocol?
     
@@ -20,10 +16,14 @@ final class MoviesViewController: UIViewController, MoviesViewProtocol {
     private lazy var navigationDropdown = CRANavigationDropdownViewController(self)
 }
 
-// MARK: - Viper
-extension MoviesViewController {
+// MARK: - MoviesViewProtocol
+extension MoviesViewController: MoviesViewProtocol {
     func show(movies: [Netflix.Networking.Responses.Movie]) {
-        viewModel?.movies = movies
+        nestedCollection.reloadData()
+    }
+    
+    func show(info: OMDB.Networking.Responses.Info) {
+        
     }
     
     func show(error: Error) {
@@ -37,7 +37,7 @@ extension MoviesViewController {
         switch segueCase(for: segue) {
         case .embedNestedCollection:
             nestedCollection = segue.viewController()
-            nestedCollection.dataSource = viewModel
+            nestedCollection.dataSource = presenter
         }
     }
 }

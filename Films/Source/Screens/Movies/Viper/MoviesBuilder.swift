@@ -9,10 +9,7 @@
 import UIKit
 
 final class MoviesBuilder {
-    static func create(_ delegate: MoviesDelegateProtocol?,
-                       input: MoviesInputProtocol,
-                       viewModel: MoviesViewModelProtocol = MoviesViewModel(),
-                       output: MoviesOutputProtocol = MoviesOutput()) -> UIViewController {
+    static func create(_ delegate: MoviesDelegateProtocol?) -> UIViewController {
         
         let storyboard = UIStoryboard(storyboard: .movies)
         let view: MoviesViewController = storyboard.instantiateViewController()
@@ -20,9 +17,6 @@ final class MoviesBuilder {
         let router = MoviesRouter()
         let presenter = MoviesPresenter()
         
-        view.input = input
-        view.viewModel = viewModel
-        view.output = output
         view.presenter = presenter
         view.delegate = delegate
         presenter.view = view
