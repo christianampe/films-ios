@@ -27,6 +27,8 @@ protocol MoviesPresenterProtocol: CRANestedCollectionViewDataSource, CRANestedCo
     var interactor: MoviesInteractorProtocol? { get set }
     var router: MoviesRouterProtocol? { get set }
     
+    func viewDidLoad()
+    
     func fetched(movies: [Netflix.Networking.Responses.Movie])
     func encountered(error: Netflix.Networking.Error)
     

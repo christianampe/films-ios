@@ -63,10 +63,6 @@
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
-                                                    <connections>
-                                                        <outlet property="dataSource" destination="gFo-Lb-WNz" id="DDS-cv-i67"/>
-                                                        <outlet property="delegate" destination="gFo-Lb-WNz" id="4fA-aJ-tV1"/>
-                                                    </connections>
                                                 </collectionView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,10 +79,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="7Fq-Oh-c0V" id="KpK-LU-6u3"/>
-                                    <outlet property="delegate" destination="7Fq-Oh-c0V" id="uJM-OL-YgT"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

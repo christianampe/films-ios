@@ -13,13 +13,14 @@ extension Netflix.Networking {
         struct Movie: Decodable {
             let actors: [String]
             let director: String
+            let funFacts: String?
             let latitude: Double
             let locations: String
             let longitude: Double
             let productionCompany: String
             let releaseYear: String
             let title: String
-            let writers: [String]
+            let writers: [String]?
         }
     }
 }

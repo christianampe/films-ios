@@ -10,7 +10,7 @@ import Foundation
 
 extension Netflix.Networking {
     enum Error: Swift.Error {
-        case mapping
+        case mapping(Swift.Error)
         case service(CRANetworkingServiceError)
     }
 }

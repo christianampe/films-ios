@@ -48,9 +48,11 @@ extension MoviesViewModel {
             // sort the collection titles either alphabetically or numerically
             self.rowTitles.sort()
             
-            // delegate out that the analysis has completed
-            self.delegate?.moviesViewModel(self,
-                                           didFinishAnalyzingMovies: movies)
+            // delegate out that the analysis has completed on the main thread
+            DispatchQueue.main.async {
+                self.delegate?.moviesViewModel(self,
+                                               didFinishAnalyzingMovies: movies)
+            }
         }
     }
 }

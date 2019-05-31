@@ -16,7 +16,14 @@ final class MoviesPresenter: MoviesPresenterProtocol {
     private lazy var viewModel = MoviesViewModel(delegate: self)
 }
 
-// MARK: - VIPER
+// MARK: - VIEW TO INTERACTOR
+extension MoviesPresenter {
+    func viewDidLoad() {
+        interactor?.fetchMovies()
+    }
+}
+
+// MARK: - INTERACTOR TO VIEW
 extension MoviesPresenter {
     func fetched(movies: [Netflix.Networking.Responses.Movie]) {
         viewModel.analyze(movies)
@@ -25,9 +32,7 @@ extension MoviesPresenter {
     func encountered(error: Netflix.Networking.Error) {
         view?.show(error: error)
     }
-}
-
-extension MoviesPresenter {
+    
     func fetched(info: OMDB.Networking.Responses.Info) {
         view?.show(info: info)
     }
@@ -51,6 +56,7 @@ extension MoviesPresenter {
     func nestedCollectionViewController(_ nestedCollectionViewController: CRANestedCollectionViewController,
                                         willDisplay cell: CRANestedCollectionViewItemCell,
                                         forItemAt indexPath: IndexPath) {
+        
         
     }
 }

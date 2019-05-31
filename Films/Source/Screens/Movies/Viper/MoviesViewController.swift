@@ -16,6 +16,13 @@ final class MoviesViewController: UIViewController {
     private lazy var navigationDropdown = CRANavigationDropdownViewController(self)
 }
 
+extension MoviesViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter?.viewDidLoad()
+    }
+}
+
 // MARK: - MoviesViewProtocol
 extension MoviesViewController: MoviesViewProtocol {
     func show(movies: [Netflix.Networking.Responses.Movie]) {
@@ -37,6 +44,7 @@ extension MoviesViewController {
         switch segueCase(for: segue) {
         case .embedNestedCollection:
             nestedCollection = segue.viewController()
+            nestedCollection.delegate = presenter
             nestedCollection.dataSource = presenter
         }
     }
