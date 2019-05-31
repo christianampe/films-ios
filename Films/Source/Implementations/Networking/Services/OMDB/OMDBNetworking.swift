@@ -11,7 +11,8 @@ import Foundation
 enum OMDB {
     class Networking {
         private let provider = CRANetworkingProvider<OMDB.Networking.Target>()
-        private let jsonDecoder = JSONDecoder(.convertFromSnakeCase)
+        private let jsonDecoder = JSONDecoder()
+        private let memcache = CRAMemoryCache<OMDB.Networking.Responses.Info>()
     }
 }
 

@@ -9,13 +9,13 @@
 import Foundation
 
 protocol CRACacheProtocol {
-    associatedtype T: AnyObject
+    associatedtype T: Any
     
     func setObject(_ object: T, forKey key: NSString)
     func object(forKey key: NSString) -> T?
 }
 
-class CRACache<T: AnyObject>: CRACacheProtocol {
+class CRACache<T: Any>: CRACacheProtocol {
     
 }
 
