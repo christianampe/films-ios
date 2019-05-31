@@ -57,8 +57,6 @@ extension MoviesPresenter {
                                         willDisplay cell: CRANestedCollectionViewItemCell,
                                         forItemAt indexPath: IndexPath) {
         
-        print(indexPath.row, indexPath.section)
-        
         cell.configure(with: CRANestedCollectionViewItem(backgroundImageURLString: "https://m.media-amazon.com/images/M/MV5BN2I3NzVlMTktNWZmYi00ODk1LWE1YzUtYzVlMmY5ZjYwMTk1XkEyXkFqcGdeQXVyMzU0NzkwMDg@._V1_SX300.jpg"))
     }
 }
@@ -79,8 +77,6 @@ extension MoviesPresenter {
         guard let movies = viewModel.moviesDictionary[rowTitle] else {
             return 0
         }
-        
-        print(rowTitle, movies.count)
         
         return movies.count
     }
