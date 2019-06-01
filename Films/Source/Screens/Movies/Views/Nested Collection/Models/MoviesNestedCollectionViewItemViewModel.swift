@@ -77,6 +77,8 @@ private extension MoviesNestedCollectionViewItemViewModel {
     }
     
     func fetchImage(with urlString: String) {
+        print(urlString)
+        
         imageProvider?.image(urlString: urlString) { [weak self] result in
             guard let self = self else { return }
             
