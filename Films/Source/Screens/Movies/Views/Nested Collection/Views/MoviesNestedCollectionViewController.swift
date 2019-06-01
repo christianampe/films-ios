@@ -21,6 +21,7 @@ class MoviesNestedCollectionViewController: UIViewController {
 extension MoviesNestedCollectionViewController {
     func reloadData() {
         tableView.reloadData()
+        tableView.scrollToRow(at: IndexPath(item: 0, section: 0), at: .top, animated: false)
     }
 }
 
