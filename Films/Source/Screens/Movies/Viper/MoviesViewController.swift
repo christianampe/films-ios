@@ -20,9 +20,11 @@ final class MoviesViewController: UIViewController {
 extension MoviesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationDropdown = CRANavigationDropdownViewController(self)
         presenter?.viewDidLoad()
-        navigationDropdown.set(["Ballz", "Boobz", "Booze", "Buttz"])
+        
+        navigationDropdown = CRANavigationDropdownViewController(self)
+        navigationDropdown.delegate = presenter
+        navigationDropdown.set(Netflix.Networking.Responses.Movie.Filter.all.map { $0.rawValue })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -37,8 +39,13 @@ extension MoviesViewController {
 
 // MARK: - MoviesViewProtocol
 extension MoviesViewController: MoviesViewProtocol {
-    func show(movies: [Netflix.Networking.Responses.Movie]) {
+    func show(movies: [Netflix.Networking.Responses.Movie],
+              with filter: String) {
+        
         nestedCollection.reloadData()
+        navigationDropdown.hide()
+        
+        title = "Filtered by \(filter)"
     }
     
     func show(error: Error) {

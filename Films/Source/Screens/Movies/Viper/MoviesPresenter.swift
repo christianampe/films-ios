@@ -27,7 +27,8 @@ extension MoviesPresenter {
 // MARK: - INTERACTOR TO VIEW
 extension MoviesPresenter {
     func fetched(movies: [Netflix.Networking.Responses.Movie]) {
-        viewModel.analyze(movies)
+        viewModel.set(movies: movies)
+        viewModel.filter(by: .releaseYear)
     }
     
     func encountered(error: Netflix.Networking.Error) {
@@ -38,13 +39,15 @@ extension MoviesPresenter {
 // MARK: - MoviesViewModelDelegate
 extension MoviesPresenter: MoviesViewModelDelegate {
     func moviesViewModel(_ moviesViewModel: MoviesViewModel,
-                         didFinishAnalyzingMovies movies: [Netflix.Networking.Responses.Movie]) {
+                         didFinishAnalyzingMovies movies: [Netflix.Networking.Responses.Movie],
+                         with filter: Netflix.Networking.Responses.Movie.Filter) {
         
-        view?.show(movies: movies)
+        view?.show(movies: movies,
+                   with: filter.rawValue)
     }
 }
 
-// MARK: - CRANestedCollectionViewDelegate
+// MARK: - MoviesNestedCollectionViewDelegate
 extension MoviesPresenter {
     func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
                                         willDisplay cell: MoviesNestedCollectionViewItemCell,
@@ -86,7 +89,7 @@ extension MoviesPresenter {
     }
 }
 
-// MARK: - CRANestedCollectionViewDataSource
+// MARK: - MoviesNestedCollectionViewDataSource
 extension MoviesPresenter {
     func numberOfRows(in nestedCollectionViewController: MoviesNestedCollectionViewController) -> Int {
         return viewModel.rowTitles.count
@@ -114,5 +117,19 @@ extension MoviesPresenter {
         }
         
         return rowTitle
+    }
+}
+
+// MARK: - CRANavigationDropdownDelegate
+extension MoviesPresenter {
+    func tableView(_ tableView: UITableView,
+                   didSelectFilter filter: String) {
+        
+        guard let filter = Netflix.Networking.Responses.Movie.Filter(rawValue: filter) else {
+            assertionFailure("inconsistency in filter vs dropdown titles")
+            return
+        }
+        
+        viewModel.filter(by: filter)
     }
 }

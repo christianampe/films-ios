@@ -1,5 +1,5 @@
 //
-//  CRANestedCollectionViewRowCellDelegate.swift
+//  MoviesNestedCollectionViewRowCellDelegate.swift
 //  Films
 //
 //  Created by Christian Ampe on 5/28/19.

@@ -7,7 +7,8 @@
 //
 
 protocol MoviesViewModelProtocol: class {
-    func analyze(_ movies: [Netflix.Networking.Responses.Movie])
+    func set(movies: [Netflix.Networking.Responses.Movie])
+    func filter(by filter: Netflix.Networking.Responses.Movie.Filter)
 }
 
 protocol MoviesDelegateProtocol: class {}
@@ -16,12 +17,12 @@ protocol MoviesViewProtocol: class {
     var presenter: MoviesPresenterProtocol?  { get set }
     var delegate: MoviesDelegateProtocol? { get set }
     
-    func show(movies: [Netflix.Networking.Responses.Movie])
+    func show(movies: [Netflix.Networking.Responses.Movie], with filter: String)
     
     func show(error: Error)
 }
 
-protocol MoviesPresenterProtocol: CRANestedCollectionViewDataSource, MoviesNestedCollectionViewDelegate {
+protocol MoviesPresenterProtocol: MoviesNestedCollectionViewDataSource, MoviesNestedCollectionViewDelegate, CRANavigationDropdownDelegate {
     var view: MoviesViewProtocol? { get set }
     var interactor: MoviesInteractorProtocol? { get set }
     var router: MoviesRouterProtocol? { get set }

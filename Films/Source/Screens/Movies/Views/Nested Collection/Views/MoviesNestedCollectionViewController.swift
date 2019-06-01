@@ -14,7 +14,7 @@ class MoviesNestedCollectionViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     weak var delegate: MoviesNestedCollectionViewDelegate?
-    weak var dataSource: CRANestedCollectionViewDataSource?
+    weak var dataSource: MoviesNestedCollectionViewDataSource?
 }
 
 // MARK: - Public API

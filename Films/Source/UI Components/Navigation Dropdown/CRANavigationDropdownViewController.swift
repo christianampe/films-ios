@@ -18,6 +18,8 @@ class CRANavigationDropdownViewController: UIViewController {
     
     private var isShown: Bool = false
     private var items: [String] = []
+    
+    weak var delegate: CRANavigationDropdownDelegate?
 }
 
 // MARK: - Initializers
@@ -58,8 +60,8 @@ extension CRANavigationDropdownViewController {
         let navigationBarTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleNavigationBarTap(_:)))
         sourceNavigationController.navigationBar.addGestureRecognizer(navigationBarTapGestureRecognizer)
         
-        let backgroundViewTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleBackgroundViewTap(_:)))
-        view.addGestureRecognizer(backgroundViewTapGestureRecognizer)
+//        let backgroundViewTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleBackgroundViewTap(_:)))
+//        view.addGestureRecognizer(backgroundViewTapGestureRecognizer)
 
         // assign self properties
         self.tableView = tableView
@@ -82,9 +84,9 @@ private extension CRANavigationDropdownViewController {
         toggle()
     }
     
-    @objc func handleBackgroundViewTap(_ sender: UITapGestureRecognizer) {
-        hide()
-    }
+//    @objc func handleBackgroundViewTap(_ sender: UITapGestureRecognizer) {
+//        hide()
+//    }
 }
 
 // MARK: - Public API
@@ -233,4 +235,11 @@ extension CRANavigationDropdownViewController: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-extension CRANavigationDropdownViewController: UITableViewDelegate {}
+extension CRANavigationDropdownViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
+        
+        delegate?.tableView(tableView,
+                            didSelectFilter: items[indexPath.row])
+    }
+}

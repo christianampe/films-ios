@@ -90,6 +90,7 @@
 		BFD2E38422A2F5E200F78FAE /* MovieDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E37A22A2F5E200F78FAE /* MovieDetailInteractor.swift */; };
 		BFD2E38522A2F5E200F78FAE /* MovieDetailOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E37B22A2F5E200F78FAE /* MovieDetailOutput.swift */; };
 		BFD2E38622A2F5E200F78FAE /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E37C22A2F5E200F78FAE /* MovieDetailViewModel.swift */; };
+		BFD2E38C22A32B1100F78FAE /* CRANavigationDropdownDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E38B22A32B1100F78FAE /* CRANavigationDropdownDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +200,7 @@
 		BFD2E37A22A2F5E200F78FAE /* MovieDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailInteractor.swift; sourceTree = "<group>"; };
 		BFD2E37B22A2F5E200F78FAE /* MovieDetailOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailOutput.swift; sourceTree = "<group>"; };
 		BFD2E37C22A2F5E200F78FAE /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		BFD2E38B22A32B1100F78FAE /* CRANavigationDropdownDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANavigationDropdownDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,6 +410,7 @@
 			children = (
 				BF8BFCEC229F03D80035AB90 /* CRANavigationDropdownViewController.swift */,
 				BF8BFD2F229F52DB0035AB90 /* CRANavigationDropdownCell.swift */,
+				BFD2E38B22A32B1100F78FAE /* CRANavigationDropdownDelegate.swift */,
 			);
 			path = "Navigation Dropdown";
 			sourceTree = "<group>";
@@ -879,6 +882,7 @@
 				BF8BFCD4229E45190035AB90 /* UIStoryboard+Identifiers.swift in Sources */,
 				BF8BFD4122A05ED80035AB90 /* JSONDecoder++.swift in Sources */,
 				BFD2E38622A2F5E200F78FAE /* MovieDetailViewModel.swift in Sources */,
+				BFD2E38C22A32B1100F78FAE /* CRANavigationDropdownDelegate.swift in Sources */,
 				BFD2E38322A2F5E200F78FAE /* MovieDetailBuilder.swift in Sources */,
 				BFD2E020229D0221008EC33D /* CRANetworkingRequestHTTPMethod.swift in Sources */,
 				BFD2DFF2229D0022008EC33D /* Array++.swift in Sources */,

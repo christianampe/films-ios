@@ -1,5 +1,5 @@
 //
-//  CRANestedCollectionViewDataSource.swift
+//  MoviesNestedCollectionViewDataSource.swift
 //  Films
 //
 //  Created by Christian Ampe on 5/28/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol CRANestedCollectionViewDataSource: class {
+protocol MoviesNestedCollectionViewDataSource: class {
     func numberOfRows(in nestedCollectionViewController: MoviesNestedCollectionViewController) -> Int
     
     func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,

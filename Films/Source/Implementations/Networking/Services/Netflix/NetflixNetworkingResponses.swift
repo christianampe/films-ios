@@ -24,3 +24,23 @@ extension Netflix.Networking {
         }
     }
 }
+
+extension Netflix.Networking.Responses.Movie {
+    enum Filter: String, RawRepresentable {
+        case actor = "Actor"
+        case director = "Director"
+        case location = "Location"
+        case productionCompany = "Production Company"
+        case releaseYear = "Release Year"
+        case writer = "Writer"
+    }
+}
+
+extension Netflix.Networking.Responses.Movie.Filter {
+    static let all: [Netflix.Networking.Responses.Movie.Filter] = [.actor,
+                                                                    .director,
+                                                                    .location,
+                                                                    .productionCompany,
+                                                                    .releaseYear,
+                                                                    .writer]
+}
