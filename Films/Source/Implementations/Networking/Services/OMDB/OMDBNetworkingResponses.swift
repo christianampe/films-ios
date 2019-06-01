@@ -39,7 +39,7 @@ extension OMDB.Networking {
     }
 }
 
-extension OMDB.Networking.Responses {
+extension OMDB.Networking.Responses.Info {
     enum CodingKeys: String, CodingKey {
         case title = "Title"
         case year = "Year"
@@ -48,7 +48,7 @@ extension OMDB.Networking.Responses {
         case runtime = "Runtime"
         case genre = "Genre"
         case director = "Director"
-        case writer = "Wroter"
+        case writer = "Writer"
         case actors = "Actors"
         case plot = "Plot"
         case language = "Language"

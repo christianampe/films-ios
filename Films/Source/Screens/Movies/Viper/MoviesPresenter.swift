@@ -19,6 +19,7 @@ final class MoviesPresenter: MoviesPresenterProtocol {
 // MARK: - VIEW TO INTERACTOR
 extension MoviesPresenter {
     func viewDidLoad() {
+        viewModel.delegate = self
         interactor?.fetchMovies()
     }
 }
@@ -49,13 +50,38 @@ extension MoviesPresenter {
                                         willDisplay cell: MoviesNestedCollectionViewItemCell,
                                         forItemAt indexPath: IndexPath) {
         
+        guard let rowTitle = viewModel.rowTitles[safe: indexPath.section] else {
+            return
+        }
         
+        guard let viewModels = viewModel.cellViewModelsDictionary[rowTitle] else {
+            return
+        }
+        
+        guard let viewModel = Array(viewModels)[safe: indexPath.item] else {
+            return
+        }
+    
+        viewModel.load(cell)
     }
     
     func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
                                         didEndDisplaying cell: MoviesNestedCollectionViewItemCell,
                                         forItemAt indexPath: IndexPath) {
         
+        guard let rowTitle = viewModel.rowTitles[safe: indexPath.section] else {
+            return
+        }
+        
+        guard let viewModels = viewModel.cellViewModelsDictionary[rowTitle] else {
+            return
+        }
+        
+        guard let viewModel = Array(viewModels)[safe: indexPath.item] else {
+            return
+        }
+        
+        viewModel.stop()
     }
 }
 
@@ -72,11 +98,11 @@ extension MoviesPresenter {
             return 0
         }
         
-        guard let movies = viewModel.moviesDictionary[rowTitle] else {
+        guard let viewModels = viewModel.cellViewModelsDictionary[rowTitle] else {
             return 0
         }
         
-        return movies.count
+        return viewModels.count
     }
     
     func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,

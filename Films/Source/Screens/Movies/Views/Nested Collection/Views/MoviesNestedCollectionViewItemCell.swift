@@ -14,6 +14,20 @@ class MoviesNestedCollectionViewItemCell: UICollectionViewCell {
     @IBOutlet private weak var backgroundImageView: UIImageView!
 }
 
+// MARK: - Lifecycle
+extension MoviesNestedCollectionViewItemCell {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        layer.cornerRadius = 3
+        clipsToBounds = true
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        backgroundImageView.image = nil
+    }
+}
+
 // MARK: - MoviesNestedCollectionViewItemViewModelDelegate
 extension MoviesNestedCollectionViewItemCell: MoviesNestedCollectionViewItemViewModelDelegate {
     func viewModel(_ viewModel: MoviesNestedCollectionViewItemViewModel,

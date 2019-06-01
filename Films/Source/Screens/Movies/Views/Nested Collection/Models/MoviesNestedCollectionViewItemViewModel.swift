@@ -14,21 +14,18 @@ protocol MoviesNestedCollectionViewItemViewModelDelegate: class {
 }
 
 class MoviesNestedCollectionViewItemViewModel {
-    private var state: LoadingState {
-        didSet(oldState) {
-            guard oldState != state else {
-                return
-            }
-            
-            delegate?.viewModel(self, didTransitionToState: state)
-        }
-    }
-    
     private var title: String
     private var imageURLString: String?
     private var image: UIImage?
     
-    weak var delegate: MoviesNestedCollectionViewItemViewModelDelegate?
+    private var state: LoadingState {
+        didSet {
+            delegate?.viewModel(self, didTransitionToState: state)
+        }
+    }
+    
+    private weak var delegate: MoviesNestedCollectionViewItemViewModelDelegate?
+    
     weak var omdbProvider: OMDB.Networking?
     weak var imageProvider: Image.Networking?
     
@@ -40,14 +37,30 @@ class MoviesNestedCollectionViewItemViewModel {
 }
 
 extension MoviesNestedCollectionViewItemViewModel {
-    func load() {
-        state = .active
-        fetchInfo(for: title)
+    func load(_ delegate: MoviesNestedCollectionViewItemViewModelDelegate) {
+        self.delegate = delegate
+        
+        switch state {
+        case .inactive:
+            fetchInfo(for: title)
+        case .active:
+            break
+        case .complete(let image):
+            state = .complete(image)
+        case .failed:
+            break
+        }
+    }
+    
+    func stop() {
+        delegate = nil
     }
 }
 
 private extension MoviesNestedCollectionViewItemViewModel {
     func fetchInfo(for movie: String) {
+        state = .active
+        
         omdbProvider?.info(movie: movie) { [weak self] result in
             guard let self = self else { return }
             
@@ -77,6 +90,18 @@ private extension MoviesNestedCollectionViewItemViewModel {
                 }
             }
         }
+    }
+}
+
+extension MoviesNestedCollectionViewItemViewModel: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(title)
+    }
+
+    static func == (lhs: MoviesNestedCollectionViewItemViewModel,
+                    rhs: MoviesNestedCollectionViewItemViewModel) -> Bool {
+        
+        return lhs.title == rhs.title
     }
 }
 

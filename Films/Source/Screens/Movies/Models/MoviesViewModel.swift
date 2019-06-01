@@ -18,7 +18,7 @@ class MoviesViewModel: MoviesViewModelProtocol {
     private let imageProvider = Image.Networking()
     
     private(set) var rowTitles: [String] = []
-    private(set) var moviesDictionary: [String: [Netflix.Networking.Responses.Movie]] = [:]
+    private(set) var cellViewModelsDictionary: [String: Set<MoviesNestedCollectionViewItemViewModel>] = [:]
     
     weak var delegate: MoviesViewModelDelegate?
 }
@@ -30,16 +30,28 @@ extension MoviesViewModel {
         DispatchQueue.global(qos: .background).async { [weak self] in
             guard let self = self else { return }
             
+            // clear out previous entries
+            self.rowTitles = []
+            self.cellViewModelsDictionary = [:]
+            
             // loop through the fetched movies
             movies.forEach { movie in
-                if (self.moviesDictionary[movie.releaseYear]) != nil {
+                
+                // construct a view model
+                let viewModel = MoviesNestedCollectionViewItemViewModel(title: movie.title)
+                
+                // set providers on the view model
+                viewModel.omdbProvider = self.omdbProvider
+                viewModel.imageProvider = self.imageProvider
+                
+                if (self.cellViewModelsDictionary[movie.releaseYear]) != nil {
                     // this movie release year has been observed previously
                     // append the new movie to the dictionary
-                    self.moviesDictionary[movie.releaseYear]?.append(movie)
+                    self.cellViewModelsDictionary[movie.releaseYear]?.insert(viewModel)
                 } else {
                     // this release year has not been observered previously
                     // create a new entry in the dictionary and add the release year to the array of collection titles
-                    self.moviesDictionary[movie.releaseYear] = [movie]
+                    self.cellViewModelsDictionary[movie.releaseYear] = [viewModel]
                     self.rowTitles.append(movie.releaseYear)
                 }
             }

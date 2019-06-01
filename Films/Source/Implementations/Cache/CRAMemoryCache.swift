@@ -27,12 +27,14 @@ extension CRAMemoryCache {
             return nil
         }
         
-        guard let castedObject = object as? T else {
+        if let castedObject = object as? T {
+            return castedObject
+        } else if let containerObject = object as? CRAStructContainer<T> {
+            return containerObject.object
+        } else {
             assertionFailure("corrupt data types")
             return nil
         }
-        
-        return castedObject
     }
 }
 
