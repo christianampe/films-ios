@@ -27,11 +27,9 @@ extension MoviesNestedCollectionViewItemCell {
     }
 }
 
-// MARK: - MoviesNestedCollectionViewItemViewModelDelegate
-extension MoviesNestedCollectionViewItemCell: MoviesNestedCollectionViewItemViewModelDelegate {
-    func viewModel(_ viewModel: MoviesNestedCollectionViewItemViewModel,
-                   didTransitionToState state: MoviesNestedCollectionViewItemViewModel.LoadingState) {
-        
+// MARK: - Public API
+extension MoviesNestedCollectionViewItemCell {
+    func configure(for state: MoviesNestedCollectionViewItemViewModel.LoadingState) {
         switch state {
         case .complete(let image):
             backgroundImageView.image = image
@@ -40,6 +38,15 @@ extension MoviesNestedCollectionViewItemCell: MoviesNestedCollectionViewItemView
         default:
             break
         }
+    }
+}
+
+// MARK: - MoviesNestedCollectionViewItemViewModelDelegate
+extension MoviesNestedCollectionViewItemCell: MoviesNestedCollectionViewItemViewModelDelegate {
+    func viewModel(_ viewModel: MoviesNestedCollectionViewItemViewModel,
+                   didTransitionToState state: MoviesNestedCollectionViewItemViewModel.LoadingState) {
+        
+        configure(for: state)
     }
 }
 

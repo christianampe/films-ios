@@ -18,7 +18,7 @@ class MoviesNestedCollectionViewItemViewModel {
     private var imageURLString: String?
     private var image: UIImage?
     
-    private var state: LoadingState {
+    private(set) var state: LoadingState {
         didSet {
             delegate?.viewModel(self, didTransitionToState: state)
         }

@@ -61,8 +61,9 @@ extension MoviesPresenter {
         guard let viewModel = Array(viewModels)[safe: indexPath.item] else {
             return
         }
-    
+        
         viewModel.load(cell)
+        cell.configure(for: viewModel.state)
     }
     
     func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
