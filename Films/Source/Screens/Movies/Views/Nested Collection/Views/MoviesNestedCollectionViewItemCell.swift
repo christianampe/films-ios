@@ -18,6 +18,8 @@ class MoviesNestedCollectionViewItemCell: UICollectionViewCell {
 extension MoviesNestedCollectionViewItemCell {
     override func awakeFromNib() {
         super.awakeFromNib()
+        layer.borderColor = UIColor.white.cgColor
+        layer.borderWidth = 1
         layer.cornerRadius = 3
         clipsToBounds = true
     }

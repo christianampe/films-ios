@@ -70,6 +70,7 @@ private extension MoviesNestedCollectionViewItemViewModel {
                     self.imageURLString = info.poster
                     self.fetchImage(with: info.poster)
                 case .failure(let error):
+                    print("Failed to fetch the movie \(movie).")
                     self.state = .failed(error)
                 }
             }
@@ -77,8 +78,6 @@ private extension MoviesNestedCollectionViewItemViewModel {
     }
     
     func fetchImage(with urlString: String) {
-        print(urlString)
-        
         imageProvider?.image(urlString: urlString) { [weak self] result in
             guard let self = self else { return }
             
@@ -88,6 +87,7 @@ private extension MoviesNestedCollectionViewItemViewModel {
                     self.image = image
                     self.state = .complete(image)
                 case .failure(let error):
+                    print("Failed to download the image at \(urlString)")
                     self.state = .failed(error)
                 }
             }
