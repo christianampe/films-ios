@@ -16,6 +16,7 @@ class CRANavigationDropdownCell: UITableViewCell {
         
         // configure cell
         backgroundColor = .clear
+        selectionStyle = .none
         
         // construct label
         let label = UILabel(frame: .zero)
@@ -36,6 +37,7 @@ class CRANavigationDropdownCell: UITableViewCell {
         label.textAlignment = .center
         label.textColor = .white
         label.backgroundColor = .clear
+        label.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
         
         // assign self properties
         self.label = label

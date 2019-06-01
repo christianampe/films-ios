@@ -14,6 +14,7 @@ extension UIStoryboard {
         
         // MARK: - Screens
         case movies = "Movies"
+        case movieDetail = "MovieDetail"
         
         // MARK: - Components
         case nestedCollection = "CRANestedCollection"

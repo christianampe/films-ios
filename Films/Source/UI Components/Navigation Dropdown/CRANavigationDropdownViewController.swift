@@ -41,9 +41,10 @@ extension CRANavigationDropdownViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         // style the table view
-        tableView.backgroundColor = UIColor.black.withAlphaComponent(0.95)
+        tableView.backgroundColor = UIColor.black.withAlphaComponent(0.90)
         tableView.rowHeight = 50
         tableView.isScrollEnabled = false
+        tableView.separatorStyle = .none
         
         // configure the view
         view.translatesAutoresizingMaskIntoConstraints = false

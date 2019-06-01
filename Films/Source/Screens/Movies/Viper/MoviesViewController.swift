@@ -22,6 +22,7 @@ extension MoviesViewController {
         super.viewDidLoad()
         navigationDropdown = CRANavigationDropdownViewController(self)
         presenter?.viewDidLoad()
+        navigationDropdown.set(["Ballz", "Boobz", "Booze", "Buttz"])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
