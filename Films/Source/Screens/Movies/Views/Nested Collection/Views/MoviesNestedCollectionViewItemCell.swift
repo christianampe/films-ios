@@ -18,10 +18,7 @@ class MoviesNestedCollectionViewItemCell: UICollectionViewCell {
 extension MoviesNestedCollectionViewItemCell {
     override func awakeFromNib() {
         super.awakeFromNib()
-        layer.borderColor = UIColor.white.cgColor
-        layer.borderWidth = 1
-        layer.cornerRadius = 3
-        clipsToBounds = true
+        style()
     }
     
     override func prepareForReuse() {
@@ -38,8 +35,17 @@ extension MoviesNestedCollectionViewItemCell: MoviesNestedCollectionViewItemView
         switch state {
         case .complete(let image):
             backgroundImageView.image = image
+        case .failed:
+            backgroundImageView.image = #imageLiteral(resourceName: "missing-image")
         default:
             break
         }
+    }
+}
+
+// MARK: - Style Methods
+private extension MoviesNestedCollectionViewItemCell {
+    func style() {
+        layer.cornerRadius = 3
     }
 }

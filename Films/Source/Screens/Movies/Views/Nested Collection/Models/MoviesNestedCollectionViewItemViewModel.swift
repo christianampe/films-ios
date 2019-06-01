@@ -87,7 +87,7 @@ private extension MoviesNestedCollectionViewItemViewModel {
                     self.image = image
                     self.state = .complete(image)
                 case .failure(let error):
-                    print("Failed to download the image at \(urlString)")
+                    print("Failed to download the image at \(urlString).")
                     self.state = .failed(error)
                 }
             }
