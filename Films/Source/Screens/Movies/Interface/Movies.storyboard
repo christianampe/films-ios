@@ -28,9 +28,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="IGM-JY-3Tj" secondAttribute="bottom" id="1c0-G7-9Sw"/>
-                            <constraint firstItem="IGM-JY-3Tj" firstAttribute="top" secondItem="678-Dv-3cL" secondAttribute="top" id="2Ey-jW-Hnl"/>
                             <constraint firstItem="IGM-JY-3Tj" firstAttribute="trailing" secondItem="NSl-UV-P0z" secondAttribute="trailing" id="7iQ-5b-IjD"/>
                             <constraint firstItem="IGM-JY-3Tj" firstAttribute="leading" secondItem="NSl-UV-P0z" secondAttribute="leading" id="AWt-Zo-ITu"/>
+                            <constraint firstItem="IGM-JY-3Tj" firstAttribute="top" secondItem="678-Dv-3cL" secondAttribute="top" id="jmI-i8-ADp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NSl-UV-P0z"/>
                     </view>

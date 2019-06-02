@@ -9,10 +9,11 @@
 import UIKit
 
 class CRANavigationDropdownViewController: UIViewController {
-    private var titleLabel: UILabel!
-    private var titleImageView: UIImageView!
-    private var tableView: UITableView!
+    private weak var titleLabel: UILabel!
+    private weak var titleImageView: UIImageView!
     private weak var sourceNavigationController: UINavigationController!
+    
+    private var tableView: UITableView!
     
     private var tableViewBottomConstraint: NSLayoutConstraint!
     private var tableViewHeightConstraint: NSLayoutConstraint!
@@ -39,22 +40,27 @@ extension CRANavigationDropdownViewController {
         let titleLabel = UILabel()
         
         // style the navigation title label
-        titleLabel.text = title
         titleLabel.textColor = UIColor.white
         titleLabel.font = UIFont.systemFont(ofSize: 20.0, weight: .bold)
+        titleLabel.sizeToFit()
         
         // initialize navigation image
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "arrow-down"))
+        let titleImageView = UIImageView(image: #imageLiteral(resourceName: "arrow-down"))
         
         // initialize stack view title view stack view
-        let titleView = UIStackView(arrangedSubviews: [titleLabel, imageView])
+        let titleView = UIStackView(arrangedSubviews: [titleLabel, titleImageView])
         
         // style the title view stack view
         titleView.axis = .horizontal
         titleView.spacing = 10.0
         
+        // configure the navigation bar
+        sourceNavigationController.navigationBar.tintColor = .black
+        sourceNavigationController.navigationBar.barTintColor = .black
+        sourceNavigationController.navigationBar.isTranslucent = false
+        
         // set title view as the stack view
-        navigationItem.titleView = titleView
+        sourceNavigationController.navigationItem.titleView = titleLabel
         
         // initialize the table view
         let tableView = UITableView(frame: .zero)
@@ -74,11 +80,6 @@ extension CRANavigationDropdownViewController {
         // configure the view
         view.translatesAutoresizingMaskIntoConstraints = false
         
-        // configure the navigation bar
-        sourceNavigationController.navigationBar.tintColor = .black
-        sourceNavigationController.navigationBar.barTintColor = .black
-        sourceNavigationController.navigationBar.isTranslucent = false
-        
         // add navigation label tap gesture recognizer
         let navigationBarTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleNavigationBarTap(_:)))
         sourceNavigationController.navigationBar.addGestureRecognizer(navigationBarTapGestureRecognizer)
@@ -94,30 +95,14 @@ extension CRANavigationDropdownViewController {
     }
 }
 
-private extension CRANavigationDropdownViewController {
-    @objc func handleNavigationBarTap(_ sender: UITapGestureRecognizer) {
-        
-        // get the view which was touched
-        let location = sender.location(in: sourceNavigationController.navigationBar)
-        let hitView = sourceNavigationController.navigationBar.hitTest(location, with: nil)
-        
-        // if the view is a control abort
-        guard !(hitView is UIControl) else {
-            return
-        }
-        
-        toggle()
-    }
-    
-//    @objc func handleBackgroundViewTap(_ sender: UITapGestureRecognizer) {
-//        hide()
-//    }
-}
-
 // MARK: - Public API
 extension CRANavigationDropdownViewController {
     func reloadData() {
         tableView.reloadData()
+    }
+    
+    func set(title: String) {
+        titleLabel.text = title
     }
     
     func show(_ animated: Bool = true) {
@@ -181,6 +166,26 @@ extension CRANavigationDropdownViewController {
     func toggle(_ animated: Bool = true) {
         isShown ? hide(animated) : show(animated)
     }
+}
+
+private extension CRANavigationDropdownViewController {
+    @objc func handleNavigationBarTap(_ sender: UITapGestureRecognizer) {
+        
+        // get the view which was touched
+        let location = sender.location(in: sourceNavigationController.navigationBar)
+        let hitView = sourceNavigationController.navigationBar.hitTest(location, with: nil)
+        
+        // if the view is a control abort
+        guard !(hitView is UIControl) else {
+            return
+        }
+        
+        toggle()
+    }
+    
+//    @objc func handleBackgroundViewTap(_ sender: UITapGestureRecognizer) {
+//        hide()
+//    }
 }
 
 // MARK: - Helper Methods

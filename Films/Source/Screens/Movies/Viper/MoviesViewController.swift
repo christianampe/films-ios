@@ -44,8 +44,6 @@ extension MoviesViewController: MoviesViewProtocol {
         
         nestedCollection.reloadData()
         navigationDropdown.hide()
-        
-        title = "Filtered by \(filter)"
     }
     
     func show(error: Error) {
