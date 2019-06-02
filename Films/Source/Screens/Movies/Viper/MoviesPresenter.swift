@@ -110,10 +110,14 @@ extension MoviesPresenter {
     }
     
     func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
-                                        titleForRow row: Int) -> String {
+                                        titleForRow row: Int) -> String? {
         
         guard let rowTitle = viewModel.rowTitles[safe: row] else {
-            return ""
+            return "Unknown"
+        }
+        
+        guard !rowTitle.isEmpty else {
+            return "Unknown"
         }
         
         return rowTitle

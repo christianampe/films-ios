@@ -15,5 +15,5 @@ protocol MoviesNestedCollectionViewDataSource: class {
                                         numberOfItemsInRow row: Int) -> Int
     
     func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
-                                        titleForRow row: Int) -> String
+                                        titleForRow row: Int) -> String?
 }
