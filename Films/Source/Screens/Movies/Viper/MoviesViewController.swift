@@ -24,7 +24,7 @@ extension MoviesViewController {
         
         navigationDropdown = CRANavigationDropdownViewController(self)
         navigationDropdown.delegate = presenter
-        navigationDropdown.set(Netflix.Networking.Responses.Movie.Filter.all.map { $0.rawValue })
+        navigationDropdown.dataSource = presenter
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

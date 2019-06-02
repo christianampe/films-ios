@@ -91,6 +91,7 @@
 		BFD2E38522A2F5E200F78FAE /* MovieDetailOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E37B22A2F5E200F78FAE /* MovieDetailOutput.swift */; };
 		BFD2E38622A2F5E200F78FAE /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E37C22A2F5E200F78FAE /* MovieDetailViewModel.swift */; };
 		BFD2E38C22A32B1100F78FAE /* CRANavigationDropdownDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD2E38B22A32B1100F78FAE /* CRANavigationDropdownDelegate.swift */; };
+		BFF877BD22A44E7B009DC3C3 /* CRANavigationDropdownDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF877BC22A44E7B009DC3C3 /* CRANavigationDropdownDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +202,7 @@
 		BFD2E37B22A2F5E200F78FAE /* MovieDetailOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailOutput.swift; sourceTree = "<group>"; };
 		BFD2E37C22A2F5E200F78FAE /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		BFD2E38B22A32B1100F78FAE /* CRANavigationDropdownDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANavigationDropdownDelegate.swift; sourceTree = "<group>"; };
+		BFF877BC22A44E7B009DC3C3 /* CRANavigationDropdownDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRANavigationDropdownDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +413,7 @@
 				BF8BFCEC229F03D80035AB90 /* CRANavigationDropdownViewController.swift */,
 				BF8BFD2F229F52DB0035AB90 /* CRANavigationDropdownCell.swift */,
 				BFD2E38B22A32B1100F78FAE /* CRANavigationDropdownDelegate.swift */,
+				BFF877BC22A44E7B009DC3C3 /* CRANavigationDropdownDataSource.swift */,
 			);
 			path = "Navigation Dropdown";
 			sourceTree = "<group>";
@@ -815,6 +818,7 @@
 				BFB7B72D229DE04B001CCD49 /* CRACache.swift in Sources */,
 				BF8BFCE7229E462F0035AB90 /* NavigationBuilder.swift in Sources */,
 				BF40CBB722A1CCE000FD39E3 /* ImageNetworkingError.swift in Sources */,
+				BFF877BD22A44E7B009DC3C3 /* CRANavigationDropdownDataSource.swift in Sources */,
 				BF8BFCED229F03D80035AB90 /* CRANavigationDropdownViewController.swift in Sources */,
 				BF8BFD4622A06E880035AB90 /* OMDBNetworkingTarget.swift in Sources */,
 				BF8BFD4822A06E940035AB90 /* OMDBNetworkingResponses.swift in Sources */,

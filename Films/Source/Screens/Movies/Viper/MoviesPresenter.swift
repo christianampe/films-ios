@@ -127,13 +127,37 @@ extension MoviesPresenter {
 // MARK: - CRANavigationDropdownDelegate
 extension MoviesPresenter {
     func tableView(_ tableView: UITableView,
-                   didSelectFilter filter: String) {
+                   didSelectFilterAtRow row: Int) {
         
-        guard let filter = Netflix.Networking.Responses.Movie.Filter(rawValue: filter) else {
+        guard let filterName = viewModel.filterNames[safe: row] else {
+            assertionFailure("inconsistency in provided filters")
+            return
+        }
+        
+        guard let filter = Netflix.Networking.Responses.Movie.Filter(rawValue: filterName) else {
             assertionFailure("inconsistency in filter vs dropdown titles")
             return
         }
         
         viewModel.filter(by: filter)
+    }
+}
+
+// MARK: - CRANavigationDropdownDataSource
+extension MoviesPresenter {
+    func numberOfRows(in tableView: UITableView) -> Int {
+        return viewModel.filterNames.count
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   titleForFilterAtRow row: Int) -> String? {
+        
+        return viewModel.filterNames[safe: row]
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   titleForSelectedFilterAtRow row: Int) -> String? {
+        
+        return "Filtered by \(viewModel.filterNames[safe: row] ?? "Unknown")"
     }
 }

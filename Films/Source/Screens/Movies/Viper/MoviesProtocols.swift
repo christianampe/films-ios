@@ -22,7 +22,7 @@ protocol MoviesViewProtocol: class {
     func show(error: Error)
 }
 
-protocol MoviesPresenterProtocol: MoviesNestedCollectionViewDataSource, MoviesNestedCollectionViewDelegate, CRANavigationDropdownDelegate {
+protocol MoviesPresenterProtocol: MoviesNestedCollectionViewDataSource, MoviesNestedCollectionViewDelegate, CRANavigationDropdownDelegate, CRANavigationDropdownDataSource {
     var view: MoviesViewProtocol? { get set }
     var interactor: MoviesInteractorProtocol? { get set }
     var router: MoviesRouterProtocol? { get set }

@@ -23,6 +23,8 @@ class MoviesViewModel: MoviesViewModelProtocol {
     private(set) var rowTitles: [String] = []
     private(set) var cellViewModelsDictionary: [String: Set<MoviesNestedCollectionViewItemViewModel>] = [:]
     
+    private(set) var filterNames = Netflix.Networking.Responses.Movie.Filter.all.map { $0.rawValue }
+    
     weak var delegate: MoviesViewModelDelegate?
 }
 

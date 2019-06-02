@@ -9,6 +9,8 @@
 import UIKit
 
 class CRANavigationDropdownViewController: UIViewController {
+    private var titleLabel: UILabel!
+    private var titleImageView: UIImageView!
     private var tableView: UITableView!
     private weak var sourceNavigationController: UINavigationController!
     
@@ -17,9 +19,9 @@ class CRANavigationDropdownViewController: UIViewController {
     private var bottomConstraint: NSLayoutConstraint!
     
     private var isShown: Bool = false
-    private var items: [String] = []
     
     weak var delegate: CRANavigationDropdownDelegate?
+    weak var dataSource: CRANavigationDropdownDataSource?
 }
 
 // MARK: - Initializers
@@ -33,7 +35,28 @@ extension CRANavigationDropdownViewController {
             return
         }
         
-        // construct the table view
+        // initialize navigation title label
+        let titleLabel = UILabel()
+        
+        // style the navigation title label
+        titleLabel.text = title
+        titleLabel.textColor = UIColor.white
+        titleLabel.font = UIFont.systemFont(ofSize: 20.0, weight: .bold)
+        
+        // initialize navigation image
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "arrow-down"))
+        
+        // initialize stack view title view stack view
+        let titleView = UIStackView(arrangedSubviews: [titleLabel, imageView])
+        
+        // style the title view stack view
+        titleView.axis = .horizontal
+        titleView.spacing = 10.0
+        
+        // set title view as the stack view
+        navigationItem.titleView = titleView
+        
+        // initialize the table view
         let tableView = UITableView(frame: .zero)
         
         // configure the table view
@@ -64,6 +87,8 @@ extension CRANavigationDropdownViewController {
 //        view.addGestureRecognizer(backgroundViewTapGestureRecognizer)
 
         // assign self properties
+        self.titleLabel = titleLabel
+        self.titleImageView = titleImageView
         self.tableView = tableView
         self.sourceNavigationController = sourceNavigationController
     }
@@ -91,8 +116,7 @@ private extension CRANavigationDropdownViewController {
 
 // MARK: - Public API
 extension CRANavigationDropdownViewController {
-    func set(_ items: [String]) {
-        self.items = items
+    func reloadData() {
         tableView.reloadData()
     }
     
@@ -221,25 +245,38 @@ extension CRANavigationDropdownViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
         
-        return items.count
+        return dataSource?.numberOfRows(in: tableView) ?? 0
     }
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(for: indexPath) as CRANavigationDropdownCell
-        cell.configure(items[indexPath.row])
-        
-        return cell
+        return tableView.dequeueReusableCell(for: indexPath) as CRANavigationDropdownCell
     }
 }
 
 // MARK: - UITableViewDelegate
 extension CRANavigationDropdownViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
+                   willDisplay cell: UITableViewCell,
+                   forRowAt indexPath: IndexPath) {
+        
+        guard let cell = cell as? CRANavigationDropdownCell else {
+            assertionFailure("incorrect cell type utilized")
+            return
+        }
+        
+        guard let title = dataSource?.tableView(tableView, titleForFilterAtRow: indexPath.row) else {
+            return
+        }
+        
+        cell.configure(title)
+    }
+    
+    func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         
         delegate?.tableView(tableView,
-                            didSelectFilter: items[indexPath.row])
+                            didSelectFilterAtRow: indexPath.row)
     }
 }

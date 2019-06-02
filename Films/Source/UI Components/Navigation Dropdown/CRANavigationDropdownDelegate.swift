@@ -10,10 +10,10 @@ import UIKit.UITableView
 
 protocol CRANavigationDropdownDelegate: class {
     func tableView(_ tableView: UITableView,
-                   didSelectFilter filter: String)
+                   didSelectFilterAtRow row: Int)
 }
 
 extension CRANavigationDropdownDelegate {
     func tableView(_ tableView: UITableView,
-                   didSelectFilter filter: String) {}
+                   didSelectFilterAtRow row: Int) {}
 }
