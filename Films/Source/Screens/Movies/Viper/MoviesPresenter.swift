@@ -54,15 +54,19 @@ extension MoviesPresenter {
             return
         }
         
-        guard let viewModels = viewModel.cellViewModelsDictionary[rowTitle] else {
+        guard let cellViewModels = viewModel.cellViewModelsDictionary[rowTitle] else {
             return
         }
         
-        guard let viewModel = Array(viewModels)[safe: indexPath.item] else {
+        guard let cellViewModel = Array(cellViewModels)[safe: indexPath.item] else {
             return
         }
         
-        let id = viewModel.id
+        guard let movie = viewModel.movieDictionary[cellViewModel.id] else {
+            return
+        }
+        
+        // TODO: segue to movie detail screen with this information
     }
     
     func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
@@ -73,16 +77,16 @@ extension MoviesPresenter {
             return
         }
         
-        guard let viewModels = viewModel.cellViewModelsDictionary[rowTitle] else {
+        guard let cellViewModels = viewModel.cellViewModelsDictionary[rowTitle] else {
             return
         }
         
-        guard let viewModel = Array(viewModels)[safe: indexPath.item] else {
+        guard let cellViewModel = Array(cellViewModels)[safe: indexPath.item] else {
             return
         }
         
-        viewModel.load(cell)
-        cell.configure(for: viewModel.state)
+        cellViewModel.load(cell)
+        cell.configure(for: cellViewModel.state)
     }
     
     func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
@@ -93,15 +97,15 @@ extension MoviesPresenter {
             return
         }
         
-        guard let viewModels = viewModel.cellViewModelsDictionary[rowTitle] else {
+        guard let cellViewModels = viewModel.cellViewModelsDictionary[rowTitle] else {
             return
         }
         
-        guard let viewModel = Array(viewModels)[safe: indexPath.item] else {
+        guard let cellViewModel = Array(cellViewModels)[safe: indexPath.item] else {
             return
         }
         
-        viewModel.stop()
+        cellViewModel.stop()
     }
 }
 
@@ -118,11 +122,11 @@ extension MoviesPresenter {
             return 0
         }
         
-        guard let viewModels = viewModel.cellViewModelsDictionary[rowTitle] else {
+        guard let cellViewModels = viewModel.cellViewModelsDictionary[rowTitle] else {
             return 0
         }
         
-        return viewModels.count
+        return cellViewModels.count
     }
     
     func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,

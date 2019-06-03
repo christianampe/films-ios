@@ -17,7 +17,7 @@ class MoviesViewModel: MoviesViewModelProtocol {
     private let omdbProvider = OMDB.Networking()
     private let imageProvider = Image.Networking()
     
-    private var movieDictionary = [Int: Netflix.Networking.Responses.Movie]()
+    private(set) var movieDictionary = [Int: Netflix.Networking.Responses.Movie]()
     
     private(set) var rowTitles: [String] = []
     private(set) var cellViewModelsDictionary: [String: Set<MoviesNestedCollectionViewItemViewModel>] = [:]
