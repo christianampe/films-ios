@@ -143,6 +143,7 @@ extension CRANavigationDropdownViewController {
         
         // animate the constraint and the background color to an opaque black
         UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut], animations: {
+            self.titleImageView.transform = self.titleImageView.transform.rotated(by: 180 * CGFloat(Double.pi/180))
             self.view.layoutIfNeeded()
             self.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
         }, completion: { _ in
@@ -165,8 +166,9 @@ extension CRANavigationDropdownViewController {
         
         // animate the constraint and the background color to clear
         UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut], animations: {
-            self.view.layoutIfNeeded()
+            self.titleImageView.transform = self.titleImageView.transform.rotated(by: 180 * CGFloat(Double.pi/180))
             self.view.backgroundColor = UIColor.black.withAlphaComponent(0)
+            self.view.layoutIfNeeded()
         }, completion: { _ in
             self.remove(self.tableView)
             self.remove(self.view)
