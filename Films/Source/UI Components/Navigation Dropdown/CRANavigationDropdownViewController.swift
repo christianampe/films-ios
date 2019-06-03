@@ -149,7 +149,7 @@ extension CRANavigationDropdownViewController {
         UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseInOut], animations: {
             self.titleImageView.transform = self.titleImageView.transform.rotated(by: 180 * CGFloat(Double.pi/180))
             self.view.layoutIfNeeded()
-            self.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+            self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         }, completion: { _ in
             self.isShown = true
         })
@@ -163,7 +163,7 @@ extension CRANavigationDropdownViewController {
         }
         
         // background color to be animated
-        view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         
         // shift the bottom of the table view up to the bottom of the navigation bar
         tableViewBottomConstraint.constant = 0

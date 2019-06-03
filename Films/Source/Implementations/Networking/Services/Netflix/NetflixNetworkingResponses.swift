@@ -38,9 +38,9 @@ extension Netflix.Networking.Responses.Movie {
 
 extension Netflix.Networking.Responses.Movie.Filter {
     static let all: [Netflix.Networking.Responses.Movie.Filter] = [.actor,
-                                                                    .director,
-                                                                    .location,
-                                                                    .productionCompany,
-                                                                    .releaseYear,
-                                                                    .writer]
+                                                                   .director,
+                                                                   .location,
+                                                                   .productionCompany,
+                                                                   .releaseYear,
+                                                                   .writer]
 }
