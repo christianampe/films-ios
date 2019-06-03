@@ -154,10 +154,4 @@ extension MoviesPresenter {
         
         return viewModel.filterNames[safe: row]
     }
-    
-    func tableView(_ tableView: UITableView,
-                   titleForSelectedFilterAtRow row: Int) -> String? {
-        
-        return "Filtered by \(viewModel.filterNames[safe: row] ?? "Unknown")"
-    }
 }

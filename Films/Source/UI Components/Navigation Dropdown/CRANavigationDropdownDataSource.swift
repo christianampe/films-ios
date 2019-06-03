@@ -11,5 +11,4 @@ import UIKit.UITableView
 protocol CRANavigationDropdownDataSource: class {
     func numberOfRows(in tableView: UITableView) -> Int
     func tableView(_ tableView: UITableView, titleForFilterAtRow row: Int) -> String?
-    func tableView(_ tableView: UITableView, titleForSelectedFilterAtRow row: Int) -> String?
 }

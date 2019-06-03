@@ -116,6 +116,10 @@ extension CRANavigationDropdownViewController {
         tableView.reloadData()
     }
     
+    func set(title: String?) {
+        titleLabel.text = title
+    }
+    
     func show(_ animated: Bool = true) {
         
         // exit execution if the dropdown is already shown
@@ -252,10 +256,6 @@ private extension CRANavigationDropdownViewController {
     func toggle(_ animated: Bool = true) {
         isShown ? hide(animated) : show(animated)
     }
-    
-    func set(title: String?) {
-        titleLabel.text = title
-    }
 }
 
 // MARK: - UITableViewDataSource
@@ -293,9 +293,6 @@ extension CRANavigationDropdownViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
-        
-        set(title: dataSource?.tableView(tableView,
-                                         titleForSelectedFilterAtRow: indexPath.row))
         
         delegate?.tableView(tableView,
                             didSelectFilterAtRow: indexPath.row)
