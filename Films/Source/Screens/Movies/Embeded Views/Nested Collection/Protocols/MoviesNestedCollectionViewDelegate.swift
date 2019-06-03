@@ -24,4 +24,12 @@ protocol MoviesNestedCollectionViewDelegate: class {
 extension MoviesNestedCollectionViewDelegate {
     func nestedCollectionView(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
                               didSelectItemAtIndexPath indexPath: IndexPath) {}
+    
+    func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
+                                        willDisplay cell: MoviesNestedCollectionViewItemCell,
+                                        forItemAt indexPath: IndexPath) {}
+    
+    func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
+                                        didEndDisplaying cell: MoviesNestedCollectionViewItemCell,
+                                        forItemAt indexPath: IndexPath) {}
 }

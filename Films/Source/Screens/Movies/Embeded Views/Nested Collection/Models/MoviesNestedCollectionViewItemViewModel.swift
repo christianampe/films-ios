@@ -14,7 +14,10 @@ protocol MoviesNestedCollectionViewItemViewModelDelegate: class {
 }
 
 class MoviesNestedCollectionViewItemViewModel {
-    private var title: String
+    let id: Int
+    
+    private let title: String
+    
     private var imageURLString: String?
     private var image: UIImage?
     
@@ -29,7 +32,10 @@ class MoviesNestedCollectionViewItemViewModel {
     weak var omdbProvider: OMDB.Networking?
     weak var imageProvider: Image.Networking?
     
-    init(title: String) {
+    init(id: Int,
+         title: String) {
+        
+        self.id = id
         self.title = title
         self.image = nil
         self.state = .inactive

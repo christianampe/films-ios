@@ -17,8 +17,7 @@ protocol MoviesViewProtocol: class {
     var presenter: MoviesPresenterProtocol?  { get set }
     var delegate: MoviesDelegateProtocol? { get set }
     
-    func show(movies: [Netflix.Networking.Responses.Movie], with filter: String)
-    
+    func show(_ filter: String)
     func show(error: Error)
 }
 
@@ -39,4 +38,6 @@ protocol MoviesInteractorProtocol: class {
     func fetchMovies()
 }
 
-protocol MoviesRouterProtocol: class {}
+protocol MoviesRouterProtocol: class {
+    
+}

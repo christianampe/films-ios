@@ -38,17 +38,33 @@ extension MoviesPresenter {
 
 // MARK: - MoviesViewModelDelegate
 extension MoviesPresenter: MoviesViewModelDelegate {
-    func moviesViewModel(_ moviesViewModel: MoviesViewModel,
-                         didFinishAnalyzingMovies movies: [Netflix.Networking.Responses.Movie],
-                         with filter: Netflix.Networking.Responses.Movie.Filter) {
+    func moviesViewModelDidFinishAnalyzingMovies(_ moviesViewModel: MoviesViewModel,
+                                                 with filter: Netflix.Networking.Responses.Movie.Filter) {
         
-        view?.show(movies: movies,
-                   with: filter.rawValue)
+        view?.show(filter.rawValue)
     }
 }
 
 // MARK: - MoviesNestedCollectionViewDelegate
 extension MoviesPresenter {
+    func nestedCollectionView(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
+                              didSelectItemAtIndexPath indexPath: IndexPath) {
+        
+        guard let rowTitle = viewModel.rowTitles[safe: indexPath.section] else {
+            return
+        }
+        
+        guard let viewModels = viewModel.cellViewModelsDictionary[rowTitle] else {
+            return
+        }
+        
+        guard let viewModel = Array(viewModels)[safe: indexPath.item] else {
+            return
+        }
+        
+        let id = viewModel.id
+    }
+    
     func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
                                         willDisplay cell: MoviesNestedCollectionViewItemCell,
                                         forItemAt indexPath: IndexPath) {

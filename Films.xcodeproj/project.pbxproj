@@ -322,7 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				BF8BFD32229F8EA30035AB90 /* Viper */,
-				BF40CBAE22A1B91400FD39E3 /* Views */,
+				BF40CBAE22A1B91400FD39E3 /* Embeded Views */,
 				BF8BFD33229F8EA70035AB90 /* Interface */,
 				BF8BFD34229F8EB40035AB90 /* Models */,
 			);
@@ -333,7 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				BFD2E38722A2F5EA00F78FAE /* Viper */,
-				BFD2E38822A2F5FB00F78FAE /* Views */,
+				BFD2E38822A2F5FB00F78FAE /* Embeded Views */,
 				BFD2E38922A2F60100F78FAE /* Interface */,
 				BFD2E38A22A2F60800F78FAE /* Models */,
 			);
@@ -354,12 +354,12 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		BF40CBAE22A1B91400FD39E3 /* Views */ = {
+		BF40CBAE22A1B91400FD39E3 /* Embeded Views */ = {
 			isa = PBXGroup;
 			children = (
 				BFD2DFE2229CFD4F008EC33D /* Nested Collection */,
 			);
-			path = Views;
+			path = "Embeded Views";
 			sourceTree = "<group>";
 		};
 		BF40CBB122A1CB8E00FD39E3 /* Image */ = {
@@ -654,11 +654,11 @@
 			path = Viper;
 			sourceTree = "<group>";
 		};
-		BFD2E38822A2F5FB00F78FAE /* Views */ = {
+		BFD2E38822A2F5FB00F78FAE /* Embeded Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Views;
+			path = "Embeded Views";
 			sourceTree = "<group>";
 		};
 		BFD2E38922A2F60100F78FAE /* Interface */ = {

@@ -39,9 +39,7 @@ extension MoviesViewController {
 
 // MARK: - MoviesViewProtocol
 extension MoviesViewController: MoviesViewProtocol {
-    func show(movies: [Netflix.Networking.Responses.Movie],
-              with filter: String) {
-        
+    func show(_ filter: String) {
         nestedCollection.reloadData()
         navigationDropdown.hide()
         navigationDropdown.set(title: "Filtered by \(filter)")
