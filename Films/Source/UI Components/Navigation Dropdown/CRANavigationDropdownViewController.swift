@@ -9,9 +9,12 @@
 import UIKit
 
 class CRANavigationDropdownViewController: UIViewController {
+    private weak var sourceViewController: UIViewController!
+    private weak var sourceNavigationController: UINavigationController!
+    
     private weak var titleLabel: UILabel!
     private weak var titleImageView: UIImageView!
-    private weak var sourceNavigationController: UINavigationController!
+    private weak var titleStackView: UIStackView!
     
     private var tableView: UITableView!
     
@@ -36,31 +39,44 @@ extension CRANavigationDropdownViewController {
             return
         }
         
-        // initialize navigation title label
+        // initialize the title label
         let titleLabel = UILabel()
         
-        // style the navigation title label
-        titleLabel.textColor = UIColor.white
-        titleLabel.font = UIFont.systemFont(ofSize: 20.0, weight: .bold)
+        // constrain title label
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        // style title label
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        titleLabel.textColor = .white
+        
+        // size title label
         titleLabel.sizeToFit()
         
-        // initialize navigation image
+        // initialize the title image view
         let titleImageView = UIImageView(image: #imageLiteral(resourceName: "arrow-down"))
         
-        // initialize stack view title view stack view
-        let titleView = UIStackView(arrangedSubviews: [titleLabel, titleImageView])
+        // constrain the title image view
+        titleImageView.translatesAutoresizingMaskIntoConstraints = false
+        titleImageView.heightAnchor.constraint(equalToConstant: 12).isActive = true
+        titleImageView.widthAnchor.constraint(equalToConstant: 12).isActive = true
         
-        // style the title view stack view
-        titleView.axis = .horizontal
-        titleView.spacing = 10.0
+        // style the title image view
+        titleImageView.contentMode = .scaleAspectFill
         
-        // configure the navigation bar
-        sourceNavigationController.navigationBar.tintColor = .black
-        sourceNavigationController.navigationBar.barTintColor = .black
-        sourceNavigationController.navigationBar.isTranslucent = false
+        // initialize the title stack view
+        let titleStackView = UIStackView(arrangedSubviews: [titleLabel, titleImageView])
         
-        // set title view as the stack view
-        sourceNavigationController.navigationItem.titleView = titleLabel
+        // constrain the title stack view
+        titleStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // style the title stack view
+        titleStackView.axis = .horizontal
+        titleStackView.alignment = .center
+        titleStackView.distribution = .fill
+        titleStackView.spacing = 10
+        
+        // set the title stack view as the title view of the embeded view controller
+        source.navigationItem.titleView = titleStackView
         
         // initialize the table view
         let tableView = UITableView(frame: .zero)
@@ -84,14 +100,13 @@ extension CRANavigationDropdownViewController {
         let navigationBarTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleNavigationBarTap(_:)))
         sourceNavigationController.navigationBar.addGestureRecognizer(navigationBarTapGestureRecognizer)
         
-//        let backgroundViewTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleBackgroundViewTap(_:)))
-//        view.addGestureRecognizer(backgroundViewTapGestureRecognizer)
-
         // assign self properties
+        self.sourceViewController = source
+        self.sourceNavigationController = sourceNavigationController
         self.titleLabel = titleLabel
         self.titleImageView = titleImageView
+        self.titleStackView = titleStackView
         self.tableView = tableView
-        self.sourceNavigationController = sourceNavigationController
     }
 }
 
@@ -99,10 +114,6 @@ extension CRANavigationDropdownViewController {
 extension CRANavigationDropdownViewController {
     func reloadData() {
         tableView.reloadData()
-    }
-    
-    func set(title: String) {
-        titleLabel.text = title
     }
     
     func show(_ animated: Bool = true) {
@@ -162,10 +173,6 @@ extension CRANavigationDropdownViewController {
             self.isShown = false
         })
     }
-    
-    func toggle(_ animated: Bool = true) {
-        isShown ? hide(animated) : show(animated)
-    }
 }
 
 private extension CRANavigationDropdownViewController {
@@ -182,10 +189,6 @@ private extension CRANavigationDropdownViewController {
         
         toggle()
     }
-    
-//    @objc func handleBackgroundViewTap(_ sender: UITapGestureRecognizer) {
-//        hide()
-//    }
 }
 
 // MARK: - Helper Methods
@@ -243,6 +246,14 @@ private extension CRANavigationDropdownViewController {
     func remove(_ tableView: UITableView) {
         tableView.removeFromSuperview()
     }
+    
+    func toggle(_ animated: Bool = true) {
+        isShown ? hide(animated) : show(animated)
+    }
+    
+    func set(title: String?) {
+        titleLabel.text = title
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -280,6 +291,9 @@ extension CRANavigationDropdownViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
+        
+        set(title: dataSource?.tableView(tableView,
+                                         titleForSelectedFilterAtRow: indexPath.row))
         
         delegate?.tableView(tableView,
                             didSelectFilterAtRow: indexPath.row)
