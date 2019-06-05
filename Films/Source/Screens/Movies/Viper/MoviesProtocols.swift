@@ -39,5 +39,5 @@ protocol MoviesInteractorProtocol: class {
 }
 
 protocol MoviesRouterProtocol: class {
-    
+    func presentMovieDetail(_ delegate: MovieDetailDelegateProtocol?, input: MovieDetailInput)
 }

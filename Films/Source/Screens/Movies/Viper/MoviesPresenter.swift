@@ -66,7 +66,11 @@ extension MoviesPresenter {
             return
         }
         
-        // TODO: segue to movie detail screen with this information
+        router?.presentMovieDetail(self, input: MovieDetailInput(poster: cellViewModel.image ?? #imageLiteral(resourceName: "missing-image"),
+                                                                 title: movie.title,
+                                                                 location: movie.locations,
+                                                                 latitude: movie.latitude,
+                                                                 longitude: movie.longitude))
     }
     
     func nestedCollectionViewController(_ nestedCollectionViewController: MoviesNestedCollectionViewController,
@@ -174,4 +178,8 @@ extension MoviesPresenter {
         
         return viewModel.filterNames[safe: row]
     }
+}
+
+extension MoviesPresenter: MovieDetailDelegateProtocol {
+    
 }

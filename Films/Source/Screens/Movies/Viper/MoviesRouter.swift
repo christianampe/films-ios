@@ -11,3 +11,11 @@ import UIKit
 final class MoviesRouter: MoviesRouterProtocol {
     weak var viewController: UIViewController?
 }
+
+extension MoviesRouter {
+    func presentMovieDetail(_ delegate: MovieDetailDelegateProtocol?,
+                            input: MovieDetailInput) {
+        
+        viewController?.show(MovieDetailBuilder.create(delegate, input: input), sender: nil)
+    }
+}

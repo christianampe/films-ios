@@ -19,7 +19,8 @@ class MoviesNestedCollectionViewItemViewModel {
     private let title: String
     
     private var imageURLString: String?
-    private var image: UIImage?
+    
+    private(set) var image: UIImage?
     
     private(set) var state: LoadingState {
         didSet {

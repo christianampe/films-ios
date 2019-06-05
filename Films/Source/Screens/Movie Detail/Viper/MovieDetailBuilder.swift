@@ -10,11 +10,10 @@ import UIKit
 
 final class MovieDetailBuilder {
     static func create(_ delegate: MovieDetailDelegateProtocol?,
-                       input: MovieDetailInput,
-                       viewModel: MovieDetailViewModel) -> UIViewController {
+                       input: MovieDetailInput) -> UIViewController {
         
         let storyboard = UIStoryboard(storyboard: .movieDetail)
-        let view: MovieDetailViewController = storyboard.instantiateViewController()
+        let view: MovieDetailTableViewController = storyboard.instantiateViewController()
         let presenter = MovieDetailPresenter()
         let interactor = MovieDetailInteractor()
         let router = MovieDetailRouter()
@@ -24,7 +23,6 @@ final class MovieDetailBuilder {
         presenter.view = view
         presenter.interactor = interactor
         presenter.input = input
-        presenter.viewModel = viewModel
         presenter.router = router
         interactor.presenter = presenter
         router.viewController = view

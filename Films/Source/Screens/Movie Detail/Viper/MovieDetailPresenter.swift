@@ -14,7 +14,6 @@ final class MovieDetailPresenter: MovieDetailPresenterProtocol {
     var router: MovieDetailRouterProtocol?
     
     var input: MovieDetailInput?
-    var viewModel: MovieDetailViewModel?
 }
 
 extension MovieDetailPresenter {

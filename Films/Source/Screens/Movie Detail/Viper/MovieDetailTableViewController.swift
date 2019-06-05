@@ -7,33 +7,40 @@
 //
 
 import UIKit
+import MapKit
 
-final class MovieDetailViewController: UIViewController, MovieDetailViewProtocol {
+final class MovieDetailTableViewController: UITableViewController, MovieDetailViewProtocol {
     var presenter: MovieDetailPresenterProtocol?
     weak var delegate: MovieDetailDelegateProtocol?
     
-    @IBOutlet private weak var collectionView: UICollectionView!
+    
+    
+    @IBOutlet private weak var posterImageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var detailLabel: UILabel!
+    
+    @IBOutlet private weak var mapView: MKMapView!
 }
 
 // MARK: - DetailViewProtocol
-extension MovieDetailViewController {
+extension MovieDetailTableViewController {
     
 }
 
 // MARK: - Lifecycle
-extension MovieDetailViewController {
+extension MovieDetailTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
 
 // MARK: - UICollectionViewDataSource
-extension MovieDetailViewController {
+extension MovieDetailTableViewController {
     
 }
 
 // MARK: - UICollectionViewDelegate
-extension MovieDetailViewController: UICollectionViewDelegate {
+extension MovieDetailTableViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
         
