@@ -28,6 +28,14 @@ extension MoviesNestedCollectionViewRowCell {
 
 extension MoviesNestedCollectionViewRowCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        
+        delegate?.collectionView(collectionView,
+                                 didSelectItemAtIndexPath: IndexPath(row: indexPath.item,
+                                                                     section: index))
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
                         willDisplay cell: UICollectionViewCell,
                         forItemAt indexPath: IndexPath) {
         

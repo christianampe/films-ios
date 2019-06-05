@@ -71,6 +71,13 @@ extension MoviesNestedCollectionViewController: UITableViewDataSource {
 
 extension MoviesNestedCollectionViewController: MoviesNestedCollectionViewRowCellDelegate {
     func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAtIndexPath indexPath: IndexPath) {
+        
+        delegate?.nestedCollectionView(self,
+                                       didSelectItemAtIndexPath: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
                         willDisplay cell: UICollectionViewCell,
                         forItemAt indexPath: IndexPath) {
         

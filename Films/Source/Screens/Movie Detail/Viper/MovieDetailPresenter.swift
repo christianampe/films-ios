@@ -16,6 +16,17 @@ final class MovieDetailPresenter: MovieDetailPresenterProtocol {
     var input: MovieDetailInput?
 }
 
+// MARK: - MovieDetailPresenterProtocol
 extension MovieDetailPresenter {
+    func viewDidLoad() {
+        guard let input = input else {
+            return
+        }
+        
+        view?.show(input)
+    }
     
+    func dismissButtonPressed() {
+        router?.dismiss(true)
+    }
 }

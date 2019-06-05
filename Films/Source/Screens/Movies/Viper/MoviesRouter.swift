@@ -16,6 +16,8 @@ extension MoviesRouter {
     func presentMovieDetail(_ delegate: MovieDetailDelegateProtocol?,
                             input: MovieDetailInput) {
         
-        viewController?.show(MovieDetailBuilder.create(delegate, input: input), sender: nil)
+        viewController?.present(MovieDetailBuilder.create(delegate, input: input),
+                                animated: true,
+                                completion: nil)
     }
 }

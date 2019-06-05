@@ -10,7 +10,7 @@ import UIKit.UICollectionView
 
 protocol MoviesNestedCollectionViewRowCellDelegate: class {
     func collectionView(_ collectionView: UICollectionView,
-                        didSelectItemAtIndexPath index: Int)
+                        didSelectItemAtIndexPath indexPath: IndexPath)
     
     func collectionView(_ collectionView: UICollectionView,
                         willDisplay cell: UICollectionViewCell,
@@ -23,5 +23,13 @@ protocol MoviesNestedCollectionViewRowCellDelegate: class {
 
 extension MoviesNestedCollectionViewRowCellDelegate {
     func collectionView(_ collectionView: UICollectionView,
-                        didSelectItemAtIndexPath index: Int) {}
+                        didSelectItemAtIndexPath indexPath: Int) {}
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {}
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        didEndDisplaying cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {}
 }

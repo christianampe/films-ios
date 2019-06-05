@@ -11,3 +11,9 @@ import UIKit
 final class MovieDetailRouter: MovieDetailRouterProtocol {
     weak var viewController: UIViewController?
 }
+
+extension MovieDetailRouter {
+    func dismiss(_ animated: Bool) {
+        viewController?.dismiss(animated: true, completion: nil)
+    }
+}
