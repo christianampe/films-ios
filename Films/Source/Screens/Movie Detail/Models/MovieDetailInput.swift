@@ -6,7 +6,12 @@
 //  Copyright © 2019 christianampe. All rights reserved.
 //
 
-struct MovieDetailInput: MovieDetailInputProtocol {
-    var latitude: Double
-    var longitude: Double
+import UIKit.UIImage
+
+struct MovieDetailInput {
+    let poster: UIImage
+    let title: String
+    let location: String
+    let latitude: Double
+    let longitude: Double
 }

@@ -1,8 +1,8 @@
 //
 //  MovieDetailPresenter.swift
-//  Films
+//  Places
 //
-//  Created Christian Ampe on 6/1/19.
+//  Created Christian Ampe on 5/14/19.
 //  Copyright © 2019 christianampe. All rights reserved.
 //
 
@@ -12,4 +12,11 @@ final class MovieDetailPresenter: MovieDetailPresenterProtocol {
     weak var view: MovieDetailViewProtocol?
     var interactor: MovieDetailInteractorProtocol?
     var router: MovieDetailRouterProtocol?
+    
+    var input: MovieDetailInput?
+    var viewModel: MovieDetailViewModel?
+}
+
+extension MovieDetailPresenter {
+    
 }

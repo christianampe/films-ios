@@ -1,26 +1,15 @@
 //
 //  MovieDetailProtocols.swift
-//  Films
+//  Places
 //
-//  Created Christian Ampe on 6/1/19.
+//  Created Christian Ampe on 5/14/19.
 //  Copyright © 2019 christianampe. All rights reserved.
 //
 
-protocol MovieDetailInputProtocol {
-    var latitude: Double { get }
-    var longitude: Double { get }
+protocol MovieDetailDelegateProtocol: class {
 }
 
-protocol MovieDetailViewModelProtocol {}
-
-protocol MovieDetailOutputProtocol {}
-
-protocol MovieDetailDelegateProtocol: class {}
-
 protocol MovieDetailViewProtocol: class {
-    var input: MovieDetailInputProtocol? { get set }
-    var output: MovieDetailOutputProtocol? { get set }
-    var viewModel: MovieDetailViewModelProtocol? { get set }
     var presenter: MovieDetailPresenterProtocol?  { get set }
     var delegate: MovieDetailDelegateProtocol? { get set }
 }

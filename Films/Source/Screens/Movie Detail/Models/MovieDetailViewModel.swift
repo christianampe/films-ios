@@ -6,6 +6,6 @@
 //  Copyright © 2019 christianampe. All rights reserved.
 //
 
-class MovieDetailViewModel: MovieDetailViewModelProtocol {
+class MovieDetailViewModel {
     
 }
