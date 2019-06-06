@@ -28,7 +28,7 @@ extension MoviesPresenter {
 extension MoviesPresenter {
     func fetched(movies: [Netflix.Networking.Responses.Movie]) {
         viewModel.set(movies: movies)
-        viewModel.filter(by: .releaseYear)
+        viewModel.filter(by: .writer)
     }
     
     func encountered(error: Netflix.Networking.Error) {
