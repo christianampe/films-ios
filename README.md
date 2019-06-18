@@ -3,13 +3,13 @@
 #### Discussion
 * `VIPER`/`MVVM` hybrid design pattern utilized in the home screen.
 * Custom `in-memory cache` - `CRAMemoryCache` which supports `structs`.
-* Custom `networking` impelementation mimmics `Moya` in terms of public API.
+* Custom `networking` impelementation mimics `Moya` in terms of public API.
 * An in-memory cache lives on the `2nd level` of the networking layer and caches the constructed `https` result objects.
 * By default `Apple's` implementation of `URLSession` contains a `URLCache` which is internally managed by the caching policy returned from the server. This cache will also persist to disk which is the reason for my omitting a `disk cache` implementation. Assuming a correctly developed `REST API` returning proper header values, `Apple's` `URLCache` will appropriately manage the storing and purging of data.
 * `HTTP` vs `HTTPS` - Both endpoints provided were non-secure with required the allowance of `arbitrary loads` in the `Xcode` project settings. This is extremely unsafe as it exposes all traffic running through the app; however, as this is a non-production application I opted for allowing it. The other option is to set custom `subdomain` exceptions which could be an improvement on my implementation.
 
 #### Known Issues
-* `Cell dequeueing` - In the home screen cell dequeueing causes issues where the embedded collection view loses track of its scroll position when it gets reused.
+* `Cell dequeueing` - In the home screen cell dequeueing causes issues where the embedded collection view looses track of its scroll position when it gets reused.
 
 #### Improvements
 * `Better logging` - a custom logger could have come in extremely handy; however, considering the time frame I felt if was better if I omitted it.
